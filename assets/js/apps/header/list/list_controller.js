@@ -15,6 +15,9 @@ AppDashboard.module("HeaderApp.List", function(List, AppDashboard, Backbone, Mar
 
       AppDashboard.regions.header.show(headers);
     },
+	rightMenu: function(){
+	   var 	
+	},
 
     setActiveHeader: function(headerUrl){
       var links = AppDashboard.request("header:entities");

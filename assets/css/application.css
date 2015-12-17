@@ -8,6 +8,9 @@ body {
 	display: none;
 }
 
+.main-region{
+   margin-top: 60px;	
+}
 /* tables */
 table.tablesorter {
 	font-family: "Roboto", arial, san-serif;
