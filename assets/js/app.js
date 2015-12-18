@@ -1,15 +1,15 @@
-var CocoDashboard = new Marionette.Application();
+var CocoManager = new Marionette.Application();
 
-CocoDashboard.navigate = function(route,  options){
+CocoManager.navigate = function(route,  options){
   options || (options = {});
   Backbone.history.navigate(route, options);
 };
 
-CocoDashboard.getCurrentRoute = function(){
+CocoManager.getCurrentRoute = function(){
   return Backbone.history.fragment
 };
 
-CocoDashboard.on("before:start", function(){
+CocoManager.on("before:start", function(){
   var RegionContainer = Marionette.LayoutView.extend({
     el: "#app-container",
 
@@ -20,8 +20,8 @@ CocoDashboard.on("before:start", function(){
     }
   });
 
-  CocoDashboard.regions = new RegionContainer();
-  CocoDashboard.regions.dialog.onShow = function(view){
+  CocoManager.regions = new RegionContainer();
+  CocoManager.regions.dialog.onShow = function(view){
     var self = this;
     var closeDialog = function(){
       self.stopListening();
@@ -42,12 +42,12 @@ CocoDashboard.on("before:start", function(){
   };
 });
 
-CocoDashboard.on("start", function(){
+CocoManager.on("start", function(){
   if(Backbone.history){
     Backbone.history.start();
 /*
     if(this.getCurrentRoute() === ""){
-      CocoDashboard.trigger("contacts:list");
+      CocoManager.trigger("contacts:list");
     }
 */
   }

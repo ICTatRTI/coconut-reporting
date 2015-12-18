@@ -17,25 +17,37 @@
 	      <div id="header-region"></div>
 		  <div id="rmenu-region"></div>
 		  <div id="drawer-region"></div>
-	      <div id="main-region"></div>
+		  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+		    <main class="mdl-layout__content main-region">
+			  <div class="sub-header-color relative clear" style="padding: 25px">
+				  <div class="f-left p-5"><img src="assets/img/summary1.png"></div>
+				  <div class="f-left p-5"><img src="assets/img/summary2.png"></div>
+				  <div class="f-left p-5"><img src="assets/img/summary3.png"></div>
+				  <div class="f-left p-5"><img src="assets/img/summary4.png"></div>
+				  <div style="clear:left"></div>
+				  <div class="f-left"><img src="assets/img/chart1.png"></div>
+				  <div class="f-left"><img src="assets/img/chart2.png"></div>
+				  <div class="f-left"><img src="assets/img/chart3.png"></div>
+				  <div class="f-left"><img src="assets/img/chart4.png"></div>
+			  </div>
+	          <div id="main-region"></div>
+		    </main>	
+		  </div>	
       	<div id="dialog-region"></div>
      </div>
-   </div>
    
     <script type="text/template" id="main-template">
-		<main class="mdl-layout__content main-region">  
-	  	   <div class="page-content">This is the main content page</div>
-	    </main>
+	  	   <h2>This is the main content page</h2>
     </script>
 		   
     <script type="text/template" id="header-template">
-	  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
        <header class="mdl-layout__header">
 		<div class="mdl-layout-icon"></div>  
 	    <div class="mdl-layout__header-row">
 	      <!-- Title -->
-	      <span class="mdl-layout-title">Coconut Surveillance Dashboard</span>
-		  <div id="report-title">Case Follow Up</div>
+	      <span class="mdl-layout-title">Dashboard</span>
+		  <div id="report-title"> </div>
 		  <div class="mdl-layout-spacer"></div>
   	      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
   	                  mdl-textfield--floating-label mdl-textfield--align-right more-vert">
@@ -58,53 +70,78 @@
 	   </header>
 	  </div>
     </script>
-	
-    <script type="text/template" id="rmenu-template">
-		<div class="mdl-layout mdl-js-layout">
-	      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-	                  mdl-textfield--floating-label mdl-textfield--align-right more-vert">
-	        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="menu-top-right" data-upgraded=",MaterialButton,MaterialRipple"> 
-			 <i class="material-icons">more_vert</i> 
-			 <span class="mdl-button__ripple-container">
-				<span class="mdl-ripple is-animating" style="width: 171.706px; height: 171.706px; transform: translate(-50%, -50%) translate(38px, 28px);">
-				</span>
-			 </span>
-		    </button>
-		    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-top-right">
-			  <li class="mdl-menu__item">Help</li>
-			  <li class="mdl-menu__item">Manage</li>
-			  <li disabled class="mdl-menu__item">Disabled Action</li>
-			  <li class="mdl-menu__item" id="logout">Logout</li>
-			</ul>
-	      </div>
-		</div>  
-	</script>
 		
     <script type="text/template" id="drawer-template">
-	<div class="mdl-layout mdl-js-layout">	
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">	
   	  <div class="mdl-layout__drawer">
-  	      <span class="mdl-layout-title">Coconut Surveillance</span>
-  		  <span class="mdl-layout-subtitle">Reports</span>	  
+		  <div class="clear m-t-30">
+  	        <div class="f-left m-l-30"><img src="assets/img/CSLogo.png" id="cslogo_sm"></div>
+		    <div class="mdl-layout-title" id="drawer-title">Coconut Surveillance</div>
+		  </div>		  
   	      <nav class="mdl-navigation">
-  	        <a class="mdl-navigation__link report__link" href="#caseFollowup">Case Follow Up</a>
-  	        <a class="mdl-navigation__link report__link" href="#location">Locations</a>
-  	        <a class="mdl-navigation__link report__link" href="#spreadsheet">Spreadsheet</a>
-  	        <a class="mdl-navigation__link report__link" href="#analysis">Analysis</a>
-  		    <a class="mdl-navigation__link report__link" href="#alerts">Alerts</a>
-  			<a class="mdl-navigation__link report__link" href="#weeklySummary">Weekly Summary</a>
-  			<a class="mdl-navigation__link report__link" href="#periodSummary">Period Summary</a>
-  			<a class="mdl-navigation__link report__link" href="#incidentsGraph">Incidents Graph</a>
-  			<a class="mdl-navigation__link report__link" href="#systemErrors">System Errors</a>
-  			<a class="mdl-navigation__link report__link" href="#pilotNotifications">Pilot Notifications</a>
-  			<a class="mdl-navigation__link report__link" href="#usersReport">Users Report</a>
-  			<a class="mdl-navigation__link report__link" href="#weeklyReports">Weekly Reports</a>
-  			<a class="mdl-navigation__link report__link" href="#rainfallReport">Rainfall Report</a>
-  			<a class="mdl-navigation__link report__link" href="#compareWeekly">Compare Weekly with Cases Followup</a>
-  			<a class="mdl-navigation__link report__link" href="#epidemicThresholds">Epidemic Thresholds</a>
+			<a class="mdl-navigation__link report__link report__subtitle" href="#dashboard">  
+			  <i class="mdl-color-text--blue-grey-400 material-icons">dashboard</i>
+			  Dashboard</a>
+			<a class="mdl-navigation__link report__link report__subtitle" href="#reports" id="report-main">  
+			  <i class="mdl-color-text--blue-grey-400 material-icons">description</i>
+			Reports</a>
+			<div class="m-l-20" id="reports">    
+  	        <a class="mdl-navigation__link report__link m-b-20" href="#caseFollowup">
+				Case Follow Up</a>
+  	        <a class="mdl-navigation__link report__link" href="#location">
+				Locations</a>
+  	        <a class="mdl-navigation__link report__link" href="#spreadsheet">
+				Spreadsheet</a>
+  	        <a class="mdl-navigation__link report__link" href="#analysis">
+				Analysis</a>
+  		    <a class="mdl-navigation__link report__link" href="#alerts">
+				Alerts</a>
+  			<a class="mdl-navigation__link report__link" href="#weeklySummary">
+				Weekly Summary</a>
+  			<a class="mdl-navigation__link report__link" href="#periodSummary">
+				Period Summary</a>
+  			<a class="mdl-navigation__link report__link" href="#incidentsGraph">
+				Incidents Graph</a>
+  			<a class="mdl-navigation__link report__link" href="#systemErrors">
+				System Errors</a>
+  			<a class="mdl-navigation__link report__link" href="#pilotNotifications">
+				Pilot Notifications</a>
+  			<a class="mdl-navigation__link report__link" href="#usersReport">
+				Users Report</a>
+  			<a class="mdl-navigation__link report__link" href="#weeklyReports">
+				Weekly Reports</a>
+  			<a class="mdl-navigation__link report__link" href="#rainfallReport">
+				Rainfall Report</a>
+  			<a class="mdl-navigation__link report__link" href="#compareWeekly">
+				Compare Weekly with Cases Followup</a>
+  			<a class="mdl-navigation__link report__link" href="#epidemicThresholds">
+				Epidemic Thresholds</a>
+		   </div>
+			<a class="mdl-navigation__link report__link report__subtitle" href="#setting-main" id="setting-main">  
+			  <i class="mdl-color-text--blue-grey-400 material-icons">settings</i>
+			Settings
+		    </a>
+			<div class="m-l-20" id="settings">    
+	  	        <a class="mdl-navigation__link report__link m-b-20" href="#language">
+					Language</a>
+	  	        <a class="mdl-navigation__link report__link m-b-20" href="#theme">
+					Color Theme</a>	
+	  	        <a class="mdl-navigation__link report__link m-b-20" href="#setting1">
+					Setting 1</a>
+	  	        <a class="mdl-navigation__link report__link m-b-20" href="#setting2">
+					Setting 2</a>
+	  	        <a class="mdl-navigation__link report__link m-b-20" href="#setting3">
+					Setting 3</a>
+	  	        <a class="mdl-navigation__link report__link m-b-20" href="#setting4">
+					Setting 4</a>
+			</div>	
   	      </nav>
         </div>
 	</div>	
     </script>
+	
+	<script type="text/template" id="report-template">
+	</script>	
 
     <script src="./assets/js/vendor/material.min.js"> </script>
     <script src="./assets/js/vendor/jquery.js"></script>
@@ -120,46 +157,60 @@
     <script src="./assets/js/apps/header/list/list_controller.js"></script> -->
 	
     <script type="text/javascript">
-	    var CocoDashboard = new Marionette.Application();
+	   $(document).ready(function() {
+		   $("#report-main").click(function(){
+		   	   $("#reports").slideToggle();
+		   });
+		   $("#setting-main").click(function(){
+		   	   $("#settings").slideToggle();
+		   });
+	   });
+	   	   
+	    var CocoManager = new Marionette.Application();
 	    
-		CocoDashboard.addRegions({
+		CocoManager.addRegions({
 	  	  headerRegion: "#header-region",
 	  	  mainRegion: "#main-region",
-		  drawerRegion: "#drawer-region",
-		  //rmenuRegion: "#rmenu-region",	
+		  drawerRegion: "#drawer-region",	
 	  	  dialog: "#dialog-region"
 	    });
 		
-	    CocoDashboard.MainView = Marionette.ItemView.extend({
+	    CocoManager.MainView = Marionette.ItemView.extend({
+			 className: "page-content",
 	  	      template: "#main-template"
 	  	  });
 		  
-	    CocoDashboard.HeaderView = Marionette.ItemView.extend({
+  	    CocoManager.ReportView = Marionette.ItemView.extend({
+  			 className: "page-content",
+  	  	      template: "#report-template"
+  	  	  });  
+		  
+	    CocoManager.HeaderView = Marionette.ItemView.extend({
 	  	      template: "#header-template"
 	  	  });
 		  
-	   CocoDashboard.DrawerView = Marionette.ItemView.extend({
+	   CocoManager.DrawerView = Marionette.ItemView.extend({
 	    	template: "#drawer-template"
 	    });
-		
- 	   //CocoDashboard.RmenuView = Marionette.ItemView.extend({
- 	   // 	template: "#rmenu-template"
- 	   // });
-		
-		CocoDashboard.on("start", function(){
-			var headerView = new CocoDashboard.HeaderView();
-			CocoDashboard.headerRegion.show(headerView);
 			
-			var drawerView = new CocoDashboard.DrawerView();
-			CocoDashboard.drawerRegion.show(drawerView);
+		CocoManager.on("start", function(){
 			
-			//var rmenuView = new CocoDashboard.RmenuView();
-			//CocoDashboard.rmenuRegion.show(rmenuView);
+			var headerView = new CocoManager.HeaderView();
+			CocoManager.headerRegion.show(headerView);
 			
-			var mainView = new CocoDashboard.MainView();
-			CocoDashboard.mainRegion.show(mainView);
+			var drawerView = new CocoManager.DrawerView();
+			CocoManager.drawerRegion.show(drawerView);
+			
+			var mainView = new CocoManager.MainView();
+			CocoManager.mainRegion.show(mainView);
+					
+			$("#report-template").load("README.md");
+			var reportView = new CocoManager.ReportView();
+			CocoManager.mainRegion.show(reportView);
+;
+			
 		});
 
-        CocoDashboard.start();
+        CocoManager.start();
     </script>
    </body>
