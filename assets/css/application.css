@@ -490,6 +490,36 @@ a.DTTT_button, button.DTTT_button, div.DTTT_button {
     padding-right: 10px;
 }
 
+.summary {
+	height: 80px;
+	margin: 0 5px;
+}
+
+#summary1 {
+	background-image: url(../img/summary1.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#summary2 {
+	background-image: url(../img/summary2.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#summary3 {
+	background-image: url(../img/summary3.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#summary4 {
+	background-image: url(../img/summary4.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+
 /* margins setting */
 
 .f-left {
