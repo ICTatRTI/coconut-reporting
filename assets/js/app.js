@@ -14,13 +14,15 @@ CocoManager.on("before:start", function(){
     el: "#app-container",
 
     regions: {
-      header: "#header-region",
-      main: "#main-region",
+      headerRegion: "#header-region",
+      mainRegion: "#main-region",
+      drawerRegion: "#drawer-region",
       dialog: "#dialog-region"
     }
   });
 
   CocoManager.regions = new RegionContainer();
+
   CocoManager.regions.dialog.onShow = function(view){
     var self = this;
     var closeDialog = function(){
