@@ -19,7 +19,7 @@
 		  <div id="drawer-region"></div>
 		  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 		    <main class="mdl-layout__content main-region">
-			  <div class="sub-header-color relative clear" style="padding: 25px">
+			  <div class="sub-header-color relative clear">
 				  <div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
 						<div class="summary" id="summary1"> 
@@ -48,14 +48,7 @@
 					<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet"><div class="summary" id="summary1"> </div></div>
 					<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet"><div class="summary" id="summary1"> </div></div>
 				  </div>
-				  <div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart1.png" width="100%"></div>
-					<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart2.png" width="100%"></div>
-				  </div>
-				  <div class="mdl-grid">	
-					<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart3.png" width="100%"></div>
-					<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart4.png" width="100%"></div>
-				  </div>
+				  
 			  </div>
 	          <div id="main-region"></div>
 		    </main>	
@@ -64,7 +57,14 @@
      </div>
    
     <script type="text/template" id="main-template">
-	  	   <h2>This is the main content page</h2>
+		  <div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart1.png" width="100%"></div>
+			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart2.png" width="100%"></div>
+		  </div>
+		  <div class="mdl-grid">	
+			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart3.png" width="100%"></div>
+			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart4.png" width="100%"></div>
+		  </div>
     </script>
 		   
     <script type="text/template" id="header-template">
@@ -167,8 +167,7 @@
 	</div>	
     </script>
 	
-	<script type="text/template" id="report-template">
-	</script>	
+	<script type="text/template" id="report-template"> TEST </script>	
 
     <script src="./assets/js/vendor/material.min.js"> </script>
     <script src="./assets/js/vendor/jquery.js"></script>
@@ -178,66 +177,24 @@
     <script src="./assets/js/vendor/backbone.js"></script>
     <script src="./assets/js/vendor/backbone.marionette.js"></script>
 
-<!--	<script src="./assets/js/app.js"> </script> 
-	<script src="./assets/js/apps/header/header_app.js"></script>
+	<script src="./assets/js/app.js"> </script> 
+<!--	<script src="./assets/js/apps/header/header_app.js"></script>
     <script src="./assets/js/apps/header/list/list_view.js"></script>
     <script src="./assets/js/apps/header/list/list_controller.js"></script> -->
 	
     <script type="text/javascript">
+	
 	   $(document).ready(function() {
+		   	
 		   $("#report-main").click(function(){
 		   	   $("#reports").slideToggle();
 		   });
 		   $("#setting-main").click(function(){
 		   	   $("#settings").slideToggle();
 		   });
+		   
 	   });
-	   	   
-	    var CocoManager = new Marionette.Application();
-	    
-		CocoManager.addRegions({
-	  	  headerRegion: "#header-region",
-	  	  mainRegion: "#main-region",
-		  drawerRegion: "#drawer-region",	
-	  	  dialog: "#dialog-region"
-	    });
 		
-	    CocoManager.MainView = Marionette.ItemView.extend({
-			 className: "page-content",
-	  	      template: "#main-template"
-	  	  });
-		  
-  	    CocoManager.ReportView = Marionette.ItemView.extend({
-  			 className: "page-content",
-  	  	      template: "#report-template"
-  	  	  });  
-		  
-	    CocoManager.HeaderView = Marionette.ItemView.extend({
-	  	      template: "#header-template"
-	  	  });
-		  
-	   CocoManager.DrawerView = Marionette.ItemView.extend({
-	    	template: "#drawer-template"
-	    });
-			
-		CocoManager.on("start", function(){
-			
-			var headerView = new CocoManager.HeaderView();
-			CocoManager.headerRegion.show(headerView);
-			
-			var drawerView = new CocoManager.DrawerView();
-			CocoManager.drawerRegion.show(drawerView);
-			
-			var mainView = new CocoManager.MainView();
-			CocoManager.mainRegion.show(mainView);
-					
-			$("#report-template").load("README.md");
-			var reportView = new CocoManager.ReportView();
-			CocoManager.mainRegion.show(reportView);
-;
-			
-		});
-
         CocoManager.start();
     </script>
    </body>

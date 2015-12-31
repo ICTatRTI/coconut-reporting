@@ -1,0 +1,193 @@
+<div id="unhide-icons">	
+ <span id="alerts-drop" class="drop-pointer">
+	<button class="mdl-button mdl-js-button mdl-button--icon">
+	   <i class="material-icons">assignment_late</i> 
+    </button>
+	<span class="mdl-badge" data-badge="99">Alerts</span>
+ </span>
+ <span id="cases-drop" class="drop-pointer">
+	<button class="mdl-button mdl-js-button mdl-button--icon"> 
+	   <i class="material-icons">functions</i> 
+    </button>Summary
+ </span>
+ <span id="legend-drop" class="drop-pointer">
+	<button class="mdl-button mdl-js-button mdl-button--icon"> 
+	   <i class="material-icons">dashboard</i> 
+    </button>
+	Legend
+ </span>
+</div>	
+<div id="alerts-section" class="hide">
+	<h4>Alerts</h4>	
+	<div>
+		<p>The following districts have USSD Notifications that have not been followed up after two days. Recommendation call the DMSO:</p>
+		<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+		  <thead>
+		    <tr>
+		      <th class="mdl-data-table__cell--non-numeric">District</th>
+		      <th>Number of Cases</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td class="mdl-data-table__cell--non-numeric">MJINI</td>
+		      <td>6</td>
+		    </tr>
+		    <tr>
+		      <td class="mdl-data-table__cell--non-numeric">MKOANI</td>
+		      <td>1</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>	
+</div>
+
+<div id="cases-section" class="hide">
+	<h4>Summary</h4>
+	<div>
+		<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+		  <thead>
+		    <tr>
+		      <td class="mdl-data-table__cell--non-numeric">Cases Reported at Facility</td>
+		      <td>51</td>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td class="mdl-data-table__cell--non-numeric">Additional People Tested</td>
+		      <td>137</td>
+		    </tr>
+		    <tr>
+		      <td class="mdl-data-table__cell--non-numeric">Additional People Tested Positive</td>
+		      <td>6</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>	
+</div>
+
+<div id="legend-section" class="hide">
+    <h4>Legends</h4>	
+	<h6>Click on a button for more details about the case.</h6>
+	<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"><i class="material-icons">account_circle</i></button> - Positive malaria result found at household<br />
+	<button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons  c_orange">account_circle</i></button> - Positive malaria result found at household with no travel history (probable local transmission). <br />
+	<button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons  household">home</i></button> - Index case had no travel history (probable local transmission).<br />
+	<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"><i class="material-icons">error_outline</i></button> - Case not followed up to facility after 24 hours. <br />
+	<span style="font-size:75%;color:#3F51B5;font-weight:bold">SHEHIA</span> - is a shehia classified as high risk based on previous data. <br />
+	<button class="btn btn-small  mdl-button--primary">caseid</button> - Case not followed up after 48 hours. <br />
+</div>
+
+<div id="results" class="result">
+
+<table class="summary tablesorter"> 
+	<thead><tr> 
+		<th class="header">Case ID (<span id="th-CaseID-count">51</span>)</th><th class="header headerSortUp">Diagnosis Date (<span id="th-DiagnosisDate-count">0</span>)</th><th class="header">Health Facility District (<span id="th-HealthFacility District-count"></span>)</th><th class="header">Shehia (<span id="th-Shehia-count">0</span>)</th><th class="header">USSD Notification (<span id="th-USSDNotification-count">49</span>)</th><th class="header">Case Notification (<span id="th-CaseNotification-count">44</span>)</th><th class="header">Facility (<span id="th-Facility-count">35</span>)</th><th class="header">Household (<span id="th-Household-count">34</span>)</th><th class="header">Household Members (<span id="th-HouseholdMembers-count">137</span>)
+		</th></tr>
+	</thead> 
+	<tbody> 
+		<tr id="case-109535" class="odd"> 
+		  <td class="CaseID"> <a class="btn btn-small  mdl-button--primary" href="#show/case/109535">109535</button> </a> </td> 
+		  <td class="IndexCaseDiagnosisDate"> 2015-11-27 </td> 
+		  <td class="HealthFacilityDistrict"> MICHEWENI </td> 
+		  <td class="HealthFacilityDistrict high-risk-shehia"> TUMBE MASHARIKI </td> 
+		  <td class="USSDNotification"> <a href="#show/case/109535/e3f8034cfa0787f62c3e2828ff23f6f3"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">open_in_browser</i></button></a> </td> 
+		  <td class="CaseNotification"> <a href="#show/case/109535/5D6BE0EF-0BC7-14D7-86FD-CB5276243847"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">tap_and_play</i></button></a> </td> 
+		  <td class="Facility"> <a href="#show/case/109535/82E6F3E6-9490-CD3A-841E-1867BDBC3F31"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">error_outline</i></button></a> </td> 
+		  <td class="Household"> <a href="#show/case/109535/21D6F874-0017-5E31-B668-CF22FB69F327"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons household-incomplete">home</i></button></a> </td> 
+		  <td class="HouseholdMembers">  </td> 
+	    </tr>
+		<tr id="case-109536" class="even"> 
+			<td class="CaseID"> <a class="btn btn-small" href="#show/case/109536">109536</a> </td> 
+			<td class="IndexCaseDiagnosisDate"> 2015-11-22 </td> 
+			<td class="HealthFacilityDistrict"> MICHEWENI </td> 
+			<td class="HealthFacilityDistrict high-risk-shehia"> TUMBE MASHARIKI </td> 
+			<td class="USSDNotification"> <a href="#show/case/109536/e3f8034cfa0787f62c3e2828ff23eafc"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">open_in_browser</i></button></a> </td> 
+			<td class="CaseNotification"> <a href="#show/case/109536/89CB95DC-4611-8748-82C6-963F1987B811"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">tap_and_play</i></button></a> </td> 
+			<td class="Facility"> <a href="#show/case/109536/0F18E04C-1114-5AC2-9F0A-6F68DCBACA94"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">error_outline</i></button></a> </td> 
+			<td class="Household"> <a href="#show/case/109536/4FFA1963-9349-86F8-9B05-5D13A871A847"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons household">home</i></button></a> </td> 
+			<td class="HouseholdMembers"> 
+				<a href="#show/case/109536/30C70357-B9EE-ADF8-B5F6-49D0A2362BCE"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a>
+				<a href="#show/case/109536/4FD6EED6-0CCF-D2C5-A8D6-E004B6751B6C"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a>
+				<a href="#show/case/109536/6281C2CA-3989-C9D5-8A45-D493D45F28FC"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons hmembers-default">account_circle</i></button></a>
+				<a href="#show/case/109536/8A776700-2FC6-A1CE-9701-4E17490DC8C0"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a>
+				<a href="#show/case/109536/D762F789-93AC-5157-9D9C-C56DB0063219"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a>
+				<a href="#show/case/109536/DACC2965-5E64-5A54-A8C7-481DDA0EE9C9"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a> 			</td> 
+		</tr>
+		<tr id="case-109543" class="odd"> 
+			<td class="CaseID"> <a class="btn btn-small" href="#show/case/109543">109543</a> </td> 
+			<td class="IndexCaseDiagnosisDate"> 2015-11-03 </td> 
+			<td class="HealthFacilityDistrict"> MICHEWENI </td> 
+			<td class="HealthFacilityDistrict high-risk-shehia"> TUMBE MASHARIKI </td> 
+			<td class="USSDNotification"> <a href="#show/case/109543/e3f8034cfa0787f62c3e2828ffff8ef0"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">open_in_browser</i></button></a> </td> 
+			<td class="CaseNotification"> <a href="#show/case/109543/B1819281-DE22-4FD4-A72D-1CFE0775AA00"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">tap_and_play</i></button></a> </td> 
+			<td class="Facility"> <a href="#show/case/109543/5DF22F27-7C78-657A-BD9B-EF1AA6D694FC"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">error_outline</i></button></a> </td> 
+			<td class="Household"> <a href="#show/case/109543/5E4FC071-836A-8D9C-B4C2-4562610B4262"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons household">home</i></button></a> </td> 
+			<td class="HouseholdMembers"> <a href="#show/case/109543/33879CAC-1987-8E1F-8A71-D0C1B761A8CD"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109543/75C42219-7224-00B4-96E2-B0A77AEE217B"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109543/B23617DD-2031-6E88-BB3A-67A8038BB95D"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109543/D389B961-E7AD-2979-A175-F5AF11183D67"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109543/DCD007D6-C2D8-858B-9B3C-D9F178234210"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109543/E9149DCE-0B53-71B3-A38E-19A91993A292"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a> </td> 
+		</tr>
+		<tr id="case-109544" class="even"> 
+			<td class="CaseID"> <a class="btn btn-small" href="#show/case/109544">109544</a> </td> 
+			<td class="IndexCaseDiagnosisDate"> 2015-11-03 </td> 
+			<td class="HealthFacilityDistrict"> MJINI </td> <td class="HealthFacilityDistrict "> SHAURIMOYO </td> 
+			<td class="USSDNotification"> <a href="#show/case/109544/acc8ad536ff466f04215d16b7f1ec7f3"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">open_in_browser</i></button></a> </td> 
+			<td class="CaseNotification"> <a href="#show/case/109544/0b82d49eaaa04db6e0f98e3a5d001283"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">tap_and_play</i></button></a> </td> 
+			<td class="Facility"> <a href="#show/case/109544/0b82d49eaaa04db6e0f98e3a5d002bdb"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">error_outline</i></button></a> </td> 
+			<td class="Household"> <a href="#show/case/109544/9736394dda8cb265511f1896b5004f13"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons household-travel">home</i></button></a> </td> 
+			<td class="HouseholdMembers"> <a href="#show/case/109544/7c071dd6f49b6212d9ae31adad001ebe"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109544/7c071dd6f49b6212d9ae31adad002a4a"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109544/7c071dd6f49b6212d9ae31adad002c85"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"><i class="material-icons">account_circle</i></button></a> </td> 
+		</tr>
+		<tr id="case-109545" class="odd"> 
+			<td class="CaseID"> <a class="btn btn-small" href="#show/case/109545">109545</a> </td> 
+			<td class="IndexCaseDiagnosisDate"> 2015-11-03 </td> 
+			<td class="HealthFacilityDistrict"> WETE </td> <td class="HealthFacilityDistrict "> UKUNJWI </td> 
+			<td class="USSDNotification"> <a href="#show/case/109545/acc8ad536ff466f04215d16b7f3e447a"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">open_in_browser</i></button></a> </td> 
+			<td class="CaseNotification"> <a href="#show/case/109545/3d80bd340d0116e811c35fd33f000654"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">tap_and_play</i></button></a> </td> 
+			<td class="Facility"> <a href="#show/case/109545/3d80bd340d0116e811c35fd33f001170"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"><i class="material-icons">error_outline</i></button></a> </td> 
+			<td class="Household"> <a href="#show/case/109545/b95ddfefc6f6da231603c30569003bd8"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons household">home</i></button></a> </td> 
+			<td class="HouseholdMembers"> <a href="#show/case/109545/e1f9210a89c7dc62f789fa7cd7002231"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109545/e1f9210a89c7dc62f789fa7cd700256c"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109545/e1f9210a89c7dc62f789fa7cd7002d8c"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a> </td> 
+		</tr>
+		<tr id="case-109546" class="even"> 
+			<td class="CaseID"> <a class="btn btn-small mdl-button--primary" href="#show/case/109546">109546</a> </td> 
+			<td class="IndexCaseDiagnosisDate"> 2015-11-03 </td> 
+			<td class="HealthFacilityDistrict"> KATI </td> 
+			<td class="HealthFacilityDistrict high-risk-shehia"> TUNDUNI </td> 
+			<td class="USSDNotification"> <a href="#show/case/109546/acc8ad536ff466f04215d16b7f5df961"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">open_in_browser</i></button></a> </td> 
+			<td class="CaseNotification"> <a href="#show/case/109546/722ea3e6d30ae0b5a200a009a5001b17"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">tap_and_play</i></button></a> </td> 
+			<td class="Facility"> <a href="#show/case/109546/722ea3e6d30ae0b5a200a009a50030b8"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">error_outline</i></button></a> </td> 
+			<td class="Household">  </td> 
+			<td class="HouseholdMembers"> <a href="#show/case/109546/722ea3e6d30ae0b5a200a009a50089f3"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109546/722ea3e6d30ae0b5a200a009a5008a23"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109546/722ea3e6d30ae0b5a200a009a5008be2"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109546/722ea3e6d30ae0b5a200a009a5009638"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109546/722ea3e6d30ae0b5a200a009a5009c2c"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109546/722ea3e6d30ae0b5a200a009a500a55f"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109546/722ea3e6d30ae0b5a200a009a500afc2"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a> </td> 
+		</tr>
+		<tr id="case-109547" class="odd"> 
+			<td class="CaseID"> <a class="btn btn-small mdl-button--primary" href="#show/case/109547">109547</a> </td> 
+			<td class="IndexCaseDiagnosisDate"> 2015-11-03 </td> 
+			<td class="HealthFacilityDistrict"> MICHEWENI </td> 
+			<td class="HealthFacilityDistrict high-risk-shehia"> TUMBE MASHARIKI </td> 
+			<td class="USSDNotification"> <a href="#show/case/109547/acc8ad536ff466f04215d16b7f7e0ae3"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">open_in_browser</i></button></a> </td> 
+			<td class="CaseNotification"> <a href="#show/case/109547/f1353f8788e9efd8e52b439603001686"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">tap_and_play</i></button></a> </td> 
+			<td class="Facility">  </td> <td class="Household">  </td> 
+			<td class="HouseholdMembers">  </td> 
+		</tr>
+		<tr id="case-109530" class="even"> 
+			<td class="CaseID"> <a class="btn btn-small" href="#show/case/109530">109530</a> </td> 
+			<td class="IndexCaseDiagnosisDate"> 2015-11-02 </td> 
+			<td class="HealthFacilityDistrict"> MICHEWENI </td> 
+			<td class="HealthFacilityDistrict high-risk-shehia"> TUMBE MASHARIKI </td> 
+			<td class="USSDNotification"> <a href="#show/case/109530/37b3c3239e37805e59953e0328a6fd6e"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">open_in_browser</i></button></a> </td> 
+			<td class="CaseNotification"> <a href="#show/case/109530/EF29D361-55C6-49B0-A399-D6F4C857E6F9"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">tap_and_play</i></button></a> </td> 
+			<td class="Facility"> <a href="#show/case/109530/698B1629-00A0-597C-AE5A-290D712C9C88"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"><i class="material-icons">error_outline</i></button></a> </td> <td class="Household"> <a href="#show/case/109530/E2655868-F7CC-6357-807A-CCB624A8E891"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons household">home</i></button></a> </td> 
+			<td class="HouseholdMembers"> <a href="#show/case/109530/0816159F-8E18-B2D8-80DE-6149D99425F9"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109530/1A98454C-10E1-7F43-9E8C-7C7B064EA7AD"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons c_orange">account_circle</i></button></a><a href="#show/case/109530/2D870821-2750-CB1B-9F23-A14A956A557B"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109530/9DBD44CD-86F3-BC0F-90F9-E03BB539524F"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a><a href="#show/case/109530/E1AB1050-E76B-7EF8-A7F1-4CE22B4123B7"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button><a href="#show/case/109530/ECBB3A83-603E-06B9-98B1-8901159FF267"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="material-icons">account_circle</i></button></a> </td> 
+		</tr>
+	</tbody> 
+	</table>
+</div>
+  <script>
+    $(document).ready(function() {
+      $("#alerts-drop").click(function(){
+      	  $("#alerts-section").slideToggle();
+      });
+      $("#cases-drop").click(function(){
+      	  $("#cases-section").slideToggle();
+      });
+      $("#legend-drop").click(function(){
+      	  $("#legend-section").slideToggle();
+      });
+	});
+</script>	    	  
