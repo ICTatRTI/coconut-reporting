@@ -11,9 +11,12 @@ CocoManager.module("ReportsApp.List", function(List, CocoManager, Backbone, Mari
 	    CocoManager.Dashboard.Show.Controller.showDashboard();
 		
 	    $("#report-template").load(report_name, function(){
-			var reportView = new CocoManager.ReportView();
-			reportView.render();
-			CocoManager.mainRegion.show(reportView);
+	  	    var rptHeaderView = new List.ReportOptionsView();
+	        CocoManager.dashboard.dashHeaderRegion.show(rptHeaderView);
+			
+			var reportView = new List.ReportView();
+			//CocoManager.mainRegion.show(reportView);
+			CocoManager.dashboard.dashMainRegion.show(reportView);
 	    });
 	}
 	

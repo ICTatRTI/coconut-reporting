@@ -94,7 +94,7 @@ table.tablesorter tr {
 }
 
 table.tablesorter thead tr .header {
-	background-image: url(bg.gif);
+	background-image: url(../img/bg.gif);
 	background-repeat: no-repeat;
 	background-position: center right;
 	cursor: pointer;
@@ -120,10 +120,10 @@ table.tablesorter tbody tr.odd td {
 */
 
 table.tablesorter thead tr .headerSortUp {
-	background-image: url(asc.gif);
+	background-image: url(../img/asc.gif);
 }
 table.tablesorter thead tr .headerSortDown {
-	background-image: url(desc.gif);
+	background-image: url(../img/desc.gif);
 }
 
 table.tablesorter tbody td.high-risk-shehia{
@@ -211,10 +211,14 @@ table.tablesorter {
   margin:  0px 20px;	
 }
 
-.report-content {
-  margin:  0px 20px;
+.report-content, .report-header {
+  margin:  0px 10px;
   padding: 5px;	
   background: white;
+}
+
+.report-header {
+	margin:  10px 10px;
 }
 
 
@@ -252,7 +256,7 @@ table.tablesorter {
 }
 
 .mdl-layout__drawer{
-	width: 250px;
+	width: 240px;
 }
 
 .mdl-layout__drawer .mdl-navigation .report__link{
@@ -496,7 +500,7 @@ a.DTTT_button, button.DTTT_button, div.DTTT_button {
 }
 
 .summary {
-	height: 80px;
+	height: 55px;
 	margin: 0 5px;
 	padding-top: 20px;
 	text-align: left;

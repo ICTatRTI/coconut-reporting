@@ -1,7 +1,6 @@
 CocoManager.module("ReportsApp", function(ReportsApp, CocoManager, Backbone, Marionette, $, _){
   ReportsApp.Router = Marionette.AppRouter.extend({
     appRoutes: {
-      "reports" : "showReport",
 	  "reports/:id" : "showReport"			
     }
   });
@@ -12,7 +11,7 @@ CocoManager.module("ReportsApp", function(ReportsApp, CocoManager, Backbone, Mar
       //CocoManager.execute("set:active:header", "reports");
     },
 	
-    showReport: function(id){
+    showReport: function(id){	
       ReportsApp.List.Controller.showReport(id);
     },	
   };

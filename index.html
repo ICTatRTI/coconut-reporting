@@ -17,56 +17,68 @@
 	      <div id="header-region"></div>
 		  <div id="rmenu-region"></div>
 		  <div id="drawer-region"></div>
-		  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-		    <main class="mdl-layout__content main-region">
-			  <div class="sub-header-color relative clear">
-				  <div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
-						<div class="summary" id="summary1"> 
-							<div class="stats">54</div>
-							<div class="stats-title">ALERTS</div>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
-						<div class="summary" id="summary2"> 
-							<div class="stats">76</div>
-							<div class="stats-title">CASES</div>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
-						<div class="summary" id="summary3"> 
-							<div class="stats">32</div>
-							<div class="stats-title">ISSUES</div>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
-						<div class="summary" id="summary4"> 
-							<div class="stats">10</div>
-							<div class="stats-title">PILOT</div>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet"><div class="summary" id="summary1"> </div></div>
-					<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet"><div class="summary" id="summary1"> </div></div>
-				  </div>
-				  
-			  </div>
-	          <div id="main-region"></div>
-		    </main>	
-		  </div>	
-      	<div id="dialog-region"></div>
+		  <div id="main-region"></div>
+      	  <div id="dialog-region"></div>
      </div>
+	 
     <script type="text/template" id="dashboard-template">
+  	  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  	    <main class="mdl-layout__content main-region">
+		  <div id="dbheader-region"></div>
+		  <div id="dbmain-region"></div>
+	    </main>	
+	  </div>		  
+	</script>
 		
+	<script type="text/template" id="dashboard-header">
+		  <div class="sub-header-color relative clear">
+			  <div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+					<div class="summary" id="summary1"> 
+						<div class="stats">54</div>
+						<div class="stats-title">ALERTS</div>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+					<div class="summary" id="summary2"> 
+						<div class="stats">76</div>
+						<div class="stats-title">CASES</div>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+					<div class="summary" id="summary3"> 
+						<div class="stats">32</div>
+						<div class="stats-title">ISSUES</div>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+					<div class="summary" id="summary4"> 
+						<div class="stats">10</div>
+						<div class="stats-title">PILOT</div>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+					<div class="summary" id="summary1"> </div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+					<div class="summary" id="summary1"> </div>
+				</div>
+			  </div>
+		  </div>
 	</script>	
-    <script type="text/template" id="main-template">
-		  <div class="mdl-grid">
-			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart1.png" width="100%"></div>
-			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart2.png" width="100%"></div>
+    <script type="text/template" id="maincontent-template">
+		 <div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+				<img src="assets/img/chart1.png" width="100%">
+			</div>
+			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+				<img src="assets/img/chart2.png" width="100%">
+			</div>
 		  </div>
 		  <div class="mdl-grid">	
 			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart3.png" width="100%"></div>
 			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart4.png" width="100%"></div>
-		  </div>
+
     </script>
 		   
     <script type="text/template" id="header-template">
@@ -108,42 +120,42 @@
 		    <div class="mdl-layout-title" id="drawer-title">Coconut<br />Surveillance</div>
 		  </div>		  
   	      <nav class="mdl-navigation">
-			<a class="mdl-navigation__link report__link report__subtitle" href="#dashboard">  
+			<a class="mdl-navigation__link report__link report__subtitle" href="/index.html#dashboard">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">dashboard</i>
 			  Dashboard</a>
-			<a class="mdl-navigation__link report__link report__subtitle" href="#reports" id="report-main">  
+			<a class="mdl-navigation__link report__link report__subtitle" href="/index.html#reports" id="report-main">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">description</i>
 			Reports</a>
 			<div class="m-l-20" id="reports">    
-  	        <a class="mdl-navigation__link report__link m-b-20" href="#caseFollowup">
+  	        <a class="mdl-navigation__link report__link m-b-20" href="/index.html#reports/casefollowup">
 				Case Follow Up</a>
-  	        <a class="mdl-navigation__link report__link" href="#location">
+  	        <a class="mdl-navigation__link report__link" href="/index.html#reports/location">
 				Locations</a>
-  	        <a class="mdl-navigation__link report__link" href="#spreadsheet">
+  	        <a class="mdl-navigation__link report__link" href="#reports/spreadsheet">
 				Spreadsheet</a>
-  	        <a class="mdl-navigation__link report__link" href="#analysis">
+  	        <a class="mdl-navigation__link report__link" href="#reports/analysis">
 				Analysis</a>
-  		    <a class="mdl-navigation__link report__link" href="#alerts">
+  		    <a class="mdl-navigation__link report__link" href="#reports/alerts">
 				Alerts</a>
-  			<a class="mdl-navigation__link report__link" href="#weeklySummary">
+  			<a class="mdl-navigation__link report__link" href="#reports/weeklySummary">
 				Weekly Summary</a>
-  			<a class="mdl-navigation__link report__link" href="#periodSummary">
+  			<a class="mdl-navigation__link report__link" href="#reports/periodSummary">
 				Period Summary</a>
-  			<a class="mdl-navigation__link report__link" href="#incidentsGraph">
+  			<a class="mdl-navigation__link report__link" href="#reports/incidentsGraph">
 				Incidents Graph</a>
-  			<a class="mdl-navigation__link report__link" href="#systemErrors">
+  			<a class="mdl-navigation__link report__link" href="#reports/systemErrors">
 				System Errors</a>
-  			<a class="mdl-navigation__link report__link" href="#pilotNotifications">
+  			<a class="mdl-navigation__link report__link" href="#reports/pilotNotifications">
 				Pilot Notifications</a>
-  			<a class="mdl-navigation__link report__link" href="#usersReport">
+  			<a class="mdl-navigation__link report__link" href="#reports/usersReport">
 				Users Report</a>
-  			<a class="mdl-navigation__link report__link" href="#weeklyReports">
+  			<a class="mdl-navigation__link report__link" href="#reports/weeklyReports">
 				Weekly Reports</a>
-  			<a class="mdl-navigation__link report__link" href="#rainfallReport">
+  			<a class="mdl-navigation__link report__link" href="#reports/rainfallReport">
 				Rainfall Report</a>
-  			<a class="mdl-navigation__link report__link" href="#compareWeekly">
+  			<a class="mdl-navigation__link report__link" href="#reports/compareWeekly">
 				Compare Weekly with Cases Followup</a>
-  			<a class="mdl-navigation__link report__link" href="#epidemicThresholds">
+  			<a class="mdl-navigation__link report__link" href="#reports/epidemicThresholds">
 				Epidemic Thresholds</a>
 		   </div>
 			<a class="mdl-navigation__link report__link report__subtitle" href="#setting-main" id="setting-main">  
@@ -169,8 +181,9 @@
 	</div>	
     </script>
 	
-	<script type="text/template" id="report-template"> TEST </script>	
-
+	<script type="text/template" id="report-template"> </script>	
+    <script type="text/template" id="report-options-template">REPORT OPTIONS HERE</script>
+	
     <script src="./assets/js/vendor/material.min.js"> </script>
     <script src="./assets/js/vendor/jquery.js"></script>
     <script src="./assets/js/vendor/jquery-ui-1.10.3.js"></script>

@@ -17,20 +17,19 @@ CocoManager.getCurrentRoute = function(){
 };
 
 CocoManager.on("before:start", function(){
-  var AppLayoutView = Marionette.LayoutView.extend({
-    el: "#app-container",
+  var DashLayoutView = Marionette.LayoutView.extend({ 
+    template: "#dashboard-template",
 
     regions: {
-      headerRegion: "#header-region",
-      mainRegion: "#main-region",
-      drawerRegion: "#drawer-region",
-      dialog: "#dialog-region"
+      dashHeaderRegion: "#dbheader-region",
+      dashMainRegion: "#dbmain-region",
     }
   });
   
-CocoManager.regions = new AppLayoutView();
+CocoManager.dashboard = new DashLayoutView();
+CocoManager.mainRegion.show(CocoManager.dashboard);
 
-CocoManager.regions.dialog.onShow = function(view){
+CocoManager.dialog.onShow = function(view){
     var self = this;
     var closeDialog = function(){
       self.stopListening();
@@ -90,6 +89,7 @@ CocoManager.on("start", function(){
     if(Backbone.history){
       Backbone.history.start();
       CocoManager.Dashboard.Show.Controller.showDashboard();
+	  //CocoManager.ReportsApp.List.Controller.showReport();
 /*
       if(this.getCurrentRoute() === ""){
         CocoManager.trigger("contacts:list");

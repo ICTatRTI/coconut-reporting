@@ -1,8 +1,11 @@
 CocoManager.module("Dashboard.Show", function(Show, CocoManager, Backbone, Marionette, $, _){
-
-  Show.MainView = Marionette.ItemView.extend({
-	className: "page-content",
-	template: "#main-template"
+  
+  Show.DashboardView = Marionette.ItemView.extend({ 
+	template: "#maincontent-template"
+  });
+  
+  Show.DashheaderView = Marionette.ItemView.extend({
+	template: "#dashboard-header"
   });
 
   Show.ReportView = Marionette.ItemView.extend({
