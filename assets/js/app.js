@@ -70,31 +70,31 @@ CocoManager.DrawerView = Marionette.ItemView.extend({
 });
 		
 CocoManager.on("start", function(){
-	  
+/*	
 	var headerView = new CocoManager.HeaderView();
 	CocoManager.headerRegion.show(headerView);
 
 	var drawerView = new CocoManager.DrawerView();
 	CocoManager.drawerRegion.show(drawerView);
-/*
+
 	var mainView = new CocoManager.MainView();
 	CocoManager.mainRegion.show(mainView);
-*/
+
     $("#report-template").load("report.html", function(){
 		var reportView = new CocoManager.ReportView();
 		reportView.render();
 		CocoManager.mainRegion.show(reportView);
 		console.log($("#report-template").html());
     });
-
-/*		
+*/		
     if(Backbone.history){
       Backbone.history.start();
-  
+      CocoManager.Dashboard.Show.Controller.showDashboard();
+/*
       if(this.getCurrentRoute() === ""){
         CocoManager.trigger("contacts:list");
       }
-	  
+*/	  
 	}	
-	  */	
+	
 });
