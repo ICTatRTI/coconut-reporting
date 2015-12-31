@@ -1,18 +1,18 @@
-AppDashboard.module("HeaderApp", function(Header, AppDashboard, Backbone, Marionette, $, _){
+CocoManager.module("HeaderApp", function(Header, CocoManager, Backbone, Marionette, $, _){
   var API = {
-    listHeader: function(){
-      Header.List.Controller.listHeader();
+    showHeader: function(){
+      Header.Show.Controller.listHeader();
     },
 	rightMenu: function(){
-	 Header.List.Controller.rightMenu();	
+	 Header.Show.Controller.rightMenu();	
 	}
   };
 
-  AppDashboard.commands.setHandler("set:active:header", function(name){
-    AppDashboard.HeaderApp.List.Controller.setActiveHeader(name);
+  CocoManager.commands.setHandler("set:active:header", function(name){
+    CocoManager.HeaderApp.Show.Controller.setActiveHeader(name);
   });
 
   Header.on("start", function(){
-    API.listHeader();
+    API.showHeader();
   });
 });

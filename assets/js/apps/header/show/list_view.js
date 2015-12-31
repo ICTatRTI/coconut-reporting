@@ -1,5 +1,5 @@
-AppDashboard.module("HeaderApp.List", function(List, AppDashboard, Backbone, Marionette, $, _){
-  List.Header = Marionette.ItemView.extend({
+CocoManager.module("HeaderApp.Show", function(Show, CocoManager, Backbone, Marionette, $, _){
+  Show.Header = Marionette.ItemView.extend({
     template: "#header-link",
     tagName: "li",
 
@@ -20,10 +20,10 @@ AppDashboard.module("HeaderApp.List", function(List, AppDashboard, Backbone, Mar
     }
   });
 
-  List.Headers = Marionette.CompositeView.extend({
+  Show.Headers = Marionette.CompositeView.extend({
     template: "#header-template",
     className: "navbar navbar-inverse navbar-fixed-top",
-    childView: List.Header,
+    childView: Show.Header,
     childViewContainer: "ul",
 
     events: {
