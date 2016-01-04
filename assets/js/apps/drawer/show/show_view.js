@@ -11,7 +11,11 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 			if (classStr.indexOf('report__subtitle') == -1) {
 			   Backbone.history.navigate("reports/"+e.currentTarget.id, true);
 			   //this.trigger("navigate", this.id);
-			} 
-		},
+			} else {
+				if (e.currentTarget.id == "dashboard"){
+					Backbone.history.navigate(e.currentTarget.id, true);
+				}
+			}
+		}
 	  });	
 });
