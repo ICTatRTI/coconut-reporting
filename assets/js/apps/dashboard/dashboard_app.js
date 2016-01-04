@@ -8,7 +8,7 @@ CocoManager.module("Dashboard", function(Dashboard, CocoManager, Backbone, Mario
   var API = {
     showDashboard: function(){
       Dashboard.Show.Controller.showDashboard();
-      CocoManager.execute("set:active:header", "about");
+      //CocoManager.execute("set:active:header", "about");
     }
   };
 

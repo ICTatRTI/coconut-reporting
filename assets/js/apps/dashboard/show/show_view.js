@@ -17,7 +17,5 @@ CocoManager.module("Dashboard.Show", function(Show, CocoManager, Backbone, Mario
 	template: "#header-template"
   });
 
-  Show.DrawerView = Marionette.ItemView.extend({
-	template: "#drawer-template"
-  });
+  
 });
