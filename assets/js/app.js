@@ -88,13 +88,12 @@ CocoManager.on("start", function(){
 */		
     if(Backbone.history){
       Backbone.history.start();
-      CocoManager.Dashboard.Show.Controller.showDashboard();
-	  //CocoManager.ReportsApp.List.Controller.showReport();
-/*
+
       if(this.getCurrentRoute() === ""){
-        CocoManager.trigger("contacts:list");
+	    CocoManager.Dashboard.Show.Controller.showDashboard();
+        //CocoManager.trigger("contacts:list");
       }
-*/	  
+	  
 	}	
 	
 });
