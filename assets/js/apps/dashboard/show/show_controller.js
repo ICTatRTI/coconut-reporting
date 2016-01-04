@@ -9,6 +9,9 @@ CocoManager.module("Dashboard.Show", function(Show, CocoManager, Backbone, Mario
 	  
 	  var mainView = new Show.DashboardView();
 	  CocoManager.dashboard.dashMainRegion.show(mainView);
+	  
+	  var drawerView = new Show.DrawerView();
+	  CocoManager.DrawerRegion.show(drawerView);
     }
   };
 });
