@@ -7,8 +7,8 @@ CocoManager.module("Dashboard", function(Dashboard, CocoManager, Backbone, Mario
 
   var API = {
     showDashboard: function(){
+	  Backbone.history.navigate("dashboard");	
       Dashboard.Show.Controller.showDashboard();
-      //CocoManager.execute("set:active:header", "about");
     }
   };
 
@@ -18,8 +18,11 @@ CocoManager.module("Dashboard", function(Dashboard, CocoManager, Backbone, Mario
   });
 
   Dashboard.on("start", function(){
+	  
     new Dashboard.Router({
       controller: API
     });
+	API.showDashboard();
+	  
   });
 });

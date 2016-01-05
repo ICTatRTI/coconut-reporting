@@ -89,11 +89,11 @@ CocoManager.on("start", function(){
     if(Backbone.history){
       Backbone.history.start();
 
-      if(this.getCurrentRoute() === ""){
+/*      if(this.getCurrentRoute() === ""){
 	    CocoManager.Dashboard.Show.Controller.showDashboard();
         //CocoManager.trigger("contacts:list");
       }
-	  
+*/	  
 	}	
 	
 });

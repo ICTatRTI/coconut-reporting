@@ -1,7 +1,8 @@
 CocoManager.module("Dashboard.Show", function(Show, CocoManager, Backbone, Marionette, $, _){
   
   Show.DashboardView = Marionette.ItemView.extend({ 
-	template: "#maincontent-template"
+	template: "#maincontent-template",
+	  className: "dashboard-content"  
   });
   
   Show.DashheaderView = Marionette.ItemView.extend({

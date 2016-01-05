@@ -14,20 +14,30 @@
   </head>
   <body>
      <div id="app-container">
-	      <div id="header-region"></div>
-		  <div id="rmenu-region"></div>
-		  <div id="drawer-region"></div>
-		  <div id="main-region"></div>
-      	  <div id="dialog-region"></div>
+		 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+		   <header class="mdl-layout__header">
+		     <div class="mdl-layout__header-row">
+		 		<div class="mdl-layout-icon"></div>  
+		 	    <div class="mdl-layout__header-row">
+				 	<span class="mdl-layout-title">Dashboard</span>
+					<div id="header-region"></div>
+				</div>		
+				 
+		     </div>
+		   </header>
+		   <div class="mdl-layout__drawer">
+			 <div id="drawer-region"></div>  
+		   </div>
+		   <main class="mdl-layout__content">
+				 <div id="main-region"></div>
+		   </main>
+		 </div>
+		 <div id="dialog-region"></div>
      </div>
 	 
     <script type="text/template" id="dashboard-template">
-  	  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-  	    <main class="mdl-layout__content main-region">
 		  <div id="dbheader-region"></div>
-		  <div id="dbmain-region"></div>
-	    </main>	
-	  </div>		  
+		  <div id="dbmain-region"></div>		  
 	</script>
 		
 	<script type="text/template" id="dashboard-header">
@@ -82,12 +92,6 @@
     </script>
 		   
     <script type="text/template" id="header-template">
-	  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-       <header class="mdl-layout__header">
-		<div class="mdl-layout-icon"></div>  
-	    <div class="mdl-layout__header-row">
-	      <!-- Title -->
-	      <span class="mdl-layout-title">Dashboard</span>
 		  <div id="report-title"> </div>
 		  <div class="mdl-layout-spacer"></div>
   	      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
@@ -107,14 +111,9 @@
 			  <li class="mdl-menu__item" id="logout">Logout</li>
 			</ul>
   	      </div>
-		</div> 
-	   </header>
-	  </div>
     </script>
 		
     <script type="text/template" id="drawer-template">
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">	
-  	  <div class="mdl-layout__drawer">
 		  <div class="clear m-t-30">
   	        <div class="f-left m-l-20"><img src="assets/img/CSLogo.png" id="cslogo_sm"></div>
 		    <div class="mdl-layout-title" id="drawer-title">Coconut<br />Surveillance</div>
@@ -158,6 +157,14 @@
   			<a class="mdl-navigation__link report__link" id = "epodemicthresholds" href="#reports/epidemicThresholds">
 				Epidemic Thresholds</a>
 		   </div>
+			<a class="mdl-navigation__link report__link report__subtitle" href="#activity-main" id="activity-main">  
+			  <i class="mdl-color-text--blue-grey-400 material-icons">local_activity</i>
+			Activities
+		    </a>
+			<div class="m-l-20" id="activities">    
+	  	        <a class="mdl-navigation__link report__link m-b-20" href="#issues">
+					Issues</a>
+			</div>		
 			<a class="mdl-navigation__link report__link report__subtitle" href="#setting-main" id="setting-main">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">settings</i>
 			Settings
@@ -176,9 +183,7 @@
 	  	        <a class="mdl-navigation__link report__link m-b-20" href="#setting4">
 					Setting 4</a>
 			</div>	
-  	      </nav>
-        </div>
-	</div>	
+  	      </nav>	
     </script>
 	
 	<script type="text/template" id="report-template"> </script>	
@@ -215,6 +220,9 @@
 		   });
 		   $("#setting-main").click(function(){
 		   	   $("#settings").slideToggle();
+		   });
+		   $("#activity-main").click(function(){
+		   	   $("#activities").slideToggle();
 		   });
 		   
 	   });

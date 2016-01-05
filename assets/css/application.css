@@ -62,7 +62,7 @@ body {
 	padding-bottom: 0;
 }
 
-#reports, #settings {
+#reports, #settings, #activities {
 	display: none;
 }
 
@@ -258,9 +258,16 @@ table.tablesorter {
 .mdl-layout__drawer{
 	width: 240px;
 }
+.mdl-layout__drawer .mdl-navigation {
+	margin: 20px 0 0 25px;
+}
 
 .mdl-layout__drawer .mdl-navigation .report__link{
-	padding: 5px 50px;
+	padding: 5px 20px;
+}
+
+.mdl-layout--fixed-drawer>.mdl-layout__header .mdl-layout__header-row {
+	padding-left: 20px;
 }
 
 .report__subtitle {
@@ -538,6 +545,9 @@ a.DTTT_button, button.DTTT_button, div.DTTT_button {
    padding: 5px 20px;	
 }
 
+.dashboard-content {
+	background: #e0e0e0;	
+}
 /* margins setting */
 
 .f-left {

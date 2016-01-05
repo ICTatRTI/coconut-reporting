@@ -17,8 +17,9 @@ CocoManager.module("DrawerApp", function(DrawerApp, CocoManager, Backbone, Mario
   });
 
   DrawerApp.on("start", function(){
-    new DrawerApp.Router({
-      controller: API
-    });
+    //new DrawerApp.Router({
+    //  controller: API
+		//});
+		API.showDrawer();
   });
 });
