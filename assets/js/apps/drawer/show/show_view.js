@@ -6,14 +6,15 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		},
 
 		navigate: function(e){
-			e.preventDefault();
+			e.preventDefault();;
+			var reportname = e.currentTarget.id;
 			var classStr = $(e.currentTarget).attr('class');
-			if (classStr.indexOf('report__subtitle') == -1) {
-			   Backbone.history.navigate("reports/"+e.currentTarget.id, true);
-			   //this.trigger("navigate", this.id);
+			if (classStr.indexOf('report__subtitle') == -1) {;
+			   this.trigger("report:clicked", reportname);
 			} else {
-				if (e.currentTarget.id == "dashboard"){
-					Backbone.history.navigate(e.currentTarget.id, true);
+				if (reportname == "dashboard"){
+					Backbone.history.navigate(reportname, true);
+					CocoManager.Dashboard.Show.Controller.showDashboard();
 				}
 			}
 		}

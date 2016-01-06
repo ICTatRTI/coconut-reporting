@@ -1,30 +1,21 @@
 CocoManager.module("ReportsApp", function(ReportsApp, CocoManager, Backbone, Marionette, $, _){
   ReportsApp.Router = Marionette.AppRouter.extend({
     appRoutes: {
-	  "reports/:id" : "showReport"			
+	  "reports/:name" : "showReport"			
     }
   });
 
   var API = {
-    listReports: function(){
-      ReportsApp.List.Controller.listReports();
-      //CocoManager.execute("set:active:header", "reports");
-    },
-	
-    showReport: function(id){	
-      ReportsApp.List.Controller.showReport(id);
+    showReport: function(name){	
+      ReportsApp.List.Controller.showReport(name);
     },	
   };
 
-  CocoManager.on("reports:list", function(){
-    //CocoManager.navigate("reports");
-    API.listReports();
+  CocoManager.on("reports:show", function(reportname){
+    CocoManager.navigate("reports/"+reportname);
+    API.showReport(reportname);
   });
-  
-  CocoManager.on("reports:show", function(){
-    //CocoManager.navigate("reports");
-    API.showReport();
-  });
+
 
   ReportsApp.on("start", function(){
     new ReportsApp.Router({

@@ -94,14 +94,9 @@
     <script type="text/template" id="header-template">
 		  <div id="report-title"> </div>
 		  <div class="mdl-layout-spacer"></div>
-  	      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-  	                  mdl-textfield--floating-label mdl-textfield--align-right more-vert">
-  	        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="menu-top-right" data-upgraded=",MaterialButton,MaterialRipple"> 
+  
+  	        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="menu-top-right"> 
 				<i class="material-icons">more_vert</i> 
-				<span class="mdl-button__ripple-container">
-					<span class="mdl-ripple is-animating" style="width: 171.706px; height: 171.706px; transform: translate(-50%, -50%) translate(38px, 28px);">
-					</span>
-				</span>
 			</button>
 			<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
 			    for="menu-top-right">
@@ -110,7 +105,7 @@
 			  <li disabled class="mdl-menu__item">Disabled Action</li>
 			  <li class="mdl-menu__item" id="logout">Logout</li>
 			</ul>
-  	      </div>
+
     </script>
 		
     <script type="text/template" id="drawer-template">
@@ -134,10 +129,10 @@
 				Spreadsheet</a>
   	        <a class="mdl-navigation__link report__link" id = "analysis" href="#reports/analysis">
 				Analysis</a>
-  		    <a class="mdl-navigation__link report__link" id = "alerts" href="#reports/alerts">
-				Alerts</a>
   			<a class="mdl-navigation__link report__link" id = "weeklysummary" href="#reports/weeklySummary">
 				Weekly Summary</a>
+  		    <a class="mdl-navigation__link report__link" id = "alerts" href="#reports/alerts">
+				Alerts</a>	
   			<a class="mdl-navigation__link report__link" id = "periodsummary" href="#reports/periodSummary">
 				Period Summary</a>
   			<a class="mdl-navigation__link report__link" id = "incidentsgraph" href="#reports/incidentsGraph">
