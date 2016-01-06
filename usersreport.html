@@ -1,0 +1,294 @@
+<div id="reportContents">
+	<style> td.number{ text-align: center; vertical-align: middle; } </style> 
+	<div id="users"> 
+		<h3>How fast are followups occuring?</h3> 
+		<div class="userReports">
+			<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">file_download</i></button>
+			All Users</h4>
+		</div>
+		<div id="allUsers" class="user-report hide">
+		  <table style="font-size:120%" class="tablesorter" usersreporttotals=""> 
+			<tbody> 
+				<tr style="font-weight:bold" id="medianTimeFromSMSToCompleteHousehold">
+					<td>Median time from SMS sent to Complete Household</td>
+					<td>3 days</td>
+				</tr> 
+				<tr class="odd" id="cases">
+					<td>Cases</td>
+					<td>62</td>
+				</tr> 
+				<tr id="casesWithoutCompleteFacilityAfter24Hours">
+					<td>Cases without completed <b>facility</b> record 24 hours after facility notification</td>
+					<td>21</td>
+				</tr> 
+				<tr class="odd" id="casesWithoutCompleteHouseholdAfter48Hours">
+					<td>Cases without complete <b>household</b> record 48 hours after facility notification</td>
+					<td>23</td>
+				</tr> 
+				<tr id="casesWithCompleteHousehold">
+					<td>Cases with complete household record</td>
+					<td>26</td>
+				</tr> 
+				<tr class="odd" id="medianTimeFromSMSToCaseNotification">
+					<td>Median time from SMS sent to Case Notification on tablet</td>
+					<td>2 days</td>
+				</tr> 
+				<tr id="medianTimeFromCaseNotificationToCompleteFacility">
+					<td>Median time from Case Notification to Complete Facility</td>
+					<td>18 hours</td>
+				</tr> 
+				<tr class="odd" id="medianTimeFromFacilityToCompleteHousehold">
+					<td>Median time from Complete Facility to Complete Household</td>
+					<td>8 hours</td>
+				</tr> 
+			</tbody> 
+		  </table> 
+		</div>
+		<div class="userReports">
+			<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">file_download</i></button>
+			By User</h4>
+		</div>  
+		<div id="usersReport_wrapper" class="dataTables_wrapper no-footer user-report hide">
+			<div class="DTTT_container">
+				<a class="DTTT_button DTTT_button_copy" id="ToolTables_usersReport_0" tabindex="0" aria-controls="usersReport"><span>Copy</span>
+					<div style="position: absolute; left: 0px; top: 0px; width: 51px; height: 28px; z-index: 99;">
+						<embed id="ZeroClipboard_TableToolsMovie_2" src="./assets/js/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="51" height="28" name="ZeroClipboard_TableToolsMovie_2" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=51&amp;height=28" wmode="transparent">
+						</div>
+					</a>
+					<a class="DTTT_button DTTT_button_csv" id="ToolTables_usersReport_1" tabindex="0" aria-controls="usersReport"><span>CSV</span>
+						<div style="position: absolute; left: 0px; top: 0px; width: 47px; height: 28px; z-index: 99;">
+							<embed id="ZeroClipboard_TableToolsMovie_3" src="./assets/js/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="47" height="28" name="ZeroClipboard_TableToolsMovie_3" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=3&amp;width=47&amp;height=28" wmode="transparent">
+							</div>
+						</a>
+						<a class="DTTT_button DTTT_button_xls" id="ToolTables_usersReport_2" tabindex="0" aria-controls="usersReport"><span>Excel</span>
+							<div style="position: absolute; left: 0px; top: 0px; width: 52px; height: 28px; z-index: 99;">
+								<embed id="ZeroClipboard_TableToolsMovie_4" src="./assets/js/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="52" height="28" name="ZeroClipboard_TableToolsMovie_4" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=4&amp;width=52&amp;height=28" wmode="transparent">
+								</div>
+							</a>
+							<a class="DTTT_button DTTT_button_pdf" id="ToolTables_usersReport_3" tabindex="0" aria-controls="usersReport"><span>PDF</span>
+								<div style="position: absolute; left: 0px; top: 0px; width: 46px; height: 28px; z-index: 99;">
+									<embed id="ZeroClipboard_TableToolsMovie_5" src="./assets/js/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="46" height="28" name="ZeroClipboard_TableToolsMovie_5" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=5&amp;width=46&amp;height=28" wmode="transparent">
+								</div>
+							</a>
+							<a class="DTTT_button DTTT_button_print" id="ToolTables_usersReport_4" title="View print view" tabindex="0" aria-controls="usersReport"><span>Print</span></a>
+						</div>
+						<div class="clear"></div>
+						<div class="dataTables_length" id="usersReport_length">
+							<label>Show <select name="usersReport_length" aria-controls="usersReport" class="">
+								<option value="10">10</option>
+								<option value="25">25</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+							</select> entries</label>
+						</div>
+						<div id="usersReport_filter" class="dataTables_filter">
+							<label>Search:<input type="search" class="" placeholder="" aria-controls="usersReport"></label>
+						</div>
+						<table class="tablesorter dataTable no-footer" style="" id="usersReport" role="grid" aria-describedby="usersReport_info"> 
+							<thead> 
+								<tr role="row">
+									<th class="sorting" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 67px;">Name</th>
+									<th class="sorting" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="District: activate to sort column ascending" style="width: 84px;">District</th>
+									<th class="sorting_desc" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="Cases: activate to sort column ascending" style="width: 39px;">Cases</th>
+									<th class="sorting_desc" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-sort="descending" aria-label="Cases without complete facility record 24 hours after facility notification: activate to sort column ascending" style="width: 204px;">Cases without complete <b>facility</b> record 24 hours after facility notification</th>
+									<th class="sorting" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="Cases without complete facility record: activate to sort column ascending" style="width: 106px;">Cases without complete <b>facility</b> record</th>
+									<th class="sorting" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="Cases without complete household record 48 hours after facility notification: activate to sort column ascending" style="width: 215px;">Cases without complete <b>household</b> record 48 hours after facility notification</th>
+									<th class="sorting" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="Cases without complete household record: activate to sort column ascending" style="width: 119px;">Cases without complete <b>household</b> record</th>
+									<th class="sorting" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="Median time from SMS sent to Case Notification on tablet (IQR): activate to sort column ascending" style="width: 177px;">Median time from SMS sent to Case Notification on tablet (IQR)</th>
+									<th class="sorting" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="Median time from Case Notification to Complete Facility (IQR): activate to sort column ascending" style="width: 174px;">Median time from Case Notification to Complete Facility (IQR)</th>
+									<th class="sorting" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="Median time from Complete Facility to Complete Household (IQR): activate to sort column ascending" style="width: 185px;">Median time from Complete Facility to Complete Household (IQR)</th>
+									<th class="sorting" tabindex="0" aria-controls="usersReport" rowspan="1" colspan="1" aria-label="Median time from SMS sent to Complete Household (IQR): activate to sort column ascending" style="width: 163px;">Median time from SMS sent to Complete Household (IQR)</th>
+								</tr>
+							</thead> 
+							<tbody>  
+								<tr id="0777437355" role="row" class="odd"> 
+									<td>Abass Rajab Ussi</td> 
+									<td>WEST</td> 
+									<td data-type="num" data-sort="14" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">14</button> </td> 
+									<td class="number sorting_1" data-sort="7" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">7</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button></td> 
+									<td class="number" data-sort="9" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">9</button></td> 
+									<td class="number" data-sort="9" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">9</button> </td> 
+									<td data-sort="153986000" class="number">2 days (a day,3 days)</td>
+									<td data-sort="1256090500" class="number">15 days (5 days,a month)</td>
+									<td data-sort="1290654000" class="number">15 days (15 days,a month)</td>
+									<td data-sort="3834010000" class="number">a month (a month,2 months)</td>
+								</tr>
+								<tr id="0777709534" role="row" class="even"> 
+									<td>Haji Ramadhan Haji</td> 
+									<td>URBAN</td> 
+									<td data-type="num" data-sort="6" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">6</button></td> 
+									<td class="number sorting_1" data-sort="5" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">5</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button></td> 
+									<td class="number" data-sort="5" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">5</button> </td> 
+									<td data-sort="89403000" class="number">a day (11 hours,a day)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+								</tr>
+								<tr id="0777879374" role="row" class="odd"> 
+									<td>Shaban Khamis Haji</td> 
+									<td>CENTRAL</td> 
+									<td data-type="num" data-sort="6" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">6</button> </td> 
+									<td class="number sorting_1" data-sort="3" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">3</button></td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="4" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">4</button></td> 
+									<td class="number" data-sort="4" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">4</button> </td> 
+									<td data-sort="91851000" class="number">a day (a day,a day)</td>
+									<td data-sort="41668000" class="number">12 hours (12 hours,-)</td>
+									<td data-sort="546000" class="number">9 minutes (9 minutes,9 minutes)</td>
+									<td data-sort="176912000" class="number">2 days (2 days,2 days)</td>
+								</tr>
+								<tr id="0778210070" role="row" class="even"> 
+									<td>Habiba Suleiman Seif</td> 
+									<td>WEST</td> 
+									<td data-type="num" data-sort="4" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">4</button> </td> 
+									<td class="number sorting_1" data-sort="3" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">3</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="3" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">3</button></td> 
+									<td class="number" data-sort="3" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">3</button> </td> 
+									<td data-sort="551909000" class="number">6 days (4 days,10 days)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+								</tr>
+								<tr id="hmkali" role="row" class="odd"> 
+									<td>Humphrey Mkali</td> 
+									<td>-</td> 
+									<td data-type="num" data-sort="4" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">4</button> </td> 
+									<td class="number sorting_1" data-sort="2" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">2</button> </td> 
+									<td class="number" data-sort="1" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">1</button> </td> 
+									<td class="number" data-sort="1" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">1</button> </td> 
+									<td data-sort="5464000" class="number">2 hours (2 hours,2 hours)</td>
+									<td data-sort="10126000" class="number">3 hours (3 hours,3 hours)</td>
+									<td data-sort="33099000" class="number">9 hours (9 hours,9 hours)</td>
+									<td data-sort="613759000" class="number">7 days (7 days,7 days)</td>
+								</tr>
+								<tr id="0777828511" role="row" class="even"> 
+									<td>Khamis A Salum</td> 
+									<td>NORTH B</td> 
+									<td data-type="num" data-sort="4" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">4</button> </td> 
+									<td class="number sorting_1" data-sort="1" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">1</button> </td> 
+									<td class="number" data-sort="1" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">1</button> </td> 
+									<td class="number" data-sort="1" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">1</button> </td> 
+									<td data-sort="340329000" class="number">4 days (4 days,4 days)</td>
+									<td data-sort="588000" class="number">10 minutes (10 minutes,-)</td>
+									<td data-sort="19011000" class="number">5 hours (5 hours,-)</td>
+									<td data-sort="360076000" class="number">4 days (4 days,-)</td>
+								</tr>
+								<tr id="0773662538" role="row" class="odd"> 
+									<td>Bakari Juma</td> <td>URBAN</td> 
+									<td data-type="num" data-sort="12" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">12</button> </td> 
+									<td class="number sorting_1" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td data-sort="71187000" class="number">20 hours (42 minutes,2 days)</td>
+									<td data-sort="5524000" class="number">2 hours (7 minutes,18 hours)</td>
+									<td data-sort="9315000" class="number">3 hours (an hour,10 hours)</td>
+									<td data-sort="142736500" class="number">2 days (21 hours,4 days)</td>
+								</tr>
+								<tr id="0777708047" role="row" class="even"> 
+									<td>Ramadhan Seif Nassor</td> 
+									<td>NORTH B</td> 
+									<td data-type="num" data-sort="3" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">3</button></td> 
+									<td class="number sorting_1" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td data-sort="159989500" class="number">2 days (2 days,-)</td>
+									<td data-sort="138418000" class="number">2 days (2 days,-)</td>
+									<td data-sort="30960000" class="number">- (-,-)</td>
+									<td data-sort="300567500" class="number">3 days (3 days,-)</td>
+								</tr>
+								<tr id="0773196360" role="row" class="odd"> 
+									<td>Fauhat Ali Massoud</td> 
+									<td>CHAKECHAKE</td> 
+									<td data-type="num" data-sort="2" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">2</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button></td> 
+									<td data-sort="151348000" class="number">2 days (-,-)</td>
+									<td data-sort="180000" class="number">- (-,-)</td>
+									<td data-sort="4346000" class="number">an hour (-,-)</td>
+									<td data-sort="155874000" class="number">2 days (-,-)</td>
+								</tr>
+								<tr id="0773513887" role="row" class="even"> 
+									<td>Saidi Masoud Ali</td> 
+									<td>MICHEWENI</td> 
+									<td data-type="num" data-sort="2" class="number sorting_2">
+										<button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">2</button> 
+									</td> 
+									<td class="number sorting_1" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td data-sort="-6095000" class="number">2 hours (-,-)</td>
+									<td data-sort="856257000" class="number">10 days (-,-)</td>
+									<td data-sort="81000" class="number">a minute (-,-)</td>
+									<td data-sort="850243000" class="number">10 days (-,-)</td>
+								</tr>
+								<tr id="0777240940" role="row" class="odd"> 
+									<td>Mgana Othman Mgana</td> 
+									<td>SOUTH</td> 
+									<td data-type="num" data-sort="2" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">2</button> </td> 
+									<td class="number sorting_1" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td data-sort="4852000" class="number">an hour (-,-)</td>
+									<td data-sort="2250068000" class="number">a month (-,-)</td>
+									<td data-sort="30531000" class="number">8 hours (-,-)</td>
+									<td data-sort="2256651000" class="number">a month (-,-)</td>
+								</tr>
+								<tr id="0777481615" role="row" class="even"> 
+									<td>Ali Mohammed Ali</td> 
+									<td>NORTH A</td> 
+									<td data-type="num" data-sort="2" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">2</button></td> 
+									<td class="number sorting_1" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> 
+									</td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td data-sort="7314000" class="number">2 hours (-,-)</td>
+									<td data-sort="683000" class="number">11 minutes (-,-)</td>
+									<td data-sort="32459000" class="number">9 hours (-,-)</td>
+									<td data-sort="11656000" class="number">3 hours (-,-)</td>
+								</tr>
+								<tr id="0772632770" role="row" class="odd"> 
+									<td>Rashi Abdallah Seif</td> 
+									<td>MICHEWENI</td> <td data-type="num" data-sort="1" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">1</button></td> 
+									<td class="number sorting_1" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> =</td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+								</tr>
+								<tr id="0777477900" role="row" class="even"> <td>Gharib Hasani</td> 
+									<td>CHAKECHAKE</td> 
+									<td data-type="num" data-sort="1" class="number sorting_2"><button type="button" onclick="$(this).parent().children(&quot;div&quot;).toggle()">1</button> </td> 
+									<td class="number sorting_1" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td class="number" data-sort="0" }=""><button onclick="$(this).parent().children(&quot;div&quot;).toggle()" type="button">-</button> </td> 
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+									<td data-sort="NaN" class="number">- (-,-)</td>
+								</tr>
+						</tbody> 
+		</table>
+		<div class="dataTables_info" id="usersReport_info" role="status" aria-live="polite">Showing 1 to 14 of 14 entries</div>
+		<div class="dataTables_paginate paging_simple_numbers" id="usersReport_paginate"><a class="paginate_button previous disabled" aria-controls="usersReport" data-dt-idx="0" tabindex="0" id="usersReport_previous">Previous</a><span><a class="paginate_button current" aria-controls="usersReport" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="usersReport" data-dt-idx="2" tabindex="0" id="usersReport_next">Next</a>
+		</div>
+	</div> 
+   </div>
+</div>
+<script>
+	$(".userReports").click(function(){
+	  $(this).next(".user-report").slideToggle();
+	  toggleSlideIcon(this);
+	});
+</script>

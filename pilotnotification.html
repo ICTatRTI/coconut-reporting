@@ -1,0 +1,930 @@
+<div id="reportContents">
+	<div class="caseNotifications">
+		<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">file_download</i></button>
+		Comparison of Case Notifications from USSD vs Pilot at all pilot sites</h4>
+	</div>
+   <div id="comparison" class="case-notifications hide">
+		<div style="background-color:#FFCCCC"> Pink entries are unmatched. If they cannot be matched (due to spelling differences for instance) recommend calling facility to find out why the case was not sent with both systems. </div> 
+		<div id="comparison_wrapper" class="dataTables_wrapper no-footer">
+			<div class="DTTT_container">
+				<a class="DTTT_button DTTT_button_copy" id="ToolTables_comparison_0" tabindex="0" aria-controls="comparison"><span>Copy</span>
+					<div style="position: absolute; left: 0px; top: 0px; width: 51px; height: 28px; z-index: 99;">
+						<embed id="ZeroClipboard_TableToolsMovie_7" src="./assets/js/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="51" height="28" name="ZeroClipboard_TableToolsMovie_7" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=7&amp;width=51&amp;height=28" wmode="transparent">
+					</div>
+				</a>
+				<a class="DTTT_button DTTT_button_csv" id="ToolTables_comparison_1" tabindex="0" aria-controls="comparison"><span>CSV</span>
+					<div style="position: absolute; left: 0px; top: 0px; width: 47px; height: 28px; z-index: 99;">
+						<embed id="ZeroClipboard_TableToolsMovie_8" src="./assets/js/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="47" height="28" name="ZeroClipboard_TableToolsMovie_8" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=8&amp;width=47&amp;height=28" wmode="transparent">
+					</div>
+				</a>
+				<a class="DTTT_button DTTT_button_xls" id="ToolTables_comparison_2" tabindex="0" aria-controls="comparison"><span>Excel</span>
+					<div style="position: absolute; left: 0px; top: 0px; width: 52px; height: 28px; z-index: 99;">
+						<embed id="ZeroClipboard_TableToolsMovie_9" src="./assets/js/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="52" height="28" name="ZeroClipboard_TableToolsMovie_9" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=9&amp;width=52&amp;height=28" wmode="transparent">
+					</div>
+				</a>
+				<a class="DTTT_button DTTT_button_pdf" id="ToolTables_comparison_3" tabindex="0" aria-controls="comparison"><span>PDF</span>
+					<div style="position: absolute; left: 0px; top: 0px; width: 46px; height: 28px; z-index: 99;">
+						<embed id="ZeroClipboard_TableToolsMovie_10" src="./assets/js/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="46" height="28" name="ZeroClipboard_TableToolsMovie_10" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=10&amp;width=46&amp;height=28" wmode="transparent">
+					</div>
+				</a>
+				<a class="DTTT_button DTTT_button_print" id="ToolTables_comparison_4" title="View print view" tabindex="0" aria-controls="comparison"><span>Print</span></a>
+			    </div>
+				<div class="clear"></div>
+				<div class="dataTables_length" id="comparison_length">
+					<label>Show <select name="comparison_length" aria-controls="comparison" class="">
+						<option value="10">10</option>
+						<option value="25">25</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select> entries</label>
+				</div>
+				<div id="comparison_filter" class="dataTables_filter">
+					<label>Search:<input type="search" class="" placeholder="" aria-controls="comparison"></label>
+				</div>
+				<table id="comparison" class="tablesorter dataTable no-footer" role="grid" aria-describedby="comparison_info"> 
+					<thead> 
+						<tr role="row">
+							<th class="sorting_asc" tabindex="0" aria-controls="comparison" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Facility: activate to sort column descending" style="width: 186px;">Facility</th>
+							<th class="sorting" tabindex="0" aria-controls="comparison" rowspan="1" colspan="1" aria-label="Patient Name: activate to sort column ascending" style="width: 265px;">Patient Name</th>
+							<th class="sorting" tabindex="0" aria-controls="comparison" rowspan="1" colspan="1" aria-label="USSD Case ID: activate to sort column ascending" style="width: 135px;">USSD Case ID</th>
+							<th class="sorting" tabindex="0" aria-controls="comparison" rowspan="1" colspan="1" aria-label="Pilot Case ID: activate to sort column ascending" style="width: 123px;">Pilot Case ID</th>
+							<th class="sorting" tabindex="0" aria-controls="comparison" rowspan="1" colspan="1" aria-label="USSD Notification Time: activate to sort column ascending" style="width: 219px;">USSD Notification Time</th>
+							<th class="sorting_desc" tabindex="0" aria-controls="comparison" rowspan="1" colspan="1" aria-label="Pilot Notification Time: activate to sort column ascending" style="width: 208px;">Pilot Notification Time</th>
+							<th class="sorting_desc" tabindex="0" aria-controls="comparison" rowspan="1" colspan="1" aria-label="Time Difference: activate to sort column ascending" style="width: 151px;">Time Difference</th>
+							<th class="sort sorting" style="display: none; width: 56px;" tabindex="0" aria-controls="comparison" rowspan="1" colspan="1" aria-label="Sorting: activate to sort column ascending">Sorting</th>
+							<th class="sorting" tabindex="0" aria-controls="comparison" rowspan="1" colspan="1" aria-label="Source: activate to sort column ascending" style="width: 73px;">Source</th>
+						</tr>
+					</thead> 
+					<tbody>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>CHARLES CHARULA</td> 
+							<td>106231</td> 
+							<td>-</td> 
+							<td>2014-12-30 15:26:05</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2014-12-30 15:26:05</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>HUSNA HASSAN</td> 
+							<td>106242</td> 
+							<td>-</td> 
+							<td>2015-01-01 11:57:33</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-01-01 11:57:33</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> <td>ARAFATI KHALFAN</td> 
+							<td>106255</td> 
+							<td>-</td> 
+							<td>2015-01-03 08:01:02</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-01-03 08:01:02</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>KHADIJA SUJAI</td> 
+							<td>106278</td> 
+							<td>-</td> 
+							<td>2015-01-06 22:21:01</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-01-06 22:21:01</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>JUMANNE JUMANNE</td> 
+							<td>106295</td> 
+							<td>-</td> 
+							<td>2015-01-08 09:51:31</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-01-08 09:51:31</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>JAMILA KIKOKO</td> 
+							<td>106326</td> 
+							<td>-</td> 
+							<td>2015-01-11 20:05:36</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-01-11 20:05:36</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>OTHMAN YUSSUF</td> <td>106389</td> 
+							<td>-</td> <td>2015-01-17 15:20:47</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-01-17 15:20:47</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>TAMIMA  KHAMIS</td> 
+							<td>106398</td> 
+							<td>-</td> 
+							<td>2015-01-19 12:03:35</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-01-19 12:03:35</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>MOHD KHAMIS</td> 
+							<td>106419</td> 
+							<td>-</td> 
+							<td>2015-01-20 16:12:09</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-01-20 16:12:09</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>JAZIRU OMAR</td> 
+							<td>106449</td> 
+							<td>-</td> 
+							<td>2015-01-24 09:16:39</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-01-24 09:16:39</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>DAMIANO SALEH</td> 
+							<td>106673</td> 
+							<td>-</td> 
+							<td>2015-02-23 16:53:36</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-02-23 16:53:36</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>JASTIN JEMES</td> 
+							<td>106723</td> 
+							<td>-</td> 
+							<td>2015-03-05 14:51:54</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-03-05 14:51:54</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>ASHA SAID</td> <td>106737</td> 
+							<td>-</td> 
+							<td>2015-03-06 22:34:31</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-03-06 22:34:31</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>ASHA ABDI</td> 
+							<td>106986</td> <td>-</td> 
+							<td>2015-05-01 13:24:36</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-01 13:24:36</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>REGINA MABULA</td> 
+							<td>106987</td> 
+							<td>-</td> 
+							<td>2015-05-02 11:23:24</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-02 11:23:24</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>SABIHA MAHAZI</td> 
+							<td>107032</td> 
+							<td>-</td> 
+							<td>2015-05-08 21:51:27</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-08 21:51:27</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> <td>HAMZA ABDALA KAMBONA</td> 
+							<td>107190</td> 
+							<td>-</td> 
+							<td>2015-05-25 07:55:35</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-25 07:55:35</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> <td>ABBASS JAILAN</td> 
+							<td>107192</td> 
+							<td>-</td> 
+							<td>2015-05-25 08:19:42</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-25 08:19:42</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>RAMADHANI BAKARI</td> 
+							<td>107234</td> 
+							<td>-</td> 
+							<td>2015-05-25 21:03:21</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-25 21:03:21</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>SAID JUMA</td> 
+							<td>107310</td> 
+							<td>-</td> 
+							<td>2015-05-28 18:12:07</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-28 18:12:07</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td>
+							<td>SHAABANI HAJI</td> 
+							<td>107332</td> 
+							<td>-</td> 
+							<td>2015-05-29 22:20:06</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-29 22:20:06</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>ZAINABU OTHMAN</td> 
+							<td>107336</td> 
+							<td>-</td> 
+							<td>2015-05-30 23:44:49</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-30 23:44:49</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>AMEIR IDDI</td>
+							 <td>107337</td> 
+							 <td>-</td> 
+							 <td>2015-05-30 23:48:10</td> 
+							 <td class="sorting_3">-</td> 
+							 <td class="difference sorting_2"> - </td> 
+							 <td style="display:none" class="sort">2015-05-30 23:48:10</td> 
+							 <td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>BONIPHACE UGURA</td> 
+							<td>107341</td> 
+							<td>-</td> <td>2015-05-31 16:57:39</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-05-31 16:57:39</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>FOUM HAJI</td> <td>107342</td> 
+							<td>-</td> 
+							<td>2015-05-31 19:27:14</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td>
+							<td style="display:none" class="sort">2015-05-31 19:27:14</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> <td>FILBERT ROAMATONGO</td> 
+							<td>107441</td> 
+							<td>-</td> 
+							<td>2015-06-03 14:10:07</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-03 14:10:07</td> 
+							<td>-</td> 
+							</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>ZAKARIA KHAMIS</td> <td>107497</td> 
+							<td>-</td> <td>2015-06-05 11:52:17</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-05 11:52:17</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>JUMA HUSSEIN ALI</td> <td>107567</td> 
+							<td>-</td> 
+							<td>2015-06-09 19:14:43</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-09 19:14:43</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>ROZINA KHAMIS</td> 
+							<td>107568</td> 
+							<td>-</td> 
+							<td>2015-06-09 19:23:01</td> 
+							<td class="sorting_3">-</td>
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-09 19:23:01</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>ABDI ALLI</td> 
+							<td>107594</td> 
+							<td>-</td> 
+							<td>2015-06-10 22:39:25</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-10 22:39:25</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> <td>YAKUB HAJI</td> 
+							<td>107629</td> 
+							<td>-</td> 
+							<td>2015-06-12 06:36:15</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-12 06:36:15</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>YUSSUF OMAR HAMADI</td> 
+							<td>107719</td> 
+							<td>-</td> 
+							<td>2015-06-15 16:10:34</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-15 16:10:34</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>IBRAHIM ALLI</td> 
+							<td>107755</td> 
+							<td>-</td> 
+							<td>2015-06-16 20:01:47</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td>
+							<td style="display:none" class="sort">2015-06-16 20:01:47</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> <td>KHAMIS KHAMIS</td> 
+							<td>108553</td> 
+							<td>-</td> 
+							<td>2015-07-14 22:29:51</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-07-14 22:29:51</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>JUMANNE NGWAYONGA</td> 
+							<td>107789</td> 
+							<td>-</td> 
+							<td>2015-06-17 14:47:31</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-17 14:47:31</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>RAMADHAN NUNDU</td> 
+							<td>107790</td> 
+							<td>-</td> 
+							<td>2015-06-17 14:49:39</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-17 14:49:39</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>MUDRICK MWENDWA</td> <td>107796</td> 
+							<td>-</td> 
+							<td>2015-06-17 20:50:18</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-17 20:50:18</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>ZARIHA NASOUR</td> 
+							<td>107832</td> 
+							<td>-</td> 
+							<td>2015-06-19 07:01:09</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-19 07:01:09</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>MZEE RAMADHANI</td> 
+							<td>107851</td> 
+							<td>-</td> 
+							<td>2015-06-19 11:41:48</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-19 11:41:48</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>HENRY MKINDI</td> 
+							<td>107867</td> 
+							<td>-</td> 
+							<td>2015-06-19 16:23:44</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-19 16:23:44</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>HALIMA ABDI</td> 
+							<td>107871</td> 
+							<td>-</td> 
+							<td>2015-06-20 09:21:54</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-20 09:21:54</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>SABRA TAIBU</td> 
+							<td>107892</td> 
+							<td>-</td> 
+							<td>2015-06-21 20:55:18</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td>
+							 <td style="display:none" class="sort">2015-06-21 20:55:18</td> 
+							 <td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>SULEIMAN HAJI</td> 
+							<td>107893</td> 
+							<td>-</td> 
+							<td>2015-06-21 20:58:26</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-21 20:58:26</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>ZAINAB JUMA</td> 
+							<td>107894</td> 
+							<td>-</td> 
+							<td>2015-06-21 21:02:04</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-21 21:02:04</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> <td>KULWA ALLY</td> 
+							<td>108003</td> 
+							<td>-</td> 
+							<td>2015-06-23 22:12:09</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-23 22:12:09</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>FAKIH HAMADI</td> 
+							<td>108030</td> 
+							<td>-</td> 
+							<td>2015-06-24 11:27:07</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-24 11:27:07</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>KHELEF ALLI</td> 
+							<td>108040</td> 
+							<td>-</td>
+							 <td>2015-06-24 17:53:24</td> 
+							 <td class="sorting_3">-</td> 
+							 <td class="difference sorting_2"> - </td> 
+							 <td style="display:none" class="sort">2015-06-24 17:53:24</td> 
+							 <td>-</td> 
+						 </tr>
+						 <tr role="row" class="even" style="background-color: #FFCCCC"> 
+							 <td class="sorting_1">BUBUBU JESHINI</td> 
+							 <td>FATMA WAZIRI</td> <td>108075</td> 
+							 <td>-</td> <td>2015-06-26 12:00:31</td>
+							  <td class="sorting_3">-</td> 
+							  <td class="difference sorting_2"> - </td> 
+							  <td style="display:none" class="sort">2015-06-26 12:00:31</td> 
+							  <td>-</td> 
+						</tr>
+						<tr role="row" class="odd" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>  ISSA ISSA</td> 
+							<td>108086</td> 
+							<td>-</td> 
+							<td>2015-06-26 17:26:05</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-26 17:26:05</td> 
+							<td>-</td> 
+						</tr>
+						<tr role="row" class="even" style="background-color: #FFCCCC"> 
+							<td class="sorting_1">BUBUBU JESHINI</td> 
+							<td>ADAM KHALFAN</td> <td>108094</td> 
+							<td>-</td> <td>2015-06-28 21:51:57</td> 
+							<td class="sorting_3">-</td> 
+							<td class="difference sorting_2"> - </td> 
+							<td style="display:none" class="sort">2015-06-28 21:51:57</td> 
+							<td>-</td> 
+						</tr>
+					  </tbody> 
+					</table>
+					<div class="dataTables_info" id="comparison_info" role="status" aria-live="polite">Showing 1 to 50 of 346 entries</div>
+					<div class="dataTables_paginate paging_simple_numbers" id="comparison_paginate">
+						<a class="paginate_button previous disabled" aria-controls="comparison" data-dt-idx="0" tabindex="0" id="comparison_previous">Previous</a><span><a class="paginate_button current" aria-controls="comparison" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="comparison" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="comparison" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="comparison" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="comparison" data-dt-idx="5" tabindex="0">5</a><a class="paginate_button " aria-controls="comparison" data-dt-idx="6" tabindex="0">6</a><a class="paginate_button " aria-controls="comparison" data-dt-idx="7" tabindex="0">7</a></span><a class="paginate_button next" aria-controls="comparison" data-dt-idx="8" tabindex="0" id="comparison_next">Next</a>
+					</div>
+				</div>	
+			</div> 
+			<div class="caseNotifications">
+				<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">file_download</i></button>
+				Pilot Weekly Reports</h4>
+			</div>
+			<div id="weekly-report" class="case-notifications hide"> 
+				<table id="weekly_report" class="tablesorter"> 
+					<thead><th>source</th>
+						<th>source_phone</th>
+						<th>date</th>
+						<th>year</th>
+						<th>week</th>
+						<th>under 5 opd</th>
+						<th>under 5 positive</th>
+						<th>under 5 negative</th>
+						<th>over 5 opd</th>
+						<th>over 5 positive</th>
+						<th>over 5 negative</th>
+						<th>hf</th>
+						<th>facility_district</th>
+						<th>hasCaseNotification</th>
+					</thead> 
+					<tbody>
+						<tr> 
+							<td>textit</td>
+							<td>+255788074705</td>
+							<td>2015-01-05 09:09:11</td>
+							<td>2015</td>
+							<td>1</td>
+							<td>30</td>
+							<td>10</td>
+							<td>12</td>
+							<td>21</td>
+							<td>15</td>
+							<td>6</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td>
+							<td>true</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255788074705</td>
+							<td>2015-01-06 01:14:01</td>
+							<td>2015</td>
+							<td>2</td>
+							<td>31</td>
+							<td>16</td>
+							<td>5</td>
+							<td>31</td>
+							<td>16</td>
+							<td>5</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td>
+							<td>true</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+12065551212</td>
+							<td>2015-01-08 01:22:45</td>
+							<td>2015</td>
+							<td>2</td>
+							<td>32</td>
+							<td>13</td>
+							<td>5</td>
+							<td>20</td>
+							<td>2</td>
+							<td>12</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td>
+							<td>true</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255788074705</td>
+							<td>2015-01-09 06:09:27</td>
+							<td>2015</td>
+							<td>1</td>
+							<td>22</td>
+							<td>13</td>
+							<td>5</td>
+							<td>22</td>
+							<td>13</td>
+							<td>5</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255776381386</td>
+							<td>2015-01-12 07:18:37</td>
+							<td>2015</td>
+							<td>2</td>
+							<td>52</td>
+							<td>0</td>
+							<td>14</td>
+							<td>170</td>
+							<td>0</td>
+							<td>77</td>
+							<td>KIDIMNI</td>
+							<td>KATI</td>
+							<td>true</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255788074705</td>
+							<td>2015-01-12 21:25:33</td>
+							<td>2015</td>
+							<td>2</td>
+							<td>23</td>
+							<td>8</td>
+							<td>11</td>
+							<td>35</td>
+							<td>16</td>
+							<td>7</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255777666408</td>
+							<td>2015-01-13 01:47:01</td>
+							<td>2015</td>
+							<td>2</td>
+							<td>61</td>
+							<td>1</td>
+							<td>40</td>
+							<td>69</td>
+							<td>1</td>
+							<td>28</td>
+							<td>SELEM</td>
+							<td>MAGHARIBI</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255788074705</td>
+							<td>2015-01-16 08:58:54</td>
+							<td>2015</td>
+							<td>2</td>
+							<td>32</td>
+							<td>12</td>
+							<td>8</td>
+							<td>41</td>
+							<td>9</td>
+							<td>17</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255788074705</td>
+							<td>2015-01-18 13:34:54</td>
+							<td>2015</td>
+							<td>2</td>
+							<td>23</td>
+							<td>8</td>
+							<td>11</td>
+							<td>31</td>
+							<td>11</td>
+							<td>9</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td>
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255788074705</td>
+							<td>2015-01-19 02:39:55</td>
+							<td>2015</td>
+							<td>3</td>
+							<td>23</td>
+							<td>8</td>
+							<td>5</td>
+							<td>41</td>
+							<td>15</td>
+							<td>9</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255776064220</td>
+							<td>2015-01-19 04:38:01</td>
+							<td>2015</td>
+							<td>1</td>
+							<td>17</td>
+							<td>0</td>
+							<td>0</td>
+							<td>65</td>
+							<td>0</td>
+							<td>3</td>
+							<td>KITOPE DISPENSARY</td>
+							<td>KASKAZINI B</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255788074705</td>
+							<td>2015-01-19 12:22:38</td>
+							<td>2015</td>
+							<td>2</td>
+							<td>27</td>
+							<td>18</td>
+							<td>5</td>
+							<td>31</td>
+							<td>9</td>
+							<td>10</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td>
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255788074705</td>
+							<td>2015-01-19 12:55:27</td>
+							<td>2015</td>
+							<td>1</td>
+							<td>41</td>
+							<td>12</td>
+							<td>9</td>
+							<td>17</td>
+							<td>2</td>
+							<td>9</td>
+							<td>CHONGA</td>
+							<td>CHAKECHAKE</td> 
+						</tr>
+						<tr> 
+							<td>textit</td>
+							<td>+255776064220</td>
+							<td>2015-01-21 01:05:27</td>
+							<td>2015</td>
+							<td>2</td>
+							<td>20</td>
+							<td>0</td>
+							<td>3</td>
+							<td>85</td>
+							<td>0</td>
+							<td>9</td>
+							<td>KITOPE DISPENSARY</td>
+							<td>KASKAZINI B</td> 
+							</tr>
+						</tbody> 
+					</table>
+				</div>
+				<div class="caseNotifications">
+					<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">file_download</i></button>
+					Pilot New Cases Details</h4>
+				</div>	 
+				<div id="new-cases" class="case-notifications hide">
+<!--				<button onclick="$(&quot;#new_case&quot;).toggle()">Show/Hide</button> -->
+					<table id="new_case" class="tablesorter">
+						<thead>
+							<th>source</th>
+							<th>source_phone</th>
+							<th>caseid</th>
+							<th>date</th>
+							<th>name</th>
+							<th>positive_test_date</th>
+							<th>shehia</th>
+							<th>hf</th>
+							<th>facility_district</th>
+							<th>hasCaseNotification</th>
+						</thead> 
+						<tbody>
+							<tr> 
+								<td>textit</td>
+								<td>+255788074705</td>
+								<td>1EYX2FCL</td>
+								<td>2015-01-07 05:34:06</td>
+								<td>amran</td><td>2015-1-6</td><td>CHUKWANI</td><td>CHONGA</td><td>CHAKECHAKE</td><td>true</td> 
+							</tr>
+							<tr> 
+								<td>textit</td>
+								<td>+12065551212</td>
+								<td>1F2V1ULL</td>
+								<td>2015-01-08 01:21:50</td>
+								<td>hamis</td>
+								<td>2015-1-5</td>
+								<td>KIEMBESAMAKI</td>
+								<td>CHONGA</td>
+								<td>CHAKECHAKE</td> 
+							</tr>
+							<tr> 
+								<td>textit</td>
+								<td>+255788074705</td>
+								<td>1F6PPYPY</td>
+								<td>2015-01-09 03:37:20</td>
+								<td>warda</td>
+								<td>2015-1-7</td>
+								<td>UZI</td>
+								<td>CHONGA</td>
+								<td>CHAKECHAKE</td> 
+							</tr>
+							<tr> 
+								<td>textit</td>
+								<td>+255788074705</td>
+								<td>1F72K95G</td>
+								<td>2015-01-09 05:50:14</td>
+								<td>khamis</td>
+								<td>2014-1-6</td>
+								<td>FINYA</td>
+								<td>CHONGA</td>
+								<td>CHAKECHAKE</td> 
+							</tr>
+							<tr> 
+								<td>textit</td>
+								<td>+255788074705</td>
+								<td>1GEK3N1M</td>
+								<td>2015-01-19 12:19:39</td>
+								<td>james</td>
+								<td>2015-1-17</td>
+								<td>CHIMBA</td>
+								<td>CHONGA</td>
+								<td>CHAKECHAKE</td> 
+							</tr>
+							<tr> 
+								<td>textit</td>
+								<td>+255788074705</td>
+								<td>1GEMJ95H</td>
+								<td>2015-01-19 12:52:47</td>
+								<td>asnat</td>
+								<td>2015-1-16</td>
+								<td>CHIMBA</td>
+								<td>CHONGA</td>
+								<td>CHAKECHAKE</td> 
+							</tr>
+						</tbody> 
+					</table>
+				</div>	
+			</div>
+		</div>
+</div>
+
+<script>
+	$(".caseNotifications").click(function(){
+	  $(this).next(".case-notifications").slideToggle();
+	  toggleSlideIcon(this);
+	});
+</script>
+				
