@@ -10,7 +10,4 @@ CocoManager.module("ReportsApp.List", function(List, CocoManager, Backbone, Mari
 	template: "#report-options-template",
   });  
 
-  List.DrawerView = Marionette.ItemView.extend({
-	template: "#drawer-template"
-  });
 });

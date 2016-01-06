@@ -4,7 +4,6 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 	  var drawerView = new Show.DrawerView();
 	  
 	  drawerView.on("report:clicked", function(reportname){
-		  console.log("Report clicked: "+ reportname);
 		  CocoManager.trigger("reports:show", reportname);
 	  });
 	  
