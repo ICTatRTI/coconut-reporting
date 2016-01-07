@@ -2,15 +2,16 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
    	Show.DrawerView = Marionette.ItemView.extend({
 		template: "#drawer-template",
 		events: {
-		      "click a.report__link": "navigate",
-		      "click a.setting__link": "showSetting"
+		      "click a.report__link": "showReport",
+		      "click a.setting__link": "showSetting",
+			"click a.drawer__subtitle": "toggleMenu"
 		},
 
-		navigate: function(e){
+		showReport: function(e){
 			e.preventDefault();
 			var reportname = e.currentTarget.id;
 			var classStr = $(e.currentTarget).attr('class');
-			if (classStr.indexOf('report__subtitle') == -1) {;
+			if (classStr.indexOf('drawer__subtitle') == -1) {;
 			   this.trigger("report:clicked", reportname);
 			} else {
 				if (reportname == "dashboard"){
@@ -24,6 +25,12 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		  e.preventDefault();
 		  var setting = e.currentTarget.id;	
 		  this.trigger("setting:clicked", setting);
+		},
+		
+		toggleMenu: function(e){
+			e.preventDefault();
+			$target = $(e.target); 
+			$target.next("div.dropdown").slideToggle();
 		}
 		
 	  });	

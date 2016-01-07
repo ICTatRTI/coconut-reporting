@@ -114,13 +114,13 @@
 		    <div class="mdl-layout-title" id="drawer-title">Coconut<br />Surveillance</div>
 		  </div>		  
   	      <nav class="mdl-navigation">
-			<a class="mdl-navigation__link report__link report__subtitle" id="dashboard" href="/index.html#dashboard">  
+			<a class="mdl-navigation__link report__link drawer__subtitle" id="dashboard" href="/index.html#dashboard">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">dashboard</i>
 			  Dashboard</a>
-			<a class="mdl-navigation__link report__link report__subtitle" href="#" id="report-main">  
+			<a class="mdl-navigation__link report__link drawer__subtitle" href="#" id="report-main">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">description</i>
 			Reports</a>
-			<div class="m-l-20" id="reports">    
+			<div class="m-l-20 dropdown" id="reports">    
   	        <a class="mdl-navigation__link report__link m-b-20" id = "casefollowup" href="#reports/casefollowup">
 				Case Follow Up</a>
   	        <a class="mdl-navigation__link report__link" id = "locations" href="#reports/locations">
@@ -129,48 +129,48 @@
 				Spreadsheet</a>
   	        <a class="mdl-navigation__link report__link" id = "analysis" href="#reports/analysis">
 				Analysis</a>
-  			<a class="mdl-navigation__link report__link" id = "weeklysummary" href="#reports/weeklySummary">
+  			<a class="mdl-navigation__link report__link" id = "weeklysummary" href="#reports/weeklysummary">
 				Weekly Summary</a>
   		    <a class="mdl-navigation__link report__link" id = "alerts" href="#reports/alerts">
 				Alerts</a>	
-  			<a class="mdl-navigation__link report__link" id = "periodsummary" href="#reports/periodSummary">
+  			<a class="mdl-navigation__link report__link" id = "periodsummary" href="#reports/periodsummary">
 				Period Summary</a>
-  			<a class="mdl-navigation__link report__link" id = "incidentsgraph" href="#reports/incidentsGraph">
+  			<a class="mdl-navigation__link report__link" id = "incidentsgraph" href="#reports/incidentsgraph">
 				Incidents Graph</a>
-  			<a class="mdl-navigation__link report__link" id = "systemerrors" href="#reports/systemErrors">
+  			<a class="mdl-navigation__link report__link" id = "systemerrors" href="#reports/systemerrors">
 				System Errors</a>
-  			<a class="mdl-navigation__link report__link" id = "pilotnotifications" href="#reports/pilotNotifications">
+  			<a class="mdl-navigation__link report__link" id = "pilotnotification" href="#reports/pilotnotifications">
 				Pilot Notifications</a>
-  			<a class="mdl-navigation__link report__link" id = "usersreport" href="#reports/usersReport">
+  			<a class="mdl-navigation__link report__link" id = "usersreport" href="#reports/usersreport">
 				Users Report</a>
-  			<a class="mdl-navigation__link report__link" id = "weeklyreports" href="#reports/weeklyReports">
+  			<a class="mdl-navigation__link report__link" id = "weeklyreports" href="#reports/weeklyreports">
 				Weekly Reports</a>
-  			<a class="mdl-navigation__link report__link" id = "rainfallreport" href="#reports/rainfallReport">
+  			<a class="mdl-navigation__link report__link" id = "rainfallreport" href="#reports/rainfallreport">
 				Rainfall Report</a>
-  			<a class="mdl-navigation__link report__link" id = "compareweekly" href="#reports/compareWeekly">
+  			<a class="mdl-navigation__link report__link" id = "compareweekly" href="#reports/compareweekly">
 				Compare Weekly with Cases Followup</a>
-  			<a class="mdl-navigation__link report__link" id = "epidemicthreshold" href="#reports/epidemicThresholds">
+  			<a class="mdl-navigation__link report__link" id = "epidemicthreshold" href="#reports/epidemicthresholds">
 				Epidemic Thresholds</a>
 		   </div>
-			<a class="mdl-navigation__link report__link report__subtitle" href="#activity-main" id="activity-main">  
+			<a class="mdl-navigation__link report__link drawer__subtitle" href="#activity-main" id="activity-main">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">local_activity</i>
 			Activities
 		    </a>
-			<div class="m-l-20" id="activities">    
+			<div class="m-l-20 dropdown" id="activities">    
 	  	        <a class="mdl-navigation__link report__link m-b-20" href="#issues">
 					Issues</a>
 			</div>		
-			<a class="mdl-navigation__link report__link report__subtitle" href="#setting-main" id="setting-main">  
+			<a class="mdl-navigation__link report__link drawer__subtitle" href="#setting-main" id="setting-main">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">settings</i>
 			Settings
 		    </a>
-			<div class="m-l-20" id="settings">    
+			<div class="m-l-20 dropdown" id="settings"> 
+	  	        <a class="mdl-navigation__link setting__link m-b-20" id="general" href="#">General</a>				   
 	  	        <a class="mdl-navigation__link setting__link m-b-20" id="language" href="#">Language</a>
 	  	        <a class="mdl-navigation__link setting__link m-b-20" id="theme" href="#">Color Theme</a>	
 	  	        <a class="mdl-navigation__link setting__link m-b-20" id="setting1" href="#">Setting 1</a>
 	  	        <a class="mdl-navigation__link setting__link m-b-20" id="setting2" href="#">Setting 2</a>
 	  	        <a class="mdl-navigation__link setting__link m-b-20" id="setting2" href="#">Setting 3</a>
-	  	        <a class="mdl-navigation__link setting__link m-b-20" id="setting4" href="#">Setting 4</a>
 			</div>	
   	      </nav>	
     </script>
@@ -207,21 +207,6 @@
 
 	
     <script type="text/javascript">
-	
-	   $(document).ready(function() {
-		   	
-		   $("#report-main").click(function(){
-		   	   $("#reports").slideToggle();
-		   });
-		   $("#setting-main").click(function(){
-		   	   $("#settings").slideToggle();
-		   });
-		   $("#activity-main").click(function(){
-		   	   $("#activities").slideToggle();
-		   });
-		   
-	   });
-		
         CocoManager.start();
     </script>
    </body>
