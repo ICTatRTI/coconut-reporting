@@ -2,11 +2,12 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
    	Show.DrawerView = Marionette.ItemView.extend({
 		template: "#drawer-template",
 		events: {
-		      "click a": "navigate"
+		      "click a.report__link": "navigate",
+		      "click a.setting__link": "showSetting"
 		},
 
 		navigate: function(e){
-			e.preventDefault();;
+			e.preventDefault();
 			var reportname = e.currentTarget.id;
 			var classStr = $(e.currentTarget).attr('class');
 			if (classStr.indexOf('report__subtitle') == -1) {;
@@ -17,6 +18,13 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 					CocoManager.Dashboard.Show.Controller.showDashboard();
 				}
 			}
+		},
+		
+		showSetting: function(e){
+		  e.preventDefault();
+		  var setting = e.currentTarget.id;	
+		  this.trigger("setting:clicked", setting);
 		}
+		
 	  });	
 });

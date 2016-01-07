@@ -165,24 +165,23 @@
 			Settings
 		    </a>
 			<div class="m-l-20" id="settings">    
-	  	        <a class="mdl-navigation__link report__link m-b-20" href="#language">
-					Language</a>
-	  	        <a class="mdl-navigation__link report__link m-b-20" href="#theme">
-					Color Theme</a>	
-	  	        <a class="mdl-navigation__link report__link m-b-20" href="#setting1">
-					Setting 1</a>
-	  	        <a class="mdl-navigation__link report__link m-b-20" href="#setting2">
-					Setting 2</a>
-	  	        <a class="mdl-navigation__link report__link m-b-20" href="#setting3">
-					Setting 3</a>
-	  	        <a class="mdl-navigation__link report__link m-b-20" href="#setting4">
-					Setting 4</a>
+	  	        <a class="mdl-navigation__link setting__link m-b-20" id="language" href="#">Language</a>
+	  	        <a class="mdl-navigation__link setting__link m-b-20" id="theme" href="#">Color Theme</a>	
+	  	        <a class="mdl-navigation__link setting__link m-b-20" id="setting1" href="#">Setting 1</a>
+	  	        <a class="mdl-navigation__link setting__link m-b-20" id="setting2" href="#">Setting 2</a>
+	  	        <a class="mdl-navigation__link setting__link m-b-20" id="setting2" href="#">Setting 3</a>
+	  	        <a class="mdl-navigation__link setting__link m-b-20" id="setting4" href="#">Setting 4</a>
 			</div>	
   	      </nav>	
     </script>
 	
 	<script type="text/template" id="report-template"> </script>	
     <script type="text/template" id="report-options-template">REPORT OPTIONS HERE</script>
+	<script type="text/template" id="setting-template">
+	   <h3>System Settings Page</h3>
+	</script>
+	<script type="text/template" id="setting-options-template">SETTING OPTIONS HERE</script>
+	
 	
     <script src="./assets/js/vendor/material.min.js"> </script>
     <script src="./assets/js/vendor/jquery.js"></script>
@@ -201,10 +200,11 @@
 	<script src="./assets/js/apps/drawer/show/show_view.js"> </script>
 	<script src="./assets/js/apps/reports/reports_app.js"> </script> 
 	<script src="./assets/js/apps/reports/list/list_controller.js"> </script> 
-	<script src="./assets/js/apps/reports/list/list_view.js"> </script>		
-<!--	<script src="./assets/js/apps/header/header_app.js"></script>
-    <script src="./assets/js/apps/header/list/list_view.js"></script>
-    <script src="./assets/js/apps/header/list/list_controller.js"></script> -->
+	<script src="./assets/js/apps/reports/list/list_view.js"> </script>	
+	<script src="./assets/js/apps/settings/settings_app.js"> </script> 
+	<script src="./assets/js/apps/settings/show/show_controller.js"> </script> 
+	<script src="./assets/js/apps/settings/show/show_view.js"> </script>	
+
 	
     <script type="text/javascript">
 	
