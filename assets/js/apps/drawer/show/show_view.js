@@ -4,6 +4,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		events: {
 		      "click a.report__link": "showReport",
 		      "click a.setting__link": "showSetting",
+			  "click a.activity__link": "showActivity",
 			"click a.drawer__subtitle": "toggleDropdownMenu"
 		},
 
@@ -25,6 +26,12 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		  e.preventDefault();
 		  var setting = e.currentTarget.id;	
 		  this.trigger("setting:clicked", setting);
+		},
+		
+		showActivity: function(e){
+		  e.preventDefault();
+		  var activity = e.currentTarget.id;	
+		  this.trigger("activity:clicked", activity);
 		},
 		
 		toggleDropdownMenu: function(e){

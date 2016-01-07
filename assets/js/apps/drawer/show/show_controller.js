@@ -11,6 +11,10 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		 CocoManager.trigger("setting:show", setting);
 	  });
 	  
+	  drawerView.on("activity:clicked", function(activity){
+		 CocoManager.trigger("activity:show", activity);
+	  });
+	  
 	  CocoManager.drawerRegion.show(drawerView);
     }
   };

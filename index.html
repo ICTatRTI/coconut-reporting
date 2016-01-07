@@ -157,8 +157,14 @@
 			Activities
 		    </a>
 			<div class="m-l-20 dropdown" id="activities">    
-	  	        <a class="mdl-navigation__link report__link m-b-20" href="#issues">
-					Issues</a>
+	  	        <a class="mdl-navigation__link activity__link m-b-20" id="users" href="#">Users</a>
+				<a class="mdl-navigation__link activity__link m-b-20" id="SDR" href="#">Shehias, Districts and Regions</a>
+				<a class="mdl-navigation__link activity__link m-b-20" id="facilities" href="#">Facilities</a>
+				<a class="mdl-navigation__link activity__link m-b-20" id="rainfall-station" href="#">Rainfall Station</a>
+				<a class="mdl-navigation__link activity__link m-b-20" id="received-irs" href="#">Shehias received IRS</a>
+				<a class="mdl-navigation__link activity__link m-b-20" id="high-risk" href="#">Shehias high risk</a>
+				<a class="mdl-navigation__link activity__link m-b-20" id="SMS" href="#">Send SMS to users</a>
+				<a class="mdl-navigation__link activity__link m-b-20" id="issues" href="#">Issues</a>				
 			</div>		
 			<a class="mdl-navigation__link report__link drawer__subtitle" href="#setting-main" id="setting-main">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">settings</i>
@@ -256,11 +262,10 @@
 		</div>
 	   </div>	
 	</script>
-	<script type="text/template" id="setting-template">
-	   <h3>System Settings Page</h3>
-	</script>
+	<script type="text/template" id="setting-template"><h3>System Settings Page</h3></script>
 	<script type="text/template" id="setting-options-template">SETTING OPTIONS HERE</script>
-	
+	<script type="text/template" id="activity-template"><h3>Activity Page</h3></script>
+	<script type="text/template" id="activity-options-template">ACTIVITY OPTIONS HERE</script>
 	
     <script src="./assets/js/vendor/material.min.js"> </script>
     <script src="./assets/js/vendor/jquery.js"></script>
@@ -282,15 +287,13 @@
 	<script src="./assets/js/apps/reports/list/list_view.js"> </script>	
 	<script src="./assets/js/apps/settings/settings_app.js"> </script> 
 	<script src="./assets/js/apps/settings/show/show_controller.js"> </script> 
-	<script src="./assets/js/apps/settings/show/show_view.js"> </script>	
+	<script src="./assets/js/apps/settings/show/show_view.js"> </script>
+	<script src="./assets/js/apps/activity/activity_app.js"> </script> 
+	<script src="./assets/js/apps/activity/show/show_controller.js"> </script> 
+	<script src="./assets/js/apps/activity/show/show_view.js"> </script>	
 
 	
-    <script type="text/javascript">
-	  $(document).ready(function() {
-        $("#filters-drop").click(function(){
-    	  $("#filters-section").slideToggle();
-         });
-	   });	 
+    <script type="text/javascript">	 
        CocoManager.start();
     </script>
    </body>
