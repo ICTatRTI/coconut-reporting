@@ -5,7 +5,8 @@ CocoManager.module("ReportsApp.List", function(List, CocoManager, Backbone, Mari
 	template: "#report-template",
 	
 	  events: {
-	  	"click div.dropDownBtn": "showAnalysisSection"
+	  	"click div.dropDownBtn": "showAnalysisSection",
+		  "click span.rpt-suboptions": "showReportSubOption"
 	  },
 	  
   	showAnalysisSection: function(e){
@@ -15,7 +16,14 @@ CocoManager.module("ReportsApp.List", function(List, CocoManager, Backbone, Mari
 		
 		var iconStatus = $target.find("i").text()== "file_download" ? "file_upload" : "file_download";
 		$target.find("i").text(iconStatus);
-  	}
+  	},
+	
+	showReportSubOption: function(e){
+		e.preventDefault();
+		var id = $(e.currentTarget).attr('id');
+		var target = "div#"+id+"-section";
+		$(target).slideToggle();		
+	}
 	  
   });
   
