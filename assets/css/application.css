@@ -263,11 +263,11 @@ table.tablesorter {
 }
 
 .mdl-layout__drawer .mdl-navigation .report__link{
-	padding: 5px 20px;
+	padding: 5px 30px 5px 20px;
 }
 
 .mdl-layout--fixed-drawer>.mdl-layout__header .mdl-layout__header-row {
-	padding-left: 20px;
+	padding-left: 25px;
 }
 
 .report__subtitle {
@@ -555,6 +555,14 @@ a.DTTT_button, button.DTTT_button, div.DTTT_button {
 .dashboard-content {
 	background: #e0e0e0;	
 }
+
+.wrapper {
+  box-sizing: border-box;
+  position: absolute;
+  right: 20px;
+  margin-top: -20px;
+}
+
 /* margins setting */
 
 .f-left {

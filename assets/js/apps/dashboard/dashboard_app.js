@@ -9,6 +9,9 @@ CocoManager.module("Dashboard", function(Dashboard, CocoManager, Backbone, Mario
     showDashboard: function(){
 	  Backbone.history.navigate("dashboard");	
       Dashboard.Show.Controller.showDashboard();
+    },
+    showHeader: function(){
+      Dashboard.Show.Controller.showHeader();
     }
   };
 
@@ -22,7 +25,7 @@ CocoManager.module("Dashboard", function(Dashboard, CocoManager, Backbone, Mario
     new Dashboard.Router({
       controller: API
     });
-	API.showDashboard();
-	  
+    API.showHeader();
+	API.showDashboard();  
   });
 });
