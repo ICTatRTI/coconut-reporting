@@ -70,13 +70,6 @@ CocoManager.DrawerView = Marionette.ItemView.extend({
 		
 CocoManager.on("start", function(){
     if(Backbone.history){
-      Backbone.history.start();
-
-/*      if(this.getCurrentRoute() === ""){
-	    CocoManager.Dashboard.Show.Controller.showDashboard();
-        //CocoManager.trigger("contacts:list");
-      }
-*/	  
+      Backbone.history.start();  
 	}	
-	
 });

@@ -4,7 +4,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		events: {
 		      "click a.report__link": "showReport",
 		      "click a.setting__link": "showSetting",
-			"click a.drawer__subtitle": "toggleMenu"
+			"click a.drawer__subtitle": "toggleDropdownMenu"
 		},
 
 		showReport: function(e){
@@ -15,7 +15,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 			   this.trigger("report:clicked", reportname);
 			} else {
 				if (reportname == "dashboard"){
-					Backbone.history.navigate(reportname, true);
+					CocoManager.navigate(reportname, true);
 					CocoManager.Dashboard.Show.Controller.showDashboard();
 				}
 			}
@@ -27,7 +27,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		  this.trigger("setting:clicked", setting);
 		},
 		
-		toggleMenu: function(e){
+		toggleDropdownMenu: function(e){
 			e.preventDefault();
 			$target = $(e.target); 
 			$target.next("div.dropdown").slideToggle();

@@ -8,6 +8,18 @@ CocoManager.module("ReportsApp.List", function(List, CocoManager, Backbone, Mari
   List.ReportOptionsView = Marionette.ItemView.extend({
 	  className: "report-header",  
 	template: "#report-options-template",
+	  
+	events: {
+	      "click span#filters-drop": "showDateFilter"
+
+	},
+	
+	showDateFilter: function(e){
+		e.preventDefault();
+		$("div#filters-section").slideToggle();
+	}
+	
+	
   });  
 
 });

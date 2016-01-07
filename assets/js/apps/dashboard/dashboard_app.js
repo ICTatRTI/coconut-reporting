@@ -6,8 +6,7 @@ CocoManager.module("Dashboard", function(Dashboard, CocoManager, Backbone, Mario
   });
 
   var API = {
-    showDashboard: function(){
-	  Backbone.history.navigate("dashboard");	
+    showDashboard: function(){	
       Dashboard.Show.Controller.showDashboard();
     },
     showHeader: function(){

@@ -3,6 +3,7 @@ CocoManager.module("ReportsApp.List", function(List, CocoManager, Backbone, Mari
 	showReport: function(report_title){			  
 		var report_name = report_title == null ? "" : report_title+".html";
 		
+		// Loading mockup html pages
 	    $("#report-template").load(report_name, function(){
 			Marionette.TemplateCache.clear("#report-template");
 	  	    var rptHeaderView = new List.ReportOptionsView();			
