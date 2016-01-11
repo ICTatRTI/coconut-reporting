@@ -79,16 +79,24 @@
     <script type="text/template" id="maincontent-template">
 		 <div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-				<img src="assets/img/chart1.png" width="100%">
-			</div>
+				<div style="text-align: center">Travel District</div>
+				<img src="assets/img/chart-4.png" width="100%" class="charts" >
+			</div> 
 			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-				<img src="assets/img/chart2.png" width="100%">
+				<div style="text-align: center">Notify to complete FU</div>
+				<img src="assets/img/chart-1.png" width="100%" class="charts">
 			</div>
 		  </div>
 		  <div class="mdl-grid">	
-			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart3.png" width="100%"></div>
-			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"><img src="assets/img/chart4.png" width="100%"></div>
-
+			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+				<div style="text-align: center">Number of Cases</div>
+				<img src="assets/img/chart-3.png" width="100%" class="charts">
+			</div>
+			<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+				<div style="text-align: center">Dx to notify chart</div>
+				<img src="assets/img/chart-2.png" width="100%" class="charts"><br />
+			</div>
+		  </div>	
     </script>
 		   
     <script type="text/template" id="header-template">
@@ -120,7 +128,7 @@
 			<a class="mdl-navigation__link report__link drawer__subtitle" href="#" id="report-main">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">description</i>
 			Reports</a>
-			<div class="m-l-20 dropdown" id="reports">    
+			<div class="m-l-20 dropdown" id="drawer-reports">    
   	        <a class="mdl-navigation__link report__link m-b-20" id = "casefollowup" href="#reports/casefollowup">
 				Case Follow Up</a>
   	        <a class="mdl-navigation__link report__link" id = "locations" href="#reports/locations">
@@ -156,7 +164,7 @@
 			  <i class="mdl-color-text--blue-grey-400 material-icons">local_activity</i>
 			Activities
 		    </a>
-			<div class="m-l-20 dropdown" id="activities"> 
+			<div class="m-l-20 dropdown" id="drawer-activities"> 
 				<a class="mdl-navigation__link activity__link m-b-20" id="todos" href="#">To Do</a> 
 				<a class="mdl-navigation__link activity__link m-b-20" id="issues" href="#">Issues</a> 
 				<a class="mdl-navigation__link activity__link m-b-20" id="SMS" href="#">Send SMS to users</a> 
@@ -171,7 +179,7 @@
 			  <i class="mdl-color-text--blue-grey-400 material-icons">settings</i>
 			Settings
 		    </a>
-			<div class="m-l-20 dropdown" id="settings"> 
+			<div class="m-l-20 dropdown" id="drawer-settings"> 
 	  	        <a class="mdl-navigation__link setting__link m-b-20" id="general" href="#">General</a>				   
 	  	        <a class="mdl-navigation__link setting__link m-b-20" id="language" href="#">Language</a>
 	  	        <a class="mdl-navigation__link setting__link m-b-20" id="theme" href="#">Color Theme</a>	
