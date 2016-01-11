@@ -14,7 +14,7 @@ CocoManager.module("ReportsApp.List", function(List, CocoManager, Backbone, Mari
 		var $target = $(e.currentTarget); 
     	$target.next("div.dropdown-section").slideToggle();
 		
-		var iconStatus = $target.find("i").text()== "file_download" ? "file_upload" : "file_download";
+		var iconStatus = $target.find("i").text()== "play_arrow" ? "arrow_drop_down" : "play_arrow";
 		$target.find("i").text(iconStatus);
   	},
 	
