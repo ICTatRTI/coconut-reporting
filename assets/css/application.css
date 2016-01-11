@@ -1,4 +1,4 @@
-/* New Color Scheme */
+/* General Styling */
 
 body {
 	font-family: "Roboto", helvetica, san-serif;
@@ -9,10 +9,13 @@ body {
 	display: none;
 }
 
+/* View regions */
 .main-region{
    margin-top: 60px;
    background: #e0e0e0;	
 }
+
+
 
 #cslogo_sm {
 	width: 50px;
@@ -24,50 +27,7 @@ body {
 	background: #e0e0e0;
 }
 
-#sub-navigation {
-	float: right;
-	margin: 30px;
-}
-
-#module-title {
-	padding: 20px;
-	
-}
-
-#module-title h4 {
-	 margin-top: 20px;
-	 margin-bottom: 5px;
-}
-
-#module-title h5 {
-	 margin-top: 0;
-	 margin-bottom: 25px;
-	 font-weight: 100;
-}
-
-.mdl-grid.mdl-grid-p-15 {
-	padding: 15px;
-}
-
-.mdl-card {
-	width: 450px;
-}
-
-.mdl-grid.mdl-grid-p-15 {
-	margin-left: 30px;
-}
-
-.cards-top {
-	margin-top: -120px;
-	padding-bottom: 0;
-}
-
-#reports, #settings, #activities {
-	display: none;
-}
-
-
-/* tables */
+/* Tablesorter styling */
 table.tablesorter {
 	font-family: "Roboto", arial, san-serif;
 	background-color: #CDCDCD;
@@ -131,6 +91,15 @@ table.tablesorter tbody td.high-risk-shehia{
   font-weight:bold;
 }
 
+table.tablesorter {
+    font-family: arial;
+    background-color: #CDCDCD;
+    margin: 10px 0 15px;
+    font-size: 8pt;
+    width: 100%;
+    text-align: left;
+}	
+
 /*
 table.tablesorter tbody tr.even.followed-up-false td {
 	background-color: #FFFF00;
@@ -141,7 +110,13 @@ table.tablesorter tbody tr.odd.followed-up-false td {
 }
 */
 
-/* Buttons */
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* Reports Case Followup Buttons */
 
 button.malaria-default{
 	background-color: #f0f0;
@@ -194,19 +169,21 @@ button.not-followed-up-after-48-hours-false {
 	margin: 30px 30px 0 0;
 	
 }
-table.tablesorter {
-    font-family: arial;
-    background-color: #CDCDCD;
-    margin: 10px 0 15px;
-    font-size: 8pt;
-    width: 100%;
-    text-align: left;
-}	
 
-#main-content {
-	width: 100%;
+/* Case Followup Report */
+#filters-section, #alerts-section, #cases-section, #legend-section {
+	padding-bottom: 20px;
 }
 
+#filters-section {
+	padding-top: 20px;
+}
+
+#alerts-drop, #cases-drop, #legend-drop {
+	width: 100px;
+}
+
+/* Layout styling */
 .page-content {
   margin:  0px 20px;	
 }
@@ -230,29 +207,22 @@ table.tablesorter {
 	float: left;
 }
 
-#report-inputs {
-	width: 300px;
-	height: 150px;
-	padding: 10px;
-}
-.drop-pointer:hover {
-	cursor: pointer;
-}
-
-#unhide-icons {
-	float: right;
-}
-
-#filters-section, #alerts-section, #cases-section, #legend-section {
-	padding-bottom: 20px;
-}
-
-#filters-section {
+#select-by-date, #select-by-week {
 	padding-top: 20px;
 }
 
-#alerts-drop, #cases-drop, #legend-drop {
-	width: 100px;
+/* Material Design styling */
+
+.mdl-grid.mdl-grid-p-15 {
+	padding: 15px;
+}
+
+.mdl-card {
+	width: 450px;
+}
+
+.mdl-grid.mdl-grid-p-15 {
+	margin-left: 30px;
 }
 
 .mdl-layout__drawer{
@@ -263,16 +233,12 @@ table.tablesorter {
 }
 
 .mdl-layout__drawer .mdl-navigation .report__link, .mdl-layout__drawer .mdl-navigation .setting__link, .mdl-layout__drawer .mdl-navigation .activity__link{
-	padding: 5px 30px 5px 20px;
+	padding: 5px 10px 5px 20px;
+	min-width: 160px;
 }
 
 .mdl-layout--fixed-drawer>.mdl-layout__header .mdl-layout__header-row {
 	padding-left: 25px;
-}
-
-.drawer__subtitle {
-   font-size: 1.1em;
-   
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
@@ -304,11 +270,25 @@ table.tablesorter {
 	color: #fff;
 }
 
+/* Drawer styling */
+
 #drawer-title{
 	margin-top: 10px;
 	font-size: 20px;
 	padding-top: 10px;
 }
+
+.drawer__subtitle {
+   font-size: 1.1em;
+   
+}
+
+#drawer-reports, #drawer-settings, #drawer-activities {
+	display: none;
+}
+
+
+/* Reports styling */
 
 #report-title{
 	font-size: 1.3em;
@@ -319,6 +299,7 @@ table.tablesorter {
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
 }
+
 .snippet-demo {
 	padding: 0 0 10px;
 	display: table-cell;
@@ -327,8 +308,17 @@ table.tablesorter {
 	margin: 0;
 }
 
-#select-by-date, #select-by-week {
-	padding-top: 20px;
+#report-inputs {
+	width: 300px;
+	height: 150px;
+	padding: 10px;
+}
+.drop-pointer:hover {
+	cursor: pointer;
+}
+
+#unhide-icons {
+	float: right;
 }
 
 td.CaseID a{
@@ -507,12 +497,6 @@ a.DTTT_button, button.DTTT_button, div.DTTT_button {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f9f9f9', GradientType=0 );
 }
 
-.dataTables_wrapper .dataTables_filter {
-    float: right;
-    text-align: right;
-    padding-right: 10px;
-}
-
 .summary {
 	height: 55px;
 	margin: 0 5px;
@@ -563,6 +547,9 @@ a.DTTT_button, button.DTTT_button, div.DTTT_button {
   margin-top: -20px;
 }
 
+.charts {
+	border: 1px solid;
+}
 /* margins setting */
 
 .f-left {
