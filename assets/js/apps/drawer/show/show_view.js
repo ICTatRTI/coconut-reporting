@@ -2,6 +2,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
    	Show.DrawerView = Marionette.ItemView.extend({
 		template: "#drawer-template",
 		events: {
+			"click a#dashboard": "removeActive",
 		      "click a.report__link": "showReport",
 		      "click a.setting__link": "showSetting",
 			  "click a.activity__link": "showActivity",
@@ -44,8 +45,13 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 			$target.next("div.dropdown").slideToggle();
 		},
 		
+		removeActive: function(){
+			$("a.mdl-navigation__link").removeClass("active");
+		},
+		
 		setActiveLink(e){
-  		  $("a.mdl-navigation__link").removeClass("active");
+		  this.removeActive();	
+  		  //$("a.mdl-navigation__link").removeClass("active");
   		  $(e.target).addClass("active");
 		}
 		
