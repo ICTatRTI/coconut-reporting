@@ -287,6 +287,11 @@ button.not-followed-up-after-48-hours-false {
 	display: none;
 }
 
+#drawer-reports a.active, #drawer-settings a.active, #drawer-activities a.active {
+   color: #2096f3;
+   font-weight: bold;
+   font-size: 1.2em;	
+}
 
 /* Reports styling */
 
@@ -504,6 +509,10 @@ a.DTTT_button, button.DTTT_button, div.DTTT_button {
 	text-align: left;
 }
 
+.summary:hover {
+		cursor: pointer;
+}
+
 #summary1 {
 	background-image: url(../img/summary1.png);
 	background-repeat: no-repeat;
@@ -556,9 +565,17 @@ div.chart {
 	display: table-cell;
 }
 
-div.chart img{
+.chart:hover {
+		cursor: pointer;
+}
+
+.chart img{
 	vertical-align: bottom;
 }
+
+
+
+
 /* margins setting */
 
 .f-left {

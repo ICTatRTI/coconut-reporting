@@ -13,6 +13,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 			var reportname = e.currentTarget.id;
 			var classStr = $(e.currentTarget).attr('class');
 			if (classStr.indexOf('drawer__subtitle') == -1) {;
+			   this.setActiveLink(e);
 			   this.trigger("report:clicked", reportname);
 			} else {
 				if (reportname == "dashboard"){
@@ -24,12 +25,14 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		
 		showSetting: function(e){
 		  e.preventDefault();
+		  this.setActiveLink(e);
 		  var setting = e.currentTarget.id;	
 		  this.trigger("setting:clicked", setting);
 		},
 		
 		showActivity: function(e){
 		  e.preventDefault();
+		  this.setActiveLink(e);
 		  var activity = e.currentTarget.id;	
 		  this.trigger("activity:clicked", activity);
 		},
@@ -38,6 +41,11 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 			e.preventDefault();
 			$target = $(e.target); 
 			$target.next("div.dropdown").slideToggle();
+		},
+		
+		setActiveLink(e){
+  		  $("a.mdl-navigation__link").removeClass("active");
+  		  $(e.target).addClass("active");
 		}
 		
 	  });	
