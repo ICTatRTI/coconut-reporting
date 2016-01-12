@@ -547,15 +547,16 @@ a.DTTT_button, button.DTTT_button, div.DTTT_button {
   margin-top: -20px;
 }
 
-.chart {
+div.chart {
 	border: 1px solid;
 	padding: 10px;
 	background: #fff;
-	min-height: 320px;
+	height: 220px;
 	vertical-align: bottom;
+	display: table-cell;
 }
 
-div.chart{
+div.chart img{
 	vertical-align: bottom;
 }
 /* margins setting */
