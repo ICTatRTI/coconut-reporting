@@ -233,7 +233,7 @@ button.not-followed-up-after-48-hours-false {
 }
 
 .mdl-layout__drawer .mdl-navigation .report__link, .mdl-layout__drawer .mdl-navigation .setting__link, .mdl-layout__drawer .mdl-navigation .activity__link{
-	padding: 5px 10px 5px 20px;
+	padding: 5px 10px 5px 10px;
 	min-width: 160px;
 }
 
@@ -268,6 +268,15 @@ button.not-followed-up-after-48-hours-false {
 .mdl-button--icon .household-incomplete {
 	background-color: #eeeeee;
 	color: #fff;
+}
+
+/* Top right menu */
+li.mdl-menu__item a {
+   text-decoration: none;	
+}
+
+i.material-icons{
+	vertical-align: middle;
 }
 
 /* Drawer styling */
