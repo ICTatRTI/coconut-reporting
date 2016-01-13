@@ -1,0 +1,140 @@
+<h4> Weekly Reports aggregated by <select style="height:50px;font-size:115%" id="aggregationPeriod"> <option> Year </option><option selected="true"> Month </option><option> Week </option> </select> and <select style="height:50px;font-size:115%" id="aggregationArea"> <option selected="true"> Zone </option><option> District </option><option> Facility </option> </select>
+</h4>
+<br />
+<div id="weeklyReports_wrapper" class="dataTables_wrapper no-footer">
+	<div class="DTTT_container">
+		<a class="DTTT_button DTTT_button_copy" id="ToolTables_weeklyReports_0" tabindex="0" aria-controls="weeklyReports"><span>Copy</span>
+			<div style="position: absolute; left: 0px; top: 0px; width: 51px; height: 28px; z-index: 99;">
+				<embed id="ZeroClipboard_TableToolsMovie_11" src="./assets/js/copy_csv_xls.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="51" height="28" name="ZeroClipboard_TableToolsMovie_11" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=11&amp;width=51&amp;height=28" wmode="transparent">
+			</div>
+		</a>
+		<a class="DTTT_button DTTT_button_csv" id="ToolTables_weeklyReports_1" tabindex="0" aria-controls="weeklyReports"><span>CSV</span>
+			<div style="position: absolute; left: 0px; top: 0px; width: 47px; height: 28px; z-index: 99;">
+				<embed id="ZeroClipboard_TableToolsMovie_12" src="./assets/js/copy_csv_xls.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="47" height="28" name="ZeroClipboard_TableToolsMovie_12" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=12&amp;width=47&amp;height=28" wmode="transparent">
+				</div>
+		</a>
+		<a class="DTTT_button DTTT_button_print" id="ToolTables_weeklyReports_2" title="View print view" tabindex="0" aria-controls="weeklyReports"><span>Print</span></a>
+	</div>
+	<div class="clear"></div>
+	<div class="dataTables_length" id="weeklyReports_length">
+		<label>Show <select name="weeklyReports_length" aria-controls="weeklyReports" class="">
+			<option value="10">10</option>
+			<option value="25">25</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+		</select> entries</label>
+	</div>
+	<div id="weeklyReports_filter" class="dataTables_filter">
+		<label>Search:<input type="search" class="" placeholder="" aria-controls="weeklyReports"></label>
+	</div>
+	<table class="tablesorter dataTable no-footer" id="weeklyReports" role="grid" aria-describedby="weeklyReports_info"> 
+		<thead> <tr role="row">
+			<th class="sorting_desc" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-sort="descending" aria-label="Month: activate to sort column ascending" style="width: 50px;">Month</th>
+			<th class="sorting_asc" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="Zone: activate to sort column ascending" style="width: 54px;">Zone</th>
+			<th class="sorting_desc" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="All OPD &amp;lt; 5: activate to sort column ascending" style="width: 58px;">All OPD &lt; 5</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="Mal POS &amp;lt; 5: activate to sort column ascending" style="width: 62px;">Mal POS &lt; 5</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="Mal NEG &amp;lt; 5: activate to sort column ascending" style="width: 63px;">Mal NEG &lt; 5</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="All OPD &amp;gt;= 5: activate to sort column ascending" style="width: 65px;">All OPD &gt;= 5</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="Mal POS &amp;gt;= 5: activate to sort column ascending" style="width: 69px;">Mal POS &gt;= 5</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="Mal NEG &amp;gt;= 5: activate to sort column ascending" style="width: 70px;">Mal NEG &gt;= 5</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="Facility Followed-Up Positive Cases: activate to sort column ascending" style="width: 184px;">Facility Followed-Up Positive Cases</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="Weekly Reports Positive Cases: activate to sort column ascending" style="width: 161px;">Weekly Reports Positive Cases</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="&amp;lt;5 Test Rate: activate to sort column ascending" style="width: 65px;">&lt;5 Test Rate</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="&amp;lt;5 POS Rate: activate to sort column ascending" style="width: 65px;">&lt;5 POS Rate</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="=&amp;gt;5 Test Rate: activate to sort column ascending" style="width: 72px;">=&gt;5 Test Rate</th>
+			<th class="sorting" tabindex="0" aria-controls="weeklyReports" rowspan="1" colspan="1" aria-label="&amp;gt;=5 POS Rate: activate to sort column ascending" style="width: 72px;">&gt;=5 POS Rate</th>
+		</tr>
+	</thead> 
+	<tbody>  
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-11</td> 
+			<td class="sorting_2">PEMBA</td> 
+			<td class="sorting_3">5821</td>
+			<td>1</td>
+			<td>1205</td>
+			<td>9568</td>
+			<td>12</td>
+			<td>1628</td>
+			<td><button class="sort-value same-cell-disaggregatable">18</button> </td> 
+			<td> 13 </td>  
+			<td>21%</td> 
+			<td>0%</td> 
+			<td>17%</td> 
+			<td>1%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-11</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">10581</td><td>18</td><td>3141</td><td>17071</td><td>24</td><td>4373</td><td><button class="sort-value same-cell-disaggregatable">22</button> </td> <td> 42 </td>  <td>30%</td> <td>1%</td> <td>26%</td> <td>1%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-10</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">13285</td><td>7</td><td>2552</td><td>21974</td><td>204</td><td>3195</td><td><button class="sort-value same-cell-disaggregatable">39</button> </td> <td> 211 </td>  <td>19%</td> <td>0%</td> <td>15%</td> <td>6%</td> 
+		</tr>
+		<tr role="row" class="even">
+			<td class="sorting_1">2015-10</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">22098</td><td>31</td><td>6159</td><td>35297</td><td>92</td><td>7705</td><td><button class="sort-value same-cell-disaggregatable">70</button> </td> <td> 123 </td>  <td>28%</td> <td>1%</td> <td>22%</td> <td>1%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-09</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">10015</td><td>5</td><td>1681</td><td>17358</td><td>22</td><td>2510</td><td><button class="sort-value same-cell-disaggregatable">22</button> </td> <td> 27 </td>  <td>17%</td> <td>0%</td> <td>15%</td> <td>1%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-09</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">17047</td><td>76</td><td>4974</td><td>27181</td><td>120</td><td>6452</td><td><button class="sort-value same-cell-disaggregatable">126</button> </td> <td> 196 </td>  <td>30%</td> <td>2%</td> <td>24%</td> <td>2%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-08</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">11440</td><td>4</td><td>1941</td><td>20546</td><td>35</td><td>3183</td><td><button class="sort-value same-cell-disaggregatable">38</button> </td> <td> 39 </td>  <td>17%</td> <td>0%</td> <td>16%</td> <td>1%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-08</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">14588</td><td>50</td><td>4209</td><td>28166</td><td>174</td><td>6944</td><td><button class="sort-value same-cell-disaggregatable">207</button> </td> <td> 224 </td>  <td>29%</td> <td>1%</td> <td>25%</td> <td>2%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-07</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">12098</td><td>19</td><td>2102</td><td>22899</td><td>121</td><td>3893</td><td><button class="sort-value same-cell-disaggregatable">117</button> </td> <td> 140 </td>  <td>18%</td> <td>1%</td> <td>18%</td> <td>3%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-07</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">16799</td><td>107</td><td>4566</td><td>32584</td><td>556</td><td>8464</td><td><button class="sort-value same-cell-disaggregatable">428</button> </td> <td> 663 </td>  <td>28%</td> <td>2%</td> <td>28%</td> <td>6%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-06</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">11681</td><td>16</td><td>1926</td><td>22308</td><td>113</td><td>3935</td><td><button class="sort-value same-cell-disaggregatable">129</button> </td> <td> 129 </td>  <td>17%</td> <td>1%</td> <td>18%</td> <td>3%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-06</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">18188</td><td>77</td><td>5031</td><td>37514</td><td>625</td><td>11473</td><td><button class="sort-value same-cell-disaggregatable">508</button> </td> <td> 702 </td>  <td>28%</td> <td>2%</td> <td>32%</td> <td>5%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-05</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">12672</td><td>7</td><td>1773</td><td>20998</td><td>39</td><td>2255</td><td><button class="sort-value same-cell-disaggregatable">35</button> </td> <td> 46 </td>  <td>14%</td> <td>0%</td> <td>11%</td> <td>2%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-05</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">18425</td><td>45</td><td>4650</td><td>36008</td><td>276</td><td>8976</td><td><button class="sort-value same-cell-disaggregatable">211</button> </td> <td> 321 </td>  <td>25%</td> <td>1%</td> <td>26%</td> <td>3%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-04</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">18869</td><td>8</td><td>2838</td><td>25123</td><td>24</td><td>2631</td><td><button class="sort-value same-cell-disaggregatable">27</button> </td> <td> 32 </td>  <td>15%</td> <td>0%</td> <td>11%</td> <td>1%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-04</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">26339</td><td>27</td><td>5959</td><td>37835</td><td>94</td><td>7040</td><td><button class="sort-value same-cell-disaggregatable">96</button> </td> <td> 121 </td>  <td>23%</td> <td>0%</td> <td>19%</td> <td>1%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-03</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">11953</td><td>1</td><td>2015</td><td>19871</td><td>11</td><td>2468</td><td><button class="sort-value same-cell-disaggregatable">13</button> </td> <td> 12 </td>  <td>17%</td> <td>0%</td> <td>12%</td> <td>0%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-03</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">21054</td><td>32</td><td>5017</td><td>28954</td><td>69</td><td>5994</td><td><button class="sort-value same-cell-disaggregatable">97</button> </td> <td> 101 </td>  <td>24%</td> <td>1%</td> <td>21%</td> <td>1%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-02</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">11114</td><td>2</td><td>1809</td><td>19296</td><td>28</td><td>2507</td><td><button class="sort-value same-cell-disaggregatable">28</button> </td> <td> 30 </td>  <td>16%</td> <td>0%</td> <td>13%</td> <td>1%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-02</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">17255</td><td>34</td><td>4477</td><td>27282</td><td>120</td><td>5867</td><td><button class="sort-value same-cell-disaggregatable">99</button> </td> <td> 154 </td>  <td>26%</td> <td>1%</td> <td>22%</td> <td>2%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2015-01</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">13998</td><td>15</td><td>1995</td><td>22623</td><td>52</td><td>3136</td><td><button class="sort-value same-cell-disaggregatable">54</button> </td> <td> 67 </td>  <td>14%</td> <td>1%</td> <td>14%</td> <td>2%</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2015-01</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">18045</td><td>30</td><td>4753</td><td>32498</td><td>178</td><td>7093</td><td><button class="sort-value same-cell-disaggregatable">129</button> </td> <td> 208 </td>  <td>27%</td> <td>1%</td> <td>22%</td> <td>2%</td> 
+		</tr>
+		<tr role="row" class="odd"> 
+			<td class="sorting_1">2014-12</td> <td class="sorting_2">PEMBA</td> <td class="sorting_3">-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td><button class="sort-value same-cell-disaggregatable">3</button> </td> <td> - </td>  <td>-</td> <td>-</td> <td>-</td> <td>-</td> 
+		</tr>
+		<tr role="row" class="even"> 
+			<td class="sorting_1">2014-12</td> <td class="sorting_2">UNGUJA</td> <td class="sorting_3">-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td><button class="sort-value same-cell-disaggregatable">16</button> </td> <td> - </td>  <td>-</td> <td>-</td> <td>-</td> <td>-</td> 
+		</tr>
+	  </tbody> 
+	</table>
+	<div class="dataTables_info" id="weeklyReports_info" role="status" aria-live="polite">Showing 1 to 24 of 24 entries</div>
+	<div class="dataTables_paginate paging_simple_numbers" id="weeklyReports_paginate">
+		<a class="paginate_button previous disabled" aria-controls="weeklyReports" data-dt-idx="0" tabindex="0" id="weeklyReports_previous">Previous</a><span><a class="paginate_button current" aria-controls="weeklyReports" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="weeklyReports" data-dt-idx="2" tabindex="0" id="weeklyReports_next">Next</a>
+	</div>
+</div>

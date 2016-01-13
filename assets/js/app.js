@@ -50,6 +50,10 @@ CocoManager.dialog.onShow = function(view){
   };
 });
 
+CocoManager.HeaderView = Marionette.ItemView.extend({
+	template: "#header-template"
+});
+/*
 CocoManager.MainView = Marionette.ItemView.extend({
 	className: "page-content",
 	template: "#main-template"
@@ -59,14 +63,13 @@ CocoManager.ReportView = Marionette.ItemView.extend({
 	className: "report-content",
 	template: "#report-template",
 });  
-  
-CocoManager.HeaderView = Marionette.ItemView.extend({
-	template: "#header-template"
-});
-  
+    
 CocoManager.DrawerView = Marionette.ItemView.extend({
 	template: "#drawer-template"
 });
+*/
+
+var templates_path = "assets/templates/";
 		
 CocoManager.on("start", function(){
     if(Backbone.history){

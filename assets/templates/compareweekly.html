@@ -1,0 +1,175 @@
+<div id="reportContents">
+	<style> td.number{ text-align: center; vertical-align: middle; } table.tablesorter tbody td.mismatch, button.mismatch, span.mismatch{ color:#FF4081 } </style> 
+	<br> <br> 
+	<h4> Weekly Reports and cases aggregated by <select style="height:50px;font-size:115%" id="aggregationPeriod"> 
+		<option> Year </option>
+		<option> Quarter </option>
+		<option selected="true"> Month </option>
+		<option> Week </option> 
+	</select> and <select style="height:50px;font-size:115%" id="aggregationArea"> 
+		<option selected="true"> Zone </option>
+		<option> District </option>
+		<option> Facility </option> 
+	</select> for <select style="height:50px;font-size:115%" id="facilityType"> 
+		<option selected="true"> All </option>
+		<option> Private </option>
+		<option> Public </option> 
+	</select> facilities. 
+    </h4>
+	 <div>If the total positive cases from the weekly reports don't match the number of cases notified, the <span class="mismatch">mismatched values are colored</span>.</div> 
+	 <button style="float:right" id="csv">CSV Mode</button> 
+	 <br> <br> 
+	 <div id="facilityTimeliness_wrapper" class="dataTables_wrapper no-footer">
+		 <div class="DTTT_container" style="display: none;">
+			 <a class="DTTT_button DTTT_button_csv" id="ToolTables_facilityTimeliness_0" tabindex="0" aria-controls="facilityTimeliness"><span>CSV</span>
+				 <div style="position: absolute; left: 0px; top: 0px; width: 0px; height: 0px; z-index: 99;">
+					 <embed id="ZeroClipboard_TableToolsMovie_4" src="./assets/js/copy_csv_xls.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="0" height="0" name="ZeroClipboard_TableToolsMovie_4" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=4&amp;width=0&amp;height=0" wmode="transparent">
+					 </div>
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+			 <div class="dataTables_length" id="facilityTimeliness_length">
+				 <label>Show <select name="facilityTimeliness_length" aria-controls="facilityTimeliness" class="">
+					 <option value="10">10</option>
+					 <option value="25">25</option>
+					 <option value="50">50</option>
+					 <option value="100">100</option>
+				 </select> entries</label>
+			 </div>
+			 <div id="facilityTimeliness_filter" class="dataTables_filter">
+				 <label>Search:<input type="search" class="" placeholder="" aria-controls="facilityTimeliness"></label>
+			 </div>
+			 <table class="tablesorter dataTable no-footer" id="facilityTimeliness" style="" role="grid" aria-describedby="facilityTimeliness_info"> 
+				 <thead> 
+					 <tr role="row">
+						 <th class="sorting_desc" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-sort="descending" aria-label="Month: activate to sort column ascending" style="width: 38px;">Month</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Zone: activate to sort column ascending" style="width: 54px;">Zone</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Reports expected for period: activate to sort column ascending" style="width: 47px;">Reports expected for period</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Reports submitted for period: activate to sort column ascending" style="width: 51px;">Reports submitted for period</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Percent submitted for period: activate to sort column ascending" style="width: 51px;">Percent submitted for period</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Reports submitted within 1 day of period end (Monday): activate to sort column ascending" style="width: 79px;">Reports submitted within 1 day of period end (Monday)</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Reports submitted within 1-3 days of period end (by Wednesday): activate to sort column ascending" style="width: 94px;">Reports submitted within 1-3 days of period end (by Wednesday)</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Reports submitted within 3-5 days of period end (by Friday): activate to sort column ascending" style="width: 86px;">Reports submitted within 3-5 days of period end (by Friday)</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Reports submitted 7 or more days after period end: activate to sort column ascending" style="width: 72px;">Reports submitted 7 or more days after period end</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Total Tested: activate to sort column ascending" style="width: 35px;">Total Tested</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Total Positive (%): activate to sort column ascending" style="width: 42px;">Total Positive (%)</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Number of cases notified: activate to sort column ascending" style="width: 41px;">Number of cases notified</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Facility Followed-Up Positive Cases: activate to sort column ascending" style="width: 50px;">Facility Followed-Up Positive Cases</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Cases Followed-Up within 48 Hours: activate to sort column ascending" style="width: 50px;">Cases Followed-Up within 48 Hours</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Median Days from Positive Test Result to Facility Notification (IQR): activate to sort column ascending" style="width: 90px;">Median Days from Positive Test Result to Facility Notification (IQR)</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Median Days from Facility Notification to Complete Facility (IQR): activate to sort column ascending" style="width: 87px;">Median Days from Facility Notification to Complete Facility (IQR)</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="% of Notified Cases with Complete Facility Followup: activate to sort column ascending" style="width: 69px;">% of Notified Cases with Complete Facility Followup</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Median Days from Facility Notification to Complete Household (IQR): activate to sort column ascending" style="width: 92px;">Median Days from Facility Notification to Complete Household (IQR)</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="% of Notified Cases with Complete Household Followup: activate to sort column ascending" style="width: 75px;">% of Notified Cases with Complete Household Followup</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Number of Household or Neighbor Members: activate to sort column ascending" style="width: 58px;">Number of Household or Neighbor Members</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Number of Household or Neighbor Members Tested (%): activate to sort column ascending" style="width: 74px;">Number of Household or Neighbor Members Tested (%)</th>
+						 <th class="sorting" tabindex="0" aria-controls="facilityTimeliness" rowspan="1" colspan="1" aria-label="Number of Household or Neighbor Members Tested Positive (%): activate to sort column ascending" style="width: 88px;">Number of Household or Neighbor Members Tested Positive (%)</th>
+					 </tr>
+				 </thead> 
+			     <tbody>  
+				   <tr role="row" class="odd"> 
+					   <td class="sorting_1">2015-11</td>  
+					   <td> PEMBA  </td> 
+					   <td> 0 </td> 
+					   <td>6</td> 
+					   <td> - </td> 
+					   <td>6</td> 
+					   <td>0</td> 
+					   <td>0</td> 
+					   <td>0</td> 
+					   <td> <!-- Total Tested --> 136 </td> 
+					   <td class="total-positive mismatch"> 1 (0.7%) </td> 
+					   <td class="casesNotified mismatch"> 
+						   <button class="sort-value same-cell-disaggregatable mismatch">4</button> 
+						   <div class="cases" style="padding:10px;display:none"> <br> 
+							   <a href="#show/case/109609"><button class="undefined">109609</button></a>
+							   <a href="#show/case/109535"><button class="undefined">109535</button></a>
+							   <a href="#show/case/109619"><button class="undefined">109619</button></a>
+							   <a href="#show/case/109622"><button class="undefined">109622</button></a> 
+						   </div> 
+					   </td>
+					   <td class="hasCompleteFacility"> <button class="sort-value same-cell-disaggregatable">4</button> 
+						   <div class="cases" style="padding:10px;display:none"> <br> 
+							   <a href="#show/case/109609"><button class="undefined">109609</button></a>
+							   <a href="#show/case/109535"><button class="undefined">109535</button></a>
+							   <a href="#show/case/109619"><button class="undefined">109619</button></a>
+							   <a href="#show/case/109622"><button class="undefined">109622</button></a> 
+						   </div> 
+					   </td>
+					   <td class="followedUpWithin48Hours"> <button class="sort-value same-cell-disaggregatable">3</button> 
+						   <div class="cases" style="padding:10px;display:none"> <br> 
+							   <a href="#show/case/109609"><button class="undefined">109609</button></a>
+							   <a href="#show/case/109619"><button class="undefined">109619</button></a>
+							   <a href="#show/case/109622"><button class="undefined">109622</button></a> 
+						   </div> 
+					   </td> 
+					   <td>0 (0-24)</td> 
+					   <td>0 (0-0.9)</td> 
+					   <td> - </td> 
+					   <td>1.1 (1-1.5)</td> 
+					   <td> 75% </td> 
+					   <td> 11 </td> 
+					   <td> 11 (100%) </td> 
+					   <td> 0 (0%) </td> 
+				   </tr>
+				   <tr role="row" class="even"> 
+					   <td class="sorting_1">2015-11</td>  
+					   <td> UNGUJA  </td> 
+					   <td> 0 </td> 
+					   <td>3</td> 
+					   <td> - </td> 
+					   <td>3</td> 
+					   <td>0</td> 
+					   <td>0</td> 
+					   <td>0</td> 
+					   <td> <!-- Total Tested --> 90 </td> 
+					   <td class="total-positive mismatch"> 1 (1.1%) </td> 
+					   <td class="casesNotified mismatch"> 
+						   <button class="sort-value same-cell-disaggregatable mismatch">6</button> 
+						   <div class="cases" style="padding:10px;display:none"> <br> 
+							   <a href="#show/case/109594"><button class="undefined">109594</button></a>
+							   <a href="#show/case/109607"><button class="undefined">109607</button></a>
+							   <a href="#show/case/109628"><button class="undefined">109628</button></a>
+							   <a href="#show/case/109617"><button class="undefined">109617</button></a>
+							   <a href="#show/case/109613"><button class="undefined">109613</button></a>
+							   <a href="#show/case/109615"><button class="undefined">109615</button></a> 
+						   </div> 
+					   </td>
+					   <td class="hasCompleteFacility"> 
+						   <button class="sort-value same-cell-disaggregatable">6</button> 
+						   <div class="cases" style="padding:10px;display:none"> <br> 
+							   <a href="#show/case/109594"><button class="undefined">109594</button></a>
+							   <a href="#show/case/109607"><button class="undefined">109607</button></a>
+							   <a href="#show/case/109628"><button class="undefined">109628</button></a>
+							   <a href="#show/case/109617"><button class="undefined">109617</button></a>
+							   <a href="#show/case/109613"><button class="undefined">109613</button></a>
+							   <a href="#show/case/109615"><button class="undefined">109615</button></a> 
+						   </div> 
+					   </td>
+					   <td class="followedUpWithin48Hours"> <button class="sort-value same-cell-disaggregatable">3</button> 
+						   <div class="cases" style="padding:10px;display:none"> <br> 
+							   <a href="#show/case/109594"><button class="undefined">109594</button></a>
+							   <a href="#show/case/109607"><button class="undefined">109607</button></a>
+							   <a href="#show/case/109628"><button class="undefined">109628</button></a> 
+						   </div> 
+					   </td> 
+					   <td>0 (0-1.5)</td> 
+					   <td>0.3 (0-0.6)</td> 
+					   <td> - </td> 
+					   <td>0.5 (0.5-NaN)</td> 
+					   <td> 33.3% </td> 
+					   <td> 7 </td> 
+					   <td> 7 (100%) </td> 
+					   <td> 0 (0%) </td> 
+				   </tr>
+			   </tbody> 
+		   </table>
+		   <div class="dataTables_info" id="facilityTimeliness_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div>
+		   <div class="dataTables_paginate paging_simple_numbers" id="facilityTimeliness_paginate">
+			   <a class="paginate_button previous disabled" aria-controls="facilityTimeliness" data-dt-idx="0" tabindex="0" id="facilityTimeliness_previous">Previous</a>
+			   <span>
+				   <a class="paginate_button current" aria-controls="facilityTimeliness" data-dt-idx="1" tabindex="0">1</a></span>
+				   <a class="paginate_button next disabled" aria-controls="facilityTimeliness" data-dt-idx="2" tabindex="0" id="facilityTimeliness_next">Next</a>
+			   </div>
+		   </div>
+	   </div>

@@ -16,10 +16,10 @@ CocoManager.module("ReportsApp", function(ReportsApp, CocoManager, Backbone, Mar
     API.showReport(reportname);
   });
 
-
   ReportsApp.on("start", function(){
     new ReportsApp.Router({
       controller: API
     });
+	$("#report-options-template").load(templates_path + "dates_filter.html");
   });
 });

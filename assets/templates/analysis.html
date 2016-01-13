@@ -1,0 +1,999 @@
+<div class="analysis dropDownBtn">
+	<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">play_arrow</i></button>
+	Cases Followed Up<small> <button onclick="$('.details').toggle()">Toggle Details</button></small></h4>
+</div>
+<div id="cases-followed-up" class="analysis-report dropdown-section">
+  <table class="tablesorter"> 
+	<thead> 
+		<tr> 
+			<th colspan="1" class="header headerSortDown">District</th>
+			<th colspan="1" class="header">Cases</th>
+			<th colspan="1" class="header">Complete household visit</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="details header" style="display: none;">Missing USSD Notification</th>
+			<th colspan="1" class="header">Missing Case Notification</th>
+			<th colspan="1" class="details header" style="display: none;">Complete facility visit</th>
+			<th colspan="1" class="header">Without complete facility visit (but with case notification)</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Without complete facility visit within 24 hours</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Without complete household visit (but with complete facility visit)</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Without complete household visit within 48 hours</th>
+			<th colspan="1" class="header">%</th> 
+		</tr> 
+	</thead> 
+	<tbody>
+		<tr class="odd"> 
+			<td>ALL</td> 
+			<td><button class="sort-value same-cell-disaggregatable">3704</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">3209</button></td>
+			<td>87%</td>
+			<td><button class="sort-value same-cell-disaggregatable">33</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">194</button></td>
+			<td>5%</td>
+			<td><button class="sort-value same-cell-disaggregatable">212</button></td>
+			<td>6%</td>
+			<td><button class="sort-value same-cell-disaggregatable">222</button></td>
+			<td>6%</td>
+			<td><button class="sort-value same-cell-disaggregatable">435</button></td>
+			<td>12%</td>
+		</tr>
+		<tr class="even">
+			<td>CHAKE CHAKE</td>
+			<td><button class="sort-value same-cell-disaggregatable">83</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">73</button></td>
+			<td>88%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">2</button></td>
+			<td>2%</td>
+			<td><button class="sort-value same-cell-disaggregatable">3</button></td>
+			<td>4%</td>
+			<td><button class="sort-value same-cell-disaggregatable">3</button></td>
+			<td>4%</td>
+			<td><button class="sort-value same-cell-disaggregatable">7</button></td>
+			<td>8%</td>
+		</tr>
+		<tr class="odd">
+			<td>KASKAZINI A</td>
+			<td><button class="sort-value same-cell-disaggregatable">365</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">357</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">98%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">7</button></td>
+			<td>2%</td>
+		</tr>
+		<tr class="even">
+			<td>KASKAZINI B</td>
+			<td><button class="sort-value same-cell-disaggregatable">404</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">386</button></td>
+			<td>96%</td>
+			<td><button class="sort-value same-cell-disaggregatable">5</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">5</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">12</button></td>
+			<td>3%</td>
+		</tr>
+		<tr class="odd">
+			<td>KATI</td>
+			<td><button class="sort-value same-cell-disaggregatable">538</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">506</button></td>
+			<td>94%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">6</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">5</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">7</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">24</button></td>
+			<td>4%</td>
+		</tr>
+		<tr class="even">
+			<td>KUSINI</td>
+			<td><button class="sort-value same-cell-disaggregatable">257</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">240</button></td>
+			<td>93%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">4</button></td>
+			<td>2%</td>
+			<td><button class="sort-value same-cell-disaggregatable">3</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">4</button></td>
+			<td>2%</td>
+			<td><button class="sort-value same-cell-disaggregatable">12</button></td>
+			<td>5%</td>
+		</tr>
+		<tr class="odd">
+			<td>MAGHARIBI</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">995</button> </td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">766</button> </td>
+			<td>77%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">16</button> </td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">129</button> </td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">13%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">140</button> </td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">14%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">141</button> </td>
+			<td>14%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">214</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">22%</td>
+		</tr>
+		<tr class="even">
+			<td>MICHEWENI</td>
+			<td><button class="sort-value same-cell-disaggregatable">321</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">293</button></td>
+			<td>91%</td>
+			<td><button class="sort-value same-cell-disaggregatable">3</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">20</button></td>
+			<td>6%</td>
+			<td><button class="sort-value same-cell-disaggregatable">23</button></td>
+			<td>7%</td>
+			<td><button class="sort-value same-cell-disaggregatable">22</button></td>
+			<td>7%</td>
+			<td><button class="sort-value same-cell-disaggregatable">26</button></td>
+			<td>8%</td>
+		</tr>
+		<tr class="odd">
+			<td>MJINI</td>
+			<td><button class="sort-value same-cell-disaggregatable">513</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">383</button></td>
+			<td>75%</td>
+			<td><button class="sort-value same-cell-disaggregatable">4</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">23</button></td>
+			<td>4%</td>
+			<td><button class="sort-value same-cell-disaggregatable">26</button></td>
+			<td>5%</td>
+			<td><button class="sort-value same-cell-disaggregatable">27</button></td>
+			<td>5%</td>
+			<td><button class="sort-value same-cell-disaggregatable">115</button></td>
+			<td>22%</td>
+		</tr>
+		<tr class="even">
+			<td>MKOANI</td>
+			<td><button class="sort-value same-cell-disaggregatable">107</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">99</button></td>
+			<td>93%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">2</button></td>
+			<td>2%</td>
+			<td><button class="sort-value same-cell-disaggregatable">2</button></td>
+			<td>2%</td>
+			<td><button class="sort-value same-cell-disaggregatable">5</button></td>			
+			<td>5%</td>
+		</tr>
+		<tr class="odd">
+			<td>UNKNOWN</td>
+			<td><button class="sort-value same-cell-disaggregatable">3</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>33%</td>
+			<td><button class="sort-value same-cell-disaggregatable">2</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">2</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">67%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even">
+			<td>WETE</td>
+			<td><button class="sort-value same-cell-disaggregatable">118</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">105</button></td>
+			<td>89%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">8</button></td>
+			<td>7%</td>
+			<td><button class="sort-value same-cell-disaggregatable">8</button></td>
+			<td>7%</td>
+			<td><button class="sort-value same-cell-disaggregatable">8</button></td>
+			<td>7%</td>
+			<td><button class="sort-value same-cell-disaggregatable">13</button></td>
+			<td>11%</td>
+		</tr>
+	</tbody>
+  </table>
+</div>  
+<hr />
+<div class="analysis dropDownBtn">
+	<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i  class="material-icons">play_arrow</i></button>
+		Index Household and Neighbors</h4>
+</div>
+<div id="index-house-neighbors" class="analysis-report dropdown-section">
+  <table  class="tablesorter"> 
+	<thead> 
+		<tr> 
+			<th colspan="1" class="header headerSortDown">District</th>
+			<th colspan="1" class="header">No. of cases followed up</th>
+			<th colspan="1" class="header">No. of additional index household members tested</th>
+			<th colspan="1" class="header">No. of additional index household members tested positive</th>
+			<th colspan="1" class="header">% of index household members tested positive</th>
+			<th colspan="1" class="header">% increase in cases found using MCN</th>
+			<th colspan="1" class="header">No. of additional neighbor households visited</th>
+			<th colspan="1" class="header">No. of additional neighbor household members tested</th>
+			<th colspan="1" class="header">No. of additional neighbor household members tested positive</th> 
+		</tr> 
+	</thead> 
+	<tbody>
+		<tr class="odd"> 
+			<td>ALL</td> 
+			<td><button class="sort-value same-cell-disaggregatable">3209</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">13620</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">699</button></td>
+			<td>5%</td>
+			<td>22%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">261</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="even">
+			<td>CHAKE CHAKE</td>
+			<td><button class="sort-value same-cell-disaggregatable">73</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">451</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">17</button></td>
+			<td>4%</td>
+			<td>23%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">13</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="odd"> 
+			<td>KASKAZINI A</td>
+			<td><button class="sort-value same-cell-disaggregatable">357</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1279</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">71</button></td>
+			<td>6%</td>
+			<td>20%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">20</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="even">
+			<td>KASKAZINI B</td>
+			<td><button class="sort-value same-cell-disaggregatable">386</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1633</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">66</button></td>
+			<td>4%</td>
+			<td>17%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">28</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="odd"> 
+			<td>KATI</td>
+			<td><button class="sort-value same-cell-disaggregatable">506</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1825</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">86</button></td>
+			<td>5%</td>
+			<td>17%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">18</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="even">
+			<td>KUSINI</td>
+			<td><button class="sort-value same-cell-disaggregatable">240</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">827</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">40</button></td>
+			<td>5%</td>
+			<td>17%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">21</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="odd"> 
+			<td>MAGHARIBI</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">766</button><td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">3605</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">201</button></td>
+			<td>6%</td>
+			<td>26%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">1</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">94</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="even">
+			<td>MICHEWENIMICHEWENI</td>
+			<td><button class="sort-value same-cell-disaggregatable">293</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1466</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">50</button></td>
+			<td>3%</td>
+			<td>17%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">40</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="odd"> 
+			<td>MJINI</td>
+			<td><button class="sort-value same-cell-disaggregatable">383</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1710</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">112</button></td>
+			<td>7%</td>
+			<td>29%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">6</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="even">
+			<td>MKOANI</td>
+			<td><button class="sort-value same-cell-disaggregatable">299</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">386</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">17</button></td>
+			<td>4%</td>
+			<td>17%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="odd"> 
+			<td>UNKNOWN</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">7</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">6</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+		<tr class="even">
+			<td>WETE</td>
+			<td><button class="sort-value same-cell-disaggregatable">105</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">431</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">39</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">9%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">37%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+		</tr>
+	</tbody>
+  </table>
+</div>  
+<hr />
+<div class="analysis dropDownBtn">
+	<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">play_arrow</i></button>
+		Age: <small>Includes index cases with complete household visits, positive index case household members, and positive neighbor household members</small></h4>
+</div>
+<div id="age" class="analysis-report dropdown-section">
+  <table class="tablesorter"> 
+	<thead> 
+		<tr> 
+			<th colspan="1" class="header headerSortDown">District</th>
+			<th colspan="1" class="header">Total</th>
+			<th colspan="1" class="header">&lt;5</th><th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">5&lt;15</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">15&lt;25</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">&gt;=25</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Unknown</th>
+			<th colspan="1" class="header">%</th> 
+		</tr> 
+	</thead> 
+	<tbody>  
+		<tr class="odd">
+			<td>ALL</td>
+			<td><button class="sort-value same-cell-disaggregatable">3917</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">393</button></td>
+			<td>10%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1041</button></td>
+			<td>27%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1120</button></td>
+			<td>29%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1360</button></td>
+			<td>35%</td>
+			<td><button class="sort-value same-cell-disaggregatable">3</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even">
+			<td>CHAKE CHAKE</td>
+			<td><button class="sort-value same-cell-disaggregatable">90</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">13</button></td>
+			<td>14%</td>
+			<td><button class="sort-value same-cell-disaggregatable">27</button></td>
+			<td>30%</td>
+			<td><button class="sort-value same-cell-disaggregatable">24</button></td>
+			<td>27%</td>
+			<td><button class="sort-value same-cell-disaggregatable">26</button></td>
+			<td>29%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="odd">
+			<td>KASKAZINI A</td>
+			<td><button class="sort-value same-cell-disaggregatable">429</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">29</button></td>
+			<td>7%</td>
+			<td><button class="sort-value same-cell-disaggregatable">92</button></td>
+			<td>21%</td>
+			<td><button class="sort-value same-cell-disaggregatable">144</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">34%</td>
+			<td><button class="sort-value same-cell-disaggregatable">164</button></td>
+			<td>38%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even">
+			<td>KASKAZINI B</td>
+			<td><button class="sort-value same-cell-disaggregatable">452</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">46</button></td>
+			<td>10%</td>
+			<td><button class="sort-value same-cell-disaggregatable">112</button></td>
+			<td>25%</td>
+			<td><button class="sort-value same-cell-disaggregatable">140</button></td>
+			<td>31%</td>
+			<td><button class="sort-value same-cell-disaggregatable">154</button></td>
+			<td>34%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="odd">
+			<td>KATI</td>
+			<td><button class="sort-value same-cell-disaggregatable">592</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">57</button></td>
+			<td>10%</td>
+			<td><button class="sort-value same-cell-disaggregatable">160</button></td>
+			<td>27%</td>
+			<td><button class="sort-value same-cell-disaggregatable">164</button></td>
+			<td>28%</td>
+			<td><button class="sort-value same-cell-disaggregatable">211</button></td>
+			<td>36%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even">
+			<td>KUSINI B</td>
+			<td><button class="sort-value same-cell-disaggregatable">280</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">10</button></td>
+			<td>4%</td>
+			<td><button class="sort-value same-cell-disaggregatable">73</button></td>
+			<td>26%</td>
+			<td><button class="sort-value same-cell-disaggregatable">93</button></td>
+			<td>33%</td>
+			<td><button class="sort-value same-cell-disaggregatable">104</button></td>
+			<td>37%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="odd">
+			<td>MAGHARIBI</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">972</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">100</button></td>
+			<td>10%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">248</button></td>
+			<td>26%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">258</button></td>
+			<td>27%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">364</button></td>
+			<td>37%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">2</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even">
+			<td>MICHEWENI</td>
+			<td><button class="sort-value same-cell-disaggregatable">345</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">35</button></td>
+			<td>10%</td>
+			<td><button class="sort-value same-cell-disaggregatable">133</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">39%</td>
+			<td><button class="sort-value same-cell-disaggregatable">100</button></td>
+			<td>29%</td>
+			<td><button class="sort-value same-cell-disaggregatable">76</button></td>
+			<td>22%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="odd">
+			<td>MJINI</td>
+			<td><button class="sort-value same-cell-disaggregatable">496</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">63</button></td>
+			<td>13%</td>
+			<td><button class="sort-value same-cell-disaggregatable">118</button></td>
+			<td>24%</td>
+			<td><button class="sort-value same-cell-disaggregatable">121</button></td>
+			<td>24%</td>
+			<td><button class="sort-value same-cell-disaggregatable">194</button></td>
+			<td>39%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even">
+			<td>MKOANI</td>
+			<td><button class="sort-value same-cell-disaggregatable">116</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">18</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">16%</td>
+			<td><button class="sort-value same-cell-disaggregatable">33</button></td>
+			<td>28%</td>
+			<td><button class="sort-value same-cell-disaggregatable">34</button></td>
+			<td>29%</td>
+			<td><button class="sort-value same-cell-disaggregatable">31</button></td>
+			<td>27%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="odd">
+			<td>UNKNOWN</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even">
+			<td>WETE</td>
+			<td><button class="sort-value same-cell-disaggregatable">144</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">22</button></td>
+			<td>15%</td>
+			<td><button class="sort-value same-cell-disaggregatable">45</button></td>
+			<td>31%</td>
+			<td><button class="sort-value same-cell-disaggregatable">42</button></td>
+			<td>29%</td>
+			<td><button class="sort-value same-cell-disaggregatable">35</button></td>
+			<td>24%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+	</tbody>
+  </table>
+</div>  
+<hr />
+<div class="analysis dropDownBtn">
+	<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">play_arrow</i></button>
+		Gender: <small>Includes index cases with complete household visits, positive index case household members, and positive neighbor household members</small> <button type="button" onclick="$('.gender-unknown').toggle()">Toggle Unknown</button>
+	</h4>
+</div>
+<div id="gender" class="analysis-report dropdown-section">
+  <table class="tablesorter"> 
+	<thead> 
+		<tr> 
+			<th colspan="1" class="header headerSortDown">District</th>
+			<th colspan="1" class="header">Total</th>
+			<th colspan="1" class="header">Male</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Female</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="gender-unknown header" style="display: none;">Unknown</th>
+			<th colspan="1" class="gender-unknown header" style="display: none;">%</th> 
+		</tr> 
+	</thead> 
+	<tbody>  
+		<tr class="odd"> 
+			<td>ALL</td> 
+			<td><button class="sort-value same-cell-disaggregatable">3917</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">2244</button></td>
+			<td>57%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1650</button></td>
+			<td>42%</td>
+		</tr>
+		<tr class="even"> 
+			<td>CHAKE CHAKE</td>
+			<td><button class="sort-value same-cell-disaggregatable">90</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">47</button></td>
+			<td>52%</td>
+			<td><button class="sort-value same-cell-disaggregatable">40</button></td>
+			<td>44%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>KASKAZINI A</td> 
+			<td><button class="sort-value same-cell-disaggregatable">429</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">270</button></td>
+			<td>63%</td>
+			<td><button class="sort-value same-cell-disaggregatable">159</button></td>
+			<td>37%</td>
+		</tr>
+		<tr class="even"> 
+			<td>KASKAZINI B</td>
+			<td><button class="sort-value same-cell-disaggregatable">452</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">272</button></td>
+			<td>60%</td>
+			<td><button class="sort-value same-cell-disaggregatable">179</button></td>
+			<td>40%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>KATI</td> 
+			<td><button class="sort-value same-cell-disaggregatable">592</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">339</button></td>
+			<td>57%</td>
+			<td><button class="sort-value same-cell-disaggregatable">253</button></td>
+			<td>43%</td>
+		</tr>
+		<tr class="even"> 
+			<td>KUSINI</td>
+			<td><button class="sort-value same-cell-disaggregatable">280</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">168</button></td>
+			<td>60%</td>
+			<td><button class="sort-value same-cell-disaggregatable">105</button></td>
+			<td>38%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>MAGHARIBI</td> 
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">972</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">516</button></td>
+			<td>53%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">450</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">46%</td>
+		</tr>
+		<tr class="even"> 
+			<td>MICHEWENI</td>
+			<td><button class="sort-value same-cell-disaggregatable">345</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">215</button></td>
+			<td>62%</td>
+			<td><button class="sort-value same-cell-disaggregatable">129</button></td>
+			<td>37%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>MJINI</td> 
+			<td><button class="sort-value same-cell-disaggregatable">496</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">267</button></td>
+			<td>54%</td>
+			<td><button class="sort-value same-cell-disaggregatable">224</button></td>
+			<td>45%</td>
+		</tr>
+		<tr class="even"> 
+			<td>MKOANI</td>
+			<td><button class="sort-value same-cell-disaggregatable">116</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">65</button></td>
+			<td>56%</td>
+			<td><button class="sort-value same-cell-disaggregatable">51</button></td>
+			<td>44%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>UNKNOWN</td> 
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">100%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even"> 
+			<td>WETE</td>
+			<td><button class="sort-value same-cell-disaggregatable">144</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">84</button></td>
+			<td>58%</td>
+			<td><button class="sort-value same-cell-disaggregatable">60</button></td>
+			<td>42%</td>
+		</tr>
+	</tbody>
+  </table>
+</div>  
+<hr />
+<div class="analysis dropDownBtn">
+	<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">play_arrow</i></button>
+		Nets and Spraying: <small>Includes index cases with complete household visits, positive index case household members, and positive neighbor household members</small>
+	</h4>
+</div>
+<div id="nets-and-spraying" class="analysis-report dropdown-section">
+  <table class="tablesorter">
+	<thead> 
+		<tr> 
+			<th colspan="1" class="header headerSortDown">District</th>
+			<th colspan="1" class="header">Positive Cases (index &amp; household)</th>
+			<th colspan="1" class="header">Slept under a net night before diagnosis</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Household has been sprayed within last 6 months</th>
+			<th colspan="1" class="header">%</th> 
+		</tr> 
+	</thead> 
+	<tbody>  
+		<tr class="odd"> 
+			<td>ALL</td> 
+			<td><button class="sort-value same-cell-disaggregatable">3917</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">2231</button></td>
+			<td>57%</td>
+			<td><button class="sort-value same-cell-disaggregatable">301</button></td>
+			<td>8%</td>
+		</tr>
+		<tr class="even">
+			<td>CHAKE CHAKE</td>
+			<td><button class="sort-value same-cell-disaggregatable">90</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">42</button></td>
+			<td>47%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>1%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>KASKAZINI A</td> 
+			<td><button class="sort-value same-cell-disaggregatable">429</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">223</button></td>
+			<td>52%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">125</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">29%</td>
+		</tr>
+		<tr class="even">
+			<td>KASKAZINI B</td>
+			<td><button class="sort-value same-cell-disaggregatable">452</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">270</button></td>
+			<td>60%</td>
+			<td><button class="sort-value same-cell-disaggregatable">17</button></td>
+			<td>4%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>KATI</td> 
+			<td><button class="sort-value same-cell-disaggregatable">592</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">397</button></td>
+			<td>67%</td>
+			<td><button class="sort-value same-cell-disaggregatable">13</button></td>
+			<td>2%</td>
+		</tr>
+		<tr class="even">
+			<td>KUSINI</td>
+			<td><button class="sort-value same-cell-disaggregatable">280</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">176</button></td>
+			<td>63%</td>
+			<td><button class="sort-value same-cell-disaggregatable">23</button></td>
+			<td>8%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>MAGHARIBI</td> 
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">972</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">636</button></td>
+			<td>65%</td>
+			<td><button class="sort-value same-cell-disaggregatable">71</button></td>
+			<td>7%</td>
+		</tr>
+		<tr class="even">
+			<td>MICHEWENI</td>
+			<td><button class="sort-value same-cell-disaggregatable">345</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">60</button></td>
+			<td>17%</td>
+			<td><button class="sort-value same-cell-disaggregatable">14</button></td>
+			<td>4%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>MJINI</td> 
+			<td><button class="sort-value same-cell-disaggregatable">496</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">293</button></td>
+			<td>59%</td>
+			<td><button class="sort-value same-cell-disaggregatable">2</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even">
+			<td>MKOANI</td>
+			<td><button class="sort-value same-cell-disaggregatable">116</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">55</button></td>
+			<td>47%</td>
+			<td><button class="sort-value same-cell-disaggregatable">15</button></td>
+			<td>13%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>UNKNOWN</td> 
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">100%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+		</tr>
+		<tr class="even">
+			<td>WETE</td>
+			<td><button class="sort-value same-cell-disaggregatable">144</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">78</button></td>
+			<td>54%</td>
+			<td><button class="sort-value same-cell-disaggregatable">20</button></td>
+			<td>14%</td>
+		</tr>
+	</tbody>
+  </table>
+</div>  
+<hr />
+<div class="analysis dropDownBtn">
+	<h4><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">play_arrow</i></button>
+		Travel History (within past month): <small>Includes index cases with complete household visits, positive index case household members, and positive neighbor household members</small>
+	</h4>
+</div>
+<div id="travel-history-table" class="analysis-report dropdown-section">
+  <table class="tablesorter"> 
+	<thead> 
+		<tr> 
+			<th colspan="1" class="header headerSortDown">District</th>
+			<th colspan="1" class="header">Positive Cases</th>
+			<th colspan="1" class="header">Only outside Zanzibar</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Only within Zanzibar</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Within Zanzibar and outside</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Any Travel outside Zanzibar</th>
+			<th colspan="1" class="header">%</th>
+			<th colspan="1" class="header">Any Travel</th>
+			<th colspan="1" class="header">%</th> 
+		</tr> 
+	</thead> 
+	<tbody>  
+		<tr class="odd"> 
+			<td>ALL</td> 
+			<td><button class="sort-value same-cell-disaggregatable">3917</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">2027</button></td>
+			<td>52%</td>
+			<td><button class="sort-value same-cell-disaggregatable">134</button></td>
+			<td>3%</td>
+			<td><button class="sort-value same-cell-disaggregatable">23</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">2050</button></td>
+			<td>52%</td>
+			<td><button class="sort-value same-cell-disaggregatable">2185</button></td>
+			<td>56%</td>
+		</tr>
+		<tr class="even"> 
+			<td>CHAKE CHAKE</td> 
+			<td><button class="sort-value same-cell-disaggregatable">90</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">42</button></td>
+			<td>47%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">4</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">4%</td>
+			<td><button class="sort-value same-cell-disaggregatable">46</button></td>
+			<td>51%</td>
+			<td><button class="sort-value same-cell-disaggregatable">47</button></td>
+			<td>52%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>KASKAZINI A</td> 
+			<td><button class="sort-value same-cell-disaggregatable">429</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">274</button></td>
+			<td>64%</td>
+			<td><button class="sort-value same-cell-disaggregatable">19</button></td>
+			<td>4%</td>
+			<td><button class="sort-value same-cell-disaggregatable">3</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">277</button></td>
+			<td>65%</td>
+			<td><button class="sort-value same-cell-disaggregatable">296</button></td>
+			<td>69%</td>
+		</tr>
+		<tr class="even"> 
+			<td>KASKAZINI B</td> 
+			<td><button class="sort-value same-cell-disaggregatable">452</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">249</button></td>
+			<td>55%</td>
+			<td><button class="sort-value same-cell-disaggregatable">8</button></td>
+			<td>2%</td>
+			<td><button class="sort-value same-cell-disaggregatable">2</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">251</button></td>
+			<td>56%</td>
+			<td><button class="sort-value same-cell-disaggregatable">259</button></td>
+			<td>57%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>KATI</td> 
+			<td><button class="sort-value same-cell-disaggregatable">592</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">224</button></td>
+			<td>38%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">29</button></td>
+			<td>5%</td>
+			<td><button class="sort-value same-cell-disaggregatable">4</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">228</button></td>
+			<td>39%</td>
+			<td><button class="sort-value same-cell-disaggregatable">257</button></td>
+			<td>43%</td>
+		</tr>
+		<tr class="even"> 
+			<td>KUSINI</td> 
+			<td><button class="sort-value same-cell-disaggregatable">280</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">79</button></td>
+			<td>28%</td>
+			<td><button class="sort-value same-cell-disaggregatable">18</button></td>
+			<td>6%</td>
+			<td><button class="sort-value same-cell-disaggregatable">2</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">81</button></td>
+			<td>29%</td>
+			<td><button class="sort-value same-cell-disaggregatable">99</button></td>
+			<td>35%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>MAGHARIBI</td> 
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">972</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">586</button></td>
+			<td>60%</td>
+			<td><button class="sort-value same-cell-disaggregatable">15</button></td>
+			<td>2%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">5</button></td>
+			<td>1%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">591</button></td>
+			<td>61%</td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;"><button class="sort-value same-cell-disaggregatable" style="color: rgb(255, 64, 129);">606</button></td>
+			<td>62%</td>
+		</tr>
+		<tr class="even"> 
+			<td>MICHEWENI</td> 
+			<td><button class="sort-value same-cell-disaggregatable">345</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">98</button></td>
+			<td>28%</td>
+			<td><button class="sort-value same-cell-disaggregatable">11</button></td>
+			<td>3%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">99</button></td>
+			<td>29%</td>
+			<td><button class="sort-value same-cell-disaggregatable">111</button></td>
+			<td>32%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>MJINI</td> 
+			<td><button class="sort-value same-cell-disaggregatable">496</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">379</button></td>
+			<td>76%</td>
+			<td><button class="sort-value same-cell-disaggregatable">12</button></td>
+			<td>2%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">380</button></td>
+			<td>77%</td>
+			<td><button class="sort-value same-cell-disaggregatable">392</button></td>
+			<td>79%</td>
+		</tr>
+		<tr class="even"> 
+			<td>MKOANI</td> 
+			<td><button class="sort-value same-cell-disaggregatable">116</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">35</button></td>
+			<td>30%</td>
+			<td><button class="sort-value same-cell-disaggregatable">12</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">10%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td>1%</td>
+			<td><button class="sort-value same-cell-disaggregatable">36</button></td>
+			<td>31%</td>
+			<td><button class="sort-value same-cell-disaggregatable">48</button></td>
+			<td>41%</td>
+		</tr>
+		<tr class="odd"> 
+			<td>UNKNOWN</td> 
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">100%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">100%</td>
+			<td><button class="sort-value same-cell-disaggregatable">1</button></td>
+			<td class="max-value-for-column" style="color: rgb(255, 64, 129); font-weight: bold;">100%</td>
+		</tr>
+		<tr class="even"> 
+			<td>WETE</td> 
+			<td><button class="sort-value same-cell-disaggregatable">144</button></td>
+			<td><button class="sort-value same-cell-disaggregatable">60</button></td>
+			<td>42%</td>
+			<td><button class="sort-value same-cell-disaggregatable">9</button></td>
+			<td>6%</td>
+			<td><button class="sort-value same-cell-disaggregatable">0</button></td>
+			<td>0%</td>
+			<td><button class="sort-value same-cell-disaggregatable">60</button></td>
+			<td>42%</td>
+			<td><button class="sort-value same-cell-disaggregatable">69</button></td>
+			<td>48%</td>
+		</tr>
+	</tbody>
+  </table>
+</div>  
+<script>
+	$(".analysis").click(function(){
+	  $(this).next(".analysis-report").slideToggle();
+	  toggleSlideIcon(this);
+	});
+</script>
+	
