@@ -6,6 +6,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		      "click a.report__link": "showReport",
 		      "click a.setting__link": "showSetting",
 			  "click a.activity__link": "showActivity",
+			  "click a.admin__link": "showAdmin",
 			"click a.drawer__subtitle": "toggleDropdownMenu"
 		},
 
@@ -38,6 +39,13 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		  this.trigger("activity:clicked", activity);
 		},
 		
+		showAdmin: function(e){
+		  e.preventDefault();
+		  this.setActiveLink(e);
+		  var link_id = e.currentTarget.id;	
+		  this.trigger("admin:clicked", link_id);
+		},
+		
 		toggleDropdownMenu: function(e){
 			e.preventDefault();
 			$("div.dropdown").slideUp();
@@ -50,8 +58,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		},
 		
 		setActiveLink(e){
-		  this.removeActive();	
-  		  //$("a.mdl-navigation__link").removeClass("active");
+		  this.removeActive();
   		  $(e.target).addClass("active");
 		}
 		

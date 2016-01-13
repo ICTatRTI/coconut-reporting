@@ -19,7 +19,7 @@
 		     <div class="mdl-layout__header-row">
 		 		<div class="mdl-layout-icon"></div>  
 		 	    <div class="mdl-layout__header-row">
-				 	<span class="mdl-layout-title">Dashboard</span>
+				 	<span class="mdl-layout-title" id="layout-title">Dashboard</span>
 					<div id="header-region"></div>
 				</div>		
 				 
@@ -124,7 +124,7 @@
     <script type="text/template" id="header-template">
 		  <div id="report-title"> </div>
 		  <div class="mdl-layout-spacer"></div>
-		  <div id="logged-in"><i class="material-icons">account_circle</i> Steve Loo</div>	  
+		  <div id="logged-in"><i class="material-icons">account_circle</i> <span id="username">Steve Loo</span></div>	  
           <div class="wrapper">
   	        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="menu-top-right"> 
 				<i class="material-icons">more_vert</i> 
@@ -208,13 +208,13 @@
 			  <i class="mdl-color-text--blue-grey-400 material-icons">build</i>
 			Admin
 		    </a>
-			<div class="m-l-20 dropdown" id="drawer-settings"> 
-	  	        <a class="mdl-navigation__link setting__link" id="general" href="#">Users</a>				   
-				<a class="mdl-navigation__link activity__link" id="sdr" href="#">Shehias, Districts and Regions</a>
-				<a class="mdl-navigation__link activity__link" id="facilities" href="#">Facilities</a>
-				<a class="mdl-navigation__link activity__link" id="rainfall-station" href="#">Rainfall Station</a>
-				<a class="mdl-navigation__link activity__link" id="received-irs" href="#">Shehias received IRS</a>
-				<a class="mdl-navigation__link activity__link" id="high-risk" href="#">Shehias high risk</a>
+			<div class="m-l-20 dropdown" id="drawer-admin"> 
+	  	        <a class="mdl-navigation__link admin__link" id="users" href="#">Users</a>				   
+				<a class="mdl-navigation__link admin__link" id="sdr" href="#">Shehias, Districts and Regions</a>
+				<a class="mdl-navigation__link admin__link" id="facilities" href="#">Facilities</a>
+				<a class="mdl-navigation__link admin__link" id="rainfall-station" href="#">Rainfall Station</a>
+				<a class="mdl-navigation__link admin__link" id="received-irs" href="#">Shehias received IRS</a>
+				<a class="mdl-navigation__link admin__link" id="high-risk" href="#">Shehias high risk</a>
 			</div>	
   	      </nav>	
     </script>
@@ -225,6 +225,8 @@
 	<script type="text/template" id="setting-options-template">SETTING OPTIONS HERE</script>
 	<script type="text/template" id="activity-template"><h3>Activity Page</h3></script>
 	<script type="text/template" id="activity-options-template">ACTIVITY OPTIONS HERE</script>
+	<script type="text/template" id="admin-template"><h3>Admin Page</h3></script>
+	<script type="text/template" id="admin-options-template">ADMIN OPTIONS HERE</script>
 	
     <script src="./assets/js/vendor/material.min.js"> </script>
     <script src="./assets/js/vendor/jquery.js"></script>
@@ -249,7 +251,10 @@
 	<script src="./assets/js/apps/settings/show/show_view.js"> </script>
 	<script src="./assets/js/apps/activity/activity_app.js"> </script> 
 	<script src="./assets/js/apps/activity/show/show_controller.js"> </script> 
-	<script src="./assets/js/apps/activity/show/show_view.js"> </script>	
+	<script src="./assets/js/apps/activity/show/show_view.js"> </script>
+	<script src="./assets/js/apps/admin/admin_app.js"> </script> 
+	<script src="./assets/js/apps/admin/show/show_controller.js"> </script> 
+	<script src="./assets/js/apps/admin/show/show_view.js"> </script>	
 
 	
     <script type="text/javascript">	 

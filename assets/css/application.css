@@ -188,7 +188,7 @@ button.not-followed-up-after-48-hours-false {
   margin:  0px 20px;	
 }
 
-.report-content, .report-header, .setting-content, .activity-content {
+.report-content, .report-header, .setting-content, .activity-content, .admin-content {
   margin:  0px 10px;
   padding: 5px;	
   background: white;
@@ -232,7 +232,8 @@ button.not-followed-up-after-48-hours-false {
 	margin: 10px 0 0 25px;
 }
 
-.mdl-layout__drawer .mdl-navigation .report__link, .mdl-layout__drawer .mdl-navigation .setting__link, .mdl-layout__drawer .mdl-navigation .activity__link{
+.mdl-layout__drawer .mdl-navigation .report__link, .mdl-layout__drawer .mdl-navigation .setting__link, 
+.mdl-layout__drawer .mdl-navigation .activity__link, .mdl-layout__drawer .mdl-navigation .admin__link{
 	padding: 5px 10px 5px 10px;
 	min-width: 160px;
 }
@@ -296,7 +297,7 @@ i.material-icons{
 	display: none;
 }
 
-#drawer-reports a.active, #drawer-settings a.active, #drawer-activities a.active {
+#drawer-reports a.active, #drawer-settings a.active, #drawer-activities a.active, #drawer-admin a.active {
    color: #2096f3;
    font-weight: bold;
    font-size: 1.2em;	
