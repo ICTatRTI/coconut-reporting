@@ -463,7 +463,7 @@ td.CaseID a:hover{
   margin-top: 0;
 }
 
-/* logoin form */
+/* login form */
 #login_wrapper {
     font-size: 200%;
     margin: 20px auto;
@@ -563,6 +563,12 @@ a.DTTT_button, button.DTTT_button, div.DTTT_button {
   position: absolute;
   right: 20px;
   margin-top: -20px;
+}
+
+#logged-in{
+    position: absolute;
+    right: 60px;
+    margin-top: -10px;
 }
 
 div.chart {
