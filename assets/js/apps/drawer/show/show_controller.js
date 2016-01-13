@@ -20,6 +20,10 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 	  });
 	  
 	  CocoManager.drawerRegion.show(drawerView);
-    }
+    },
+	
+	updateTitle: function(newtitle){
+		$("#layout-title").html(newtitle);	
+	}
   };
 });
