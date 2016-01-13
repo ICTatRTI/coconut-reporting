@@ -20,6 +20,6 @@ CocoManager.module("ReportsApp", function(ReportsApp, CocoManager, Backbone, Mar
     new ReportsApp.Router({
       controller: API
     });
-	$("#report-options-template").load(templates_path + "dates_filter.html");
+	$("#report-options-template").load(CocoManager.config.templates + "dates_filter.html");
   });
 });

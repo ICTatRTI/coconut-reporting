@@ -69,10 +69,12 @@ CocoManager.DrawerView = Marionette.ItemView.extend({
 });
 */
 
-var templates_path = "assets/templates/";
+CocoManager.config = {
+	templates: "assets/templates/"
+    };
 		
 CocoManager.on("start", function(){
     if(Backbone.history){
       Backbone.history.start();  
-	}	
+	}
 });
