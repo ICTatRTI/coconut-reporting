@@ -8,7 +8,7 @@ CocoManager.module("ReportsApp", function(ReportsApp, CocoManager, Backbone, Mar
   var API = {
     showReport: function(name){	
       ReportsApp.List.Controller.showReport(name);
-    },	
+    }
   };
 
   CocoManager.on("reports:show", function(reportname){
