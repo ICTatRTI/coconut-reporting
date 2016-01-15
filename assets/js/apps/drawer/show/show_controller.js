@@ -22,7 +22,8 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 	  CocoManager.drawerRegion.show(drawerView);
     },
 	
-	updateTitle: function(newtitle){
+	updateTitle: function(section, newtitle){
+		newtitle =section + " <span class='menu-subtitle'>" + newtitle + "</span>";
 		$("#layout-title").html(newtitle);	
 	}
   };

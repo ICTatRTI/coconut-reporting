@@ -14,10 +14,10 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 			e.preventDefault();
 			var reportname = e.currentTarget.id;
 			var classStr = $(e.currentTarget).attr('class');
-			var linkTitle = "Reports: "+e.currentTarget.innerText;
+			var linkTitle = "Reports: ";
 			if (classStr.indexOf('drawer__subtitle') == -1) {;
 			   this.setActiveLink(e);
-			   this.setNewTitle(linkTitle);
+			   this.setNewTitle(linkTitle, e.currentTarget.innerText);
 			   this.trigger("report:clicked", reportname);
 			} else {
 				if (reportname == "dashboard"){
@@ -34,27 +34,27 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		
 		showSetting: function(e){
 		  e.preventDefault();
-		  var linkTitle = "Settings: "+e.currentTarget.innerText;
+		  var linkTitle = "Settings: ";
 		  this.setActiveLink(e);
-		  this.setNewTitle(linkTitle);
+		  this.setNewTitle(linkTitle, e.currentTarget.innerText);
 		  var setting = e.currentTarget.id;	
 		  this.trigger("setting:clicked", setting);
 		},
 		
 		showActivity: function(e){
 		  e.preventDefault();
-		  var linkTitle = "Activities: "+e.currentTarget.innerText;
+		  var linkTitle = "Activities: ";
 		  this.setActiveLink(e);
-		  this.setNewTitle(linkTitle);
+		  this.setNewTitle(linkTitle, e.currentTarget.innerText);
 		  var activity = e.currentTarget.id;	
 		  this.trigger("activity:clicked", activity);
 		},
 		
 		showAdmin: function(e){
 		  e.preventDefault();
-		  var linkTitle = "Admin: "+e.currentTarget.innerText;
+		  var linkTitle = "Admin: ";
 		  this.setActiveLink(e);
-		  this.setNewTitle(linkTitle);
+		  this.setNewTitle(linkTitle, e.currentTarget.innerText);
 		  var link_id = e.currentTarget.id;	
 		  this.trigger("admin:clicked", link_id);
 		},
@@ -81,8 +81,8 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
   		  $(e.target).addClass("active");
 		},
 		
-		setNewTitle(title){
-			CocoManager.DrawerApp.Show.Controller.updateTitle(title);
+		setNewTitle(title, subtitle){
+			CocoManager.DrawerApp.Show.Controller.updateTitle(title, subtitle);
 		}
 		
 	  });	

@@ -283,9 +283,7 @@ i.material-icons{
 /* Drawer styling */
 
 #drawer-title{
-	margin-top: 10px;
 	font-size: 20px;
-	padding-top: 10px;
 }
 
 .drawer__subtitle {
@@ -305,9 +303,9 @@ i.material-icons{
 
 /* Reports styling */
 
-#report-title{
-	font-size: 1.3em;
-	position: relative;
+#menu-title{
+	font-size: 1.1em;
+	position: absolute;
 	top: 15%;
 	left: 40%;
 	-moz-transform: translateX(-50%) translateY(-50%);
@@ -636,4 +634,8 @@ div.chart {
 
 .a-m {
 	vertical-align: middle;
+}
+
+.menu-subtitle {
+	font-size: 0.8em;
 }
