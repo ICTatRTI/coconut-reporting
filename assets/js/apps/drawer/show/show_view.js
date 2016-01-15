@@ -14,7 +14,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 			e.preventDefault();
 			var reportname = e.currentTarget.id;
 			var classStr = $(e.currentTarget).attr('class');
-			var linkTitle = "Reports >> "+e.currentTarget.innerText;
+			var linkTitle = "Reports: "+e.currentTarget.innerText;
 			if (classStr.indexOf('drawer__subtitle') == -1) {;
 			   this.setActiveLink(e);
 			   this.setNewTitle(linkTitle);
@@ -34,7 +34,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		
 		showSetting: function(e){
 		  e.preventDefault();
-		  var linkTitle = "Settings >> "+e.currentTarget.innerText;
+		  var linkTitle = "Settings: "+e.currentTarget.innerText;
 		  this.setActiveLink(e);
 		  this.setNewTitle(linkTitle);
 		  var setting = e.currentTarget.id;	
@@ -43,7 +43,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		
 		showActivity: function(e){
 		  e.preventDefault();
-		  var linkTitle = "Activities >> "+e.currentTarget.innerText;
+		  var linkTitle = "Activities: "+e.currentTarget.innerText;
 		  this.setActiveLink(e);
 		  this.setNewTitle(linkTitle);
 		  var activity = e.currentTarget.id;	
@@ -52,7 +52,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		
 		showAdmin: function(e){
 		  e.preventDefault();
-		  var linkTitle = "Admin >> "+e.currentTarget.innerText;
+		  var linkTitle = "Admin: "+e.currentTarget.innerText;
 		  this.setActiveLink(e);
 		  this.setNewTitle(linkTitle);
 		  var link_id = e.currentTarget.id;	
