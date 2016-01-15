@@ -61,9 +61,15 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		
 		toggleDropdownMenu: function(e){
 			e.preventDefault();
+			$target = $(e.target);
+			var hidden = $target.next("div.dropdown").is(":hidden");
 			$("div.dropdown").slideUp();
-			$target = $(e.target); 
-			$target.next("div.dropdown").slideToggle();
+			console.log(hidden);
+			if (!hidden) {
+  			   $target.next("div.dropdown").slideUp();
+			} else  {
+				 $target.next("div.dropdown").slideToggle();
+			} 
 		},
 		
 		removeActive: function(){
