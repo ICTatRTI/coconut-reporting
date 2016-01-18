@@ -3,13 +3,23 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		template: "#drawer-template",
 		events: {
 			"click a#dashboard": "showDashboard",
+			  "click a.drawer__link": "showLink",
 		      "click a.report__link": "showReport",
 		      "click a.setting__link": "showSetting",
 			  "click a.activity__link": "showActivity",
 			  "click a.admin__link": "showAdmin",
 			"click a.drawer__subtitle": "toggleDropdownMenu"
 		},
-
+		
+		showLink: function(e){
+			e.preventDefault();
+			$target = $(e.target);
+			var reportname = e.currentTarget.id;
+			var linkTitle = e.currentTarget.dataset.name;
+			this.setNewTitle(linkTitle, "");
+			this.trigger("report:clicked", reportname);
+		},
+		
 		showReport: function(e){
 			e.preventDefault();
 			var reportname = e.currentTarget.id;
@@ -28,7 +38,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		},
 		showDashboard: function(e){
 			e.preventDefault();
-			this.setNewTitle("Dashboard");
+			this.setNewTitle("Dashboard","");
 			this.removeActive();	
 		},
 		
@@ -64,7 +74,6 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 			$target = $(e.target);
 			var hidden = $target.next("div.dropdown").is(":hidden");
 			$("div.dropdown").slideUp();
-			console.log(hidden);
 			if (!hidden) {
   			   $target.next("div.dropdown").slideUp();
 			} else  {
