@@ -8,6 +8,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		      "click a.setting__link": "showSetting",
 			  "click a.activity__link": "showActivity",
 			  "click a.admin__link": "showAdmin",
+			  "click a.graphs__link": "showGraph",
 			"click a.drawer__subtitle": "toggleDropdownMenu"
 		},
 		
@@ -17,6 +18,7 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 			var reportname = e.currentTarget.id;
 			var linkTitle = e.currentTarget.dataset.name;
 			this.setNewTitle(linkTitle, "");
+			this.removeActive();
 			this.trigger("report:clicked", reportname);
 		},
 		
@@ -58,6 +60,15 @@ CocoManager.module("DrawerApp.Show", function(Show, CocoManager, Backbone, Mario
 		  this.setNewTitle(linkTitle, e.currentTarget.innerText);
 		  var activity = e.currentTarget.id;	
 		  this.trigger("activity:clicked", activity);
+		},
+		
+		showGraph: function(e){
+		  e.preventDefault();
+		  var linkTitle = "Graphs: ";
+		  this.setActiveLink(e);
+		  this.setNewTitle(linkTitle, e.currentTarget.innerText);
+		  var link_id = e.currentTarget.id;	
+		  this.trigger("graph:clicked", link_id);
 		},
 		
 		showAdmin: function(e){

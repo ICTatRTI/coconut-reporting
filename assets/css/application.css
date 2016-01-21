@@ -234,7 +234,7 @@ button.not-followed-up-after-48-hours-false {
 
 .mdl-layout__drawer .mdl-navigation .report__link, .mdl-layout__drawer .mdl-navigation .setting__link, 
 .mdl-layout__drawer .mdl-navigation .activity__link, .mdl-layout__drawer .mdl-navigation .admin__link,
-.mdl-layout__drawer .mdl-navigation .drawer__link {
+.mdl-layout__drawer .mdl-navigation .drawer__link, .mdl-layout__drawer .mdl-navigation .graphs__link {
 	padding: 5px 10px 5px 10px;
 	min-width: 160px;
 }
@@ -292,11 +292,11 @@ i.material-icons{
    
 }
 
-#drawer-reports, #drawer-settings, #drawer-activities {
+#drawer-reports, #drawer-settings, #drawer-activities, #drawer-admin, #drawer-graphs {
 	display: none;
 }
 
-#drawer-reports a.active, #drawer-settings a.active, #drawer-activities a.active, #drawer-admin a.active {
+#drawer-reports a.active, #drawer-settings a.active, #drawer-activities a.active, #drawer-admin a.active, #drawer-graphs a.active {
    color: #2096f3;
    font-weight: bold;
    font-size: 1.2em;	

@@ -187,6 +187,15 @@
 				<a class="mdl-navigation__link activity__link" id="todos" href="#">To Do</a> 
 				<a class="mdl-navigation__link activity__link" id="sms" href="#">Send SMS to users</a> 
 			</div>
+			<a class="mdl-navigation__link report__link drawer__subtitle" href="#" id="graphs-main">  
+			  <i class="mdl-color-text--blue-grey-400 material-icons">assessment</i>
+			Graphs
+		    </a>
+			<div class="m-l-20 dropdown" id="drawer-graphs"> 
+				<a class="mdl-navigation__link graphs__link" id="issues" href="#">Graph 1</a> 
+				<a class="mdl-navigation__link graphs__link" id="todos" href="#">Graph 2</a> 
+				<a class="mdl-navigation__link graphs__link" id="sms" href="#">Graph 3</a> 
+			</div>
 			<a class="mdl-navigation__link drawer__link" href="#reports/maps" id="maps" data-name="Maps">  
 			  <i class="mdl-color-text--blue-grey-400 material-icons">map</i>
 			  <span class="link-title">Maps</span>
@@ -213,6 +222,7 @@
 		    </a>
 			<div class="m-l-20 dropdown" id="drawer-admin"> 				   
 				<a class="mdl-navigation__link admin__link" id="facilities" href="#">Facilities</a>
+				 <a class="mdl-navigation__link admin__link" id="questions" href="#">Question Sets</a>	
 				<a class="mdl-navigation__link admin__link" id="rainfall-station" href="#">Rainfall Station</a>
 				<a class="mdl-navigation__link admin__link" id="sdr" href="#">Shehias, Districts and Regions</a>				
 				<a class="mdl-navigation__link admin__link" id="received-irs" href="#">Shehias received IRS</a>
@@ -230,6 +240,8 @@
 	<script type="text/template" id="activity-options-template">ACTIVITY OPTIONS HERE</script>
 	<script type="text/template" id="admin-template"><h3>Admin Page</h3></script>
 	<script type="text/template" id="admin-options-template">ADMIN OPTIONS HERE</script>
+	<script type="text/template" id="graph-template"><h3>Graphs Page</h3></script>
+	<script type="text/template" id="graph-options-template">GRAPHS OPTIONS HERE</script>
 	
     <script src="./assets/js/vendor/material.min.js"> </script>
     <script src="./assets/js/vendor/jquery.js"></script>
