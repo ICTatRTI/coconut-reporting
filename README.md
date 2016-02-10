@@ -1,2 +1,2 @@
-# coconut-ui-marionette
-Coconut Reporting UI using Marionette JS
+# dashboard-ui-marionette
+Reporting Dashboard UI using Marionette JS
